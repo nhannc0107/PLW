@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/colors_and_type.css">
+<script src="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/_ds_bundle.js"></script>
+<style>body{margin:0;background:#FBF6E6;font-family:var(--font-body)}*{box-sizing:border-box}a{color:#035F1D;text-decoration:none}a:hover{color:#658D1B}input::placeholder,textarea::placeholder{color:inherit;opacity:.55}</style>
+</helmet>
+<div id="pp-scale" data-screen-label="Our People" style="width:1440px;margin:0 auto;zoom:1;background:#FBF6E6;color:#2B2416;overflow:hidden">
+<div style="position:relative;height:820px;background:url(assets/photos/ppl-team-v2.jpg) center 35%/cover">
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,35,18,.55),rgba(15,35,18,0) 24%,rgba(15,35,18,.15) 38%,rgba(15,35,18,.88) 78%)"></div>
+<div style="position:absolute;left:88px;right:88px;top:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#FBF6E6"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:36px;width:auto"><div style="display:flex;gap:34px"><sc-for list="{{ navD }}" as="n" hint-placeholder-count="6"><div data-dd="{{ n.href }}" style="position:relative;display:flex"><a href="{{ n.href }}" style="font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:{{ n.c }};border-bottom:2px solid {{ n.ul }};padding-bottom:4px">{{ n.t }}</a><div data-ddm="1" style="display:none;position:absolute;top:100%;left:-18px;padding-top:14px;z-index:60"><div style="background:#FBF6E6;border:1px solid #E4DACE;border-radius:12px;box-shadow:0 14px 34px rgba(3,40,15,.2);padding:8px;display:flex;flex-direction:column;min-width:190px"><a href="#tea-leaf" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Tea Leaf</a><a href="#coffee" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Coffee</a></div></div></div></sc-for></div><div style="display:flex;gap:18px;align-items:center;font:700 12px/1 var(--font-body);letter-spacing:.12em"><span>VI <span style="opacity:.5">/ EN</span></span><a href="#shop" style="border:1px solid rgba(251,246,230,.7);border-radius:999px;padding:9px 16px;color:#FBF6E6">Shop</a></div></div>
+<div style="position:absolute;left:88px;right:88px;bottom:72px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;color:#FBF6E6"><div style="display:flex;flex-direction:column;gap:18px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#E9E887">OUR PEOPLE · CON NGƯỜI PHÚC LONG</span><h2 style="margin:0;font:700 128px/.86 var(--font-display);letter-spacing:-.045em">The hands<br>behind every cup</h2></div><p style="margin:0;max-width:380px;font:400 18px/1.6 var(--font-body);text-wrap:pretty">More than 4,000 people, from the factory in Bảo Lộc to the counter on your street. This is who they are.</p></div>
+</div>
+<div style="padding:110px 88px;display:grid;grid-template-columns:minmax(0,1fr) 480px;gap:72px;align-items:start">
+<div style="display:flex;flex-direction:column">
+<span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#692128;padding-bottom:28px">WHAT WE SHARE</span>
+<sc-for list="{{ valsA }}" as="v" hint-placeholder-count="5"><div onMouseEnter="{{ v.enter }}" style="cursor:default;border-top:1px solid #E4DACE;padding:26px 0;display:grid;grid-template-columns:56px minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:baseline"><span style="font:700 13px/1 var(--font-body);color:{{ v.nc }}">{{ v.no }}</span><span style="font:700 84px/.9 var(--font-display);letter-spacing:-.04em;color:{{ v.c }}">{{ v.vi }}</span><div style="display:flex;flex-direction:column;gap:8px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.22em;color:#692128">{{ v.en }}</span><span style="font:400 16px/1.55 var(--font-body);color:#4A4237;text-wrap:pretty">{{ v.p }}</span></div></div></sc-for>
+</div>
+<div style="position:sticky;top:32px;display:flex;flex-direction:column;gap:16px"><div style="height:600px;border-radius:6px;background:url({{ VA.img }}) {{ VA.pos }}/cover"></div><span style="font:400 italic 22px/1.35 var(--font-display);color:#035F1D">“{{ VA.q }}”</span><span style="font:700 12px/1 var(--font-body);letter-spacing:.16em;color:#685C20">{{ VA.who }}</span></div>
+</div>
+<div style="background:#035F1D;color:#FBF6E6;padding:110px 88px;display:flex;flex-direction:column;gap:64px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px"><h3 style="margin:0;font:700 72px/.95 var(--font-display);letter-spacing:-.03em">Three places,<br>one craft</h3><span style="max-width:380px;font:400 16px/1.6 var(--font-body);color:#DAE0C1">The store, the head office and the factory, told by people who have been with us for years.</span></div>
+<sc-for list="{{ stories }}" as="s" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:64px;align-items:center"><div style="order:{{ s.oi }};height:520px;border-radius:6px;background:url({{ s.img }}) {{ s.pos }}/cover"></div><div style="order:{{ s.ot }};display:flex;flex-direction:column;gap:20px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#E9E887">{{ s.k }}</span><span style="font:400 italic 34px/1.3 var(--font-display)">“{{ s.q }}”</span><p style="margin:0;font:400 16px/1.65 var(--font-body);color:#DAE0C1;text-wrap:pretty">{{ s.p }}</p><span style="font:700 13px/1.5 var(--font-body)">{{ s.name }} · <span style="font-weight:400;color:#DAE0C1">{{ s.role }}</span></span></div></div></sc-for>
+</div>
+<div style="padding:110px 88px 0;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end"><h3 style="margin:0;font:700 56px/.95 var(--font-display);letter-spacing:-.03em;color:#035F1D">Recruitment news</h3><span style="font:700 12px/1 var(--font-body);letter-spacing:.2em;color:#692128">ALL NEWS →</span></div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px"><sc-for list="{{ news }}" as="n" hint-placeholder-count="3"><div style="display:flex;flex-direction:column;gap:14px"><div style="height:260px;border-radius:6px;background:url({{ n.img }}) {{ n.pos }}/cover"></div><span style="font:700 11px/1 var(--font-body);letter-spacing:.2em;color:#692128">{{ n.date }} · {{ n.tag }}</span><span style="font:700 26px/1.15 var(--font-display);color:#2B2416">{{ n.t }}</span></div></sc-for></div>
+</div>
+<div style="padding:110px 88px;display:grid;grid-template-columns:minmax(0,1fr) 520px;gap:64px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:20px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#692128">OPEN ROLES · {{ jobsA.n }}</span><h3 style="margin:0;font:700 56px/.95 var(--font-display);letter-spacing:-.03em;color:#035F1D">Grow with us</h3>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ jobsA.tabs }}" as="t" hint-placeholder-count="4"><button onClick="{{ t.pick }}" style="cursor:pointer;white-space:nowrap;flex:none;border:1px solid #035F1D;border-radius:999px;padding:10px 16px;background:{{ t.bg }};color:{{ t.fg }};font:700 13px/1 var(--font-body)">{{ t.t }}</button></sc-for></div>
+<div style="border-top:1px solid #2B2416"><sc-for list="{{ jobsA.rows }}" as="j" hint-placeholder-count="6"><div style="display:grid;grid-template-columns:minmax(0,1fr) 160px 110px;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid #E4DACE"><div style="display:flex;flex-direction:column;gap:6px"><span style="font:700 22px/1.15 var(--font-display);color:#2B2416">{{ j.t }}</span><span style="font:400 13px/1 var(--font-body);color:#685C20">{{ j.team }} · {{ j.type }}</span></div><span style="font:400 14px/1.3 var(--font-body);color:#4A4237">{{ j.loc }}</span><button onClick="{{ j.apply }}" style="cursor:pointer;border:none;background:{{ j.bg }};color:{{ j.fg }};border-radius:999px;padding:10px 14px;font:700 12px/1 var(--font-body)">{{ j.cta }}</button></div></sc-for></div></div>
+<div style="position:sticky;top:32px;background:#F2EBE7;border-radius:20px;padding:36px;display:flex;flex-direction:column;gap:14px">
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}"><div style="display:flex;flex-direction:column;gap:14px;padding:40px 0"><span style="font:700 40px/1 var(--font-display);color:#035F1D">Thank you, {{ F.name }}</span><span style="font:400 16px/1.6 var(--font-body);color:#4A4237">We have your application for {{ F.role }}. Our team will reply within five working days.</span><button onClick="{{ reset }}" style="align-self:flex-start;cursor:pointer;border:1px solid #035F1D;background:transparent;color:#035F1D;border-radius:999px;padding:12px 18px;font:700 13px/1 var(--font-body)">Send another</button></div></sc-if>
+<sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:14px">
+<span style="font:700 32px/1 var(--font-display);color:#035F1D">Apply now</span>
+<input value="{{ F.name }}" onChange="{{ on.name }}" placeholder="Full name" style="border:1px solid #C9BC9A;border-radius:10px;padding:14px 16px;font:400 15px/1 var(--font-body);background:#FFFFFF;color:#2B2416;outline:none">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><input value="{{ F.phone }}" onChange="{{ on.phone }}" placeholder="Phone" style="border:1px solid #C9BC9A;border-radius:10px;padding:14px 16px;font:400 15px/1 var(--font-body);background:#FFFFFF;color:#2B2416;outline:none"><input value="{{ F.email }}" onChange="{{ on.email }}" placeholder="Email" style="border:1px solid #C9BC9A;border-radius:10px;padding:14px 16px;font:400 15px/1 var(--font-body);background:#FFFFFF;color:#2B2416;outline:none"></div>
+<select value="{{ F.role }}" onChange="{{ on.role }}" style="border:1px solid #C9BC9A;border-radius:10px;padding:14px 16px;font:400 15px/1 var(--font-body);background:#FFFFFF;color:#2B2416"><sc-for list="{{ roleOpts }}" as="o" hint-placeholder-count="6"><option value="{{ o }}">{{ o }}</option></sc-for></select>
+<select value="{{ F.city }}" onChange="{{ on.city }}" style="border:1px solid #C9BC9A;border-radius:10px;padding:14px 16px;font:400 15px/1 var(--font-body);background:#FFFFFF;color:#2B2416"><sc-for list="{{ cityOpts }}" as="o" hint-placeholder-count="5"><option value="{{ o }}">{{ o }}</option></sc-for></select>
+<label style="border:1px dashed #C9BC9A;border-radius:10px;padding:16px;font:400 14px/1.4 var(--font-body);color:#685C20;cursor:pointer;display:flex;justify-content:space-between;gap:12px"><span>{{ F.cvLabel }}</span><span style="font-weight:700;color:#035F1D">Upload CV</span><input type="file" onChange="{{ on.cv }}" style="display:none"></label>
+<textarea value="{{ F.msg }}" onChange="{{ on.msg }}" placeholder="Tell us why Phúc Long" rows="3" style="border:1px solid #C9BC9A;border-radius:10px;padding:14px 16px;font:400 15px/1.5 var(--font-body);background:#FFFFFF;color:#2B2416;outline:none;resize:none"></textarea>
+<button onClick="{{ submit }}" style="cursor:pointer;border:none;background:#035F1D;color:#FBF6E6;border-radius:999px;padding:16px 24px;font:700 14px/1 var(--font-body)">Send application →</button>
+<span style="font:400 12px/1.4 var(--font-body);color:#C51D25">{{ err }}</span>
+</div></sc-if>
+</div>
+</div>
+<footer style="background:#1C4220;color:#FBF6E6;padding:40px 88px;display:flex;justify-content:space-between;align-items:center;gap:24px"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:30px;width:auto"><div style="display:flex;gap:22px"><sc-for list="{{ navD }}" as="n" hint-placeholder-count="6"><a href="{{ n.href }}" style="font:600 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6">{{ n.t }}</a></sc-for></div><div style="display:flex;align-items:center;gap:22px"><a href="#" style="font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;background:#FDF8E1;color:#035F1D;padding:12px 18px;border-radius:999px">Contact us →</a><span style="font:500 12px/1 var(--font-body);opacity:.8">© Phúc Long Heritage</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const VALS = [
+  { vi: 'Đam mê', en: 'PASSIONATE', p: 'We love tea, and it shows in every cup we hand over.', img: 'assets/photos/ppl-factory.jpg', pos: 'center 30%', q: 'Twenty-two years, and the smell of fresh leaves still makes me smile.', who: 'CHÚ BẢY · TEA MASTER, BẢO LỘC' },
+  { vi: 'Tận tâm', en: 'DEDICATED', p: 'We do the small things right, even when nobody is watching.', img: 'assets/photos/ppl-manager-v2.jpg', pos: 'center 20%', q: 'The first cup of the morning gets the same care as the thousandth.', who: 'THU HÀ · STORE MANAGER, NGUYỄN HUỆ' },
+  { vi: 'Trung thực', en: 'HONEST', p: 'We say what we mean and stand behind what we serve.', img: 'assets/photos/ppl-office-v2.jpg', pos: 'center', q: 'If a batch is not right, we say so, and it does not leave the tasting room.', who: 'MINH ANH · TEA DEVELOPMENT, HEAD OFFICE' },
+  { vi: 'Gắn bó', en: 'LOYAL', p: 'We stay for each other. Many of us have grown up here.', img: 'assets/photos/ppl-team-v2.jpg', pos: 'center 35%', q: 'My first shift leader is now my area manager. We still have tea every Monday.', who: 'QUỐC BẢO · SHIFT LEADER, QUẬN 3' },
+  { vi: 'Kiên nhẫn', en: 'PATIENT', p: 'Good tea takes time. So does training a good team.', img: 'assets/photos/ppl-factory.jpg', pos: 'right 30%', q: 'You cannot rush a leaf. You cannot rush a person either.', who: 'CHÚ BẢY · TEA MASTER, BẢO LỘC' }
+].map((v, i) => ({ ...v, no: '0' + (i + 1) }));
+const JOBS = [
+  { t: 'Store Manager', team: 'STORES', type: 'Full-time', loc: 'TP.HCM', d: 'Lead a team of 15–25 people, run daily operations and grow your store with the area manager.' },
+  { t: 'Shift Leader', team: 'STORES', type: 'Full-time', loc: 'Hà Nội', d: 'Run a shift, coach new tea makers and keep every cup to standard.' },
+  { t: 'Tea Maker / Barista', team: 'STORES', type: 'Full or part-time', loc: 'Nationwide', d: 'Make tea and coffee, welcome guests and learn the craft from day one. No experience needed.' },
+  { t: 'Tea Quality Specialist', team: 'FACTORY', type: 'Full-time', loc: 'Bảo Lộc, Lâm Đồng', d: 'Taste, grade and release every batch of leaf and blend before it leaves the factory.' },
+  { t: 'Brand Marketing Executive', team: 'HEAD OFFICE', type: 'Full-time', loc: 'TP.HCM', d: 'Plan campaigns and seasonal launches with the brand and product teams.' },
+  { t: 'Supply Chain Planner', team: 'HEAD OFFICE', type: 'Full-time', loc: 'TP.HCM', d: 'Plan stock from the factory to 234 stores so no one runs out of their favourite tea.' }
+];
+const TEAMS = ['ALL', 'STORES', 'HEAD OFFICE', 'FACTORY'];
+class Component extends DCLogic {
+  componentDidUpdate() { if (window.PL) { const __v = this.state.vi !== undefined ? (this.state.vi ? 'vi' : 'en') : this.state.lang; if ((__v === 'vi' || __v === 'en') && __v !== PL.lang) PL.lang = __v; } }
+  state = { val: 1, tA: 'ALL', tB: 'ALL', openC: 0, F: { name: '', phone: '', email: '', role: 'Any role', city: 'TP.HCM', msg: '', cv: '' }, sent: false, err: '' };
+  fit = () => { const el = document.getElementById('pp-scale'); if (el) el.style.zoom = Math.max(0.3, document.documentElement.clientWidth / 1440); };
+  componentDidMount() { this.fit(); window.addEventListener('resize', this.fit); }
+  componentWillUnmount() { window.removeEventListener('resize', this.fit); }
+  setF = (k, v) => this.setState(s => ({ F: { ...s.F, [k]: v }, err: '' }));
+  jobs(key) { const tab = this.state[key]; const rows = JOBS.filter(j => tab === 'ALL' || j.team === tab).map(j => { const on = this.state.F.role === j.t; return { ...j, cta: on ? 'Selected' : 'Apply', bg: on ? '#035F1D' : 'transparent', fg: on ? '#FBF6E6' : '#035F1D', cbg: on ? '#E9E887' : '#FBF6E6', cfg: '#035F1D', apply: () => this.setF('role', j.t) }; });
+    return { n: rows.length, rows, tabs: TEAMS.map(t => ({ t: t === 'ALL' ? 'All roles' : t.charAt(0) + t.slice(1).toLowerCase(), bg: tab === t ? '#035F1D' : 'transparent', fg: tab === t ? '#FBF6E6' : '#035F1D', bgd: tab === t ? '#E9E887' : 'transparent', fgd: tab === t ? '#035F1D' : '#E9E887', pick: () => this.setState({ [key]: t }) })) }; }
+  renderVals() {
+    const h = ['#our-story', '#our-drink', '#tea-leaf', '#our-stores', '#our-people', '#media'], T = ['Our Story', 'Our Drink', 'Our Products', 'Our Stores', 'Our People', 'Media'];
+    const F = this.state.F;
+    const on = {}; ['name', 'phone', 'email', 'role', 'city', 'msg'].forEach(k => on[k] = e => this.setF(k, e.target.value)); on.cv = e => this.setF('cv', e.target.files && e.target.files[0] ? e.target.files[0].name : '');
+    return {
+      navD: T.map((t, i) => ({ t, href: h[i], c: i === 4 ? '#EFF4A4' : '#FBF6E6', ul: i === 4 ? '#EFF4A4' : 'transparent' })),
+      navL: T.map((t, i) => ({ t, href: h[i], c: i === 4 ? '#692128' : '#035F1D', ul: i === 4 ? '#692128' : 'transparent' })),
+      vals: VALS, VA: VALS[this.state.val],
+      valsA: VALS.map((v, i) => ({ ...v, c: this.state.val === i ? '#035F1D' : '#C9BC9A', nc: this.state.val === i ? '#692128' : '#C9BC9A', enter: () => this.setState({ val: i }) })),
+      stories: [
+        { k: 'THE STORE', img: 'assets/photos/ppl-manager-v2.jpg', pos: 'center 20%', q: 'I came for a summer job. That was nine years ago.', p: 'Thu Hà started as a tea maker on Nguyễn Huệ. Today she runs the same store, and has trained more than sixty people who now work across the city.', name: 'Nguyễn Thu Hà', role: 'Store Manager, Nguyễn Huệ' },
+        { k: 'THE HEAD OFFICE', img: 'assets/photos/ppl-office-v2.jpg', pos: 'center', q: 'Every new drink starts on this table, with twenty cups and honest opinions.', p: 'Minh Anh’s team tastes every new recipe with the stores before it reaches the menu. Nothing launches until the store teams say yes.', name: 'Trần Minh Anh', role: 'Tea Development, Head Office' },
+        { k: 'THE FACTORY', img: 'assets/photos/ppl-factory.jpg', pos: 'center 30%', q: 'You cannot rush a leaf. You cannot rush a person either.', p: 'Chú Bảy has graded tea in Bảo Lộc for twenty-two years. He checks every batch by eye, hand and taste, and teaches the young team to do the same.', name: 'Lê Văn Bảy', role: 'Tea Master, Bảo Lộc factory' }
+      ].map((s, i) => ({ ...s, oi: i % 2 ? 2 : 1, ot: i % 2 ? 1 : 2 })),
+      day: [
+        { time: '4:30', place: 'BẢO LỘC FACTORY', img: 'assets/photos/ppl-factory.jpg', pos: 'center 30%', val: 'Kiên nhẫn · Patient', h: 'The first leaves of the day', p: 'Before sunrise the tea master grades the night’s withered leaves by hand. Nothing moves on until it is right.', name: 'Lê Văn Bảy', role: 'Tea Master' },
+        { time: '6:30', place: 'NGUYỄN HUỆ, TP.HCM', img: 'assets/photos/ppl-team-v2.jpg', pos: 'center 35%', val: 'Gắn bó · Loyal', h: 'Briefing before the doors open', p: 'Ten minutes, standing at the counter: today’s tea, yesterday’s wins, and who needs a hand.', name: 'Quốc Bảo', role: 'Shift Leader' },
+        { time: '10:00', place: 'HEAD OFFICE, QUẬN 3', img: 'assets/photos/ppl-office-v2.jpg', pos: 'center', val: 'Trung thực · Honest', h: 'Twenty cups on the table', p: 'The tea development team tastes next season’s drinks and says honestly what works.', name: 'Trần Minh Anh', role: 'Tea Development' },
+        { time: '22:30', place: 'NGUYỄN HUỆ, TP.HCM', img: 'assets/photos/ppl-manager-v2.jpg', pos: 'center 20%', val: 'Tận tâm · Dedicated', h: 'The last cup, the same care', p: 'At closing time the manager checks every station and thanks the team by name.', name: 'Nguyễn Thu Hà', role: 'Store Manager' }
+      ],
+      qa: [
+        { q: 'How did you start at Phúc Long?', a: 'I was a second-year student looking for summer work. The store on Nguyễn Huệ needed tea makers, and I stayed because the team felt like a family from the first week.', pull: 'The team felt like a family from the first week.', val: 'Gắn bó · Loyal' },
+        { q: 'What did you learn in your first year?', a: 'Patience. My trainer made me brew the same oolong again and again until the colour was right. I was frustrated then. Now I do the same with my own team.', pull: 'Now I do the same with my own team.', val: 'Kiên nhẫn · Patient' },
+        { q: 'What does a good day look like?', a: 'A regular who knows my staff by name, a new tea maker who gets her first compliment, and no cup that I would not drink myself.', pull: 'No cup that I would not drink myself.', val: 'Tận tâm · Dedicated' },
+        { q: 'What do you say to someone thinking of joining?', a: 'Come if you love tea and people. We will teach you the rest, and we will tell you honestly how you are doing.', pull: 'We will tell you honestly how you are doing.', val: 'Trung thực · Honest' },
+        { q: 'And after nine years?', a: 'I still taste every new drink with the team before it goes on our menu. That part never gets old.', pull: '', val: '' }
+      ],
+      news: [
+        { date: '12 NOV 2026', tag: 'HIRING DAY', t: 'Open hiring day at our Hà Nội flagship', img: 'assets/photos/store-interior-buudien.png', pos: 'center' },
+        { date: '01 NOV 2026', tag: 'PROGRAMME', t: 'Store Management Trainee 2027 is open', img: 'assets/photos/ppl-team-v2.jpg', pos: 'center 35%' },
+        { date: '20 OCT 2026', tag: 'FACTORY', t: 'Bảo Lộc factory welcomes 30 new team members', img: 'assets/photos/ppl-factory.jpg', pos: 'center 30%' }
+      ],
+      jobsA: this.jobs('tA'), jobsB: this.jobs('tB'),
+      jobsC: JOBS.map((j, i) => ({ ...j, open: this.state.openC === i, sign: this.state.openC === i ? '–' : '+', toggle: () => this.setState(s => ({ openC: s.openC === i ? -1 : i })), apply: () => this.setF('role', j.t) })),
+      roleOpts: ['Any role'].concat(JOBS.map(j => j.t)), cityOpts: ['TP.HCM', 'Hà Nội', 'Đà Nẵng', 'Cần Thơ', 'Bảo Lộc', 'Other'],
+      F: { ...F, cvLabel: F.cv || 'PDF or Word, up to 5 MB' }, on, err: this.state.err,
+      sent: this.state.sent, notSent: !this.state.sent,
+      submit: () => { if (!F.name.trim() || !(F.phone.trim() || F.email.trim())) return this.setState({ err: 'Please add your name and a phone number or email.' }); this.setState({ sent: true }); },
+      reset: () => this.setState({ sent: false, F: { name: '', phone: '', email: '', role: 'Any role', city: 'TP.HCM', msg: '', cv: '' } })
+    };
+  }
+}
+</script>
+</body>
+</html>

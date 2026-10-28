@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/colors_and_type.css">
+<script src="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/_ds_bundle.js"></script>
+<style>body{margin:0;background:#FBF6E6;font-family:var(--font-body)}*{box-sizing:border-box}a{color:#035F1D;text-decoration:none}a:hover{color:#658D1B}input::placeholder{color:inherit;opacity:.55}</style>
+</helmet>
+<div id="st-scale" data-screen-label="Our Stores" style="width:1440px;margin:0 auto;zoom:1;background:#FBF6E6;color:#2B2416;overflow:hidden">
+<div style="position:relative;height:820px;background:url(assets/photos/store-flagship-int.jpg) center/cover">
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,35,18,.55),rgba(15,35,18,0) 28%,rgba(15,35,18,0) 45%,rgba(15,35,18,.78))"></div>
+<div style="position:absolute;left:88px;right:88px;top:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#FBF6E6"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:36px;width:auto"><div style="display:flex;gap:34px"><sc-for list="{{ navD }}" as="n" hint-placeholder-count="6"><div data-dd="{{ n.href }}" style="position:relative;display:flex"><a href="{{ n.href }}" style="font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:{{ n.c }};border-bottom:2px solid {{ n.ul }};padding-bottom:4px">{{ n.t }}</a><div data-ddm="1" style="display:none;position:absolute;top:100%;left:-18px;padding-top:14px;z-index:60"><div style="background:#FBF6E6;border:1px solid #E4DACE;border-radius:12px;box-shadow:0 14px 34px rgba(3,40,15,.2);padding:8px;display:flex;flex-direction:column;min-width:190px"><a href="#tea-leaf" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Tea Leaf</a><a href="#coffee" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Coffee</a></div></div></div></sc-for></div><div style="display:flex;gap:18px;align-items:center;font:700 12px/1 var(--font-body);letter-spacing:.12em"><span>VI <span style="opacity:.5">/ EN</span></span><a href="#shop" style="border:1px solid rgba(251,246,230,.7);border-radius:999px;padding:9px 16px;color:#FBF6E6">Shop</a></div></div>
+<div style="position:absolute;left:88px;right:88px;bottom:72px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;color:#FBF6E6"><div style="display:flex;flex-direction:column;gap:18px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#E9E887">OUR STORES · CỬA HÀNG</span><h2 style="margin:0;font:700 128px/.86 var(--font-display);letter-spacing:-.045em">Any size,<br>the same ritual</h2></div><p style="margin:0;max-width:380px;font:400 18px/1.6 var(--font-body);text-wrap:pretty">Phúc Long works in a double-height flagship and in a counter inside a mall. The tea, the craft and the welcome stay the same.</p></div>
+</div>
+<div style="padding:110px 88px 0;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px"><h3 style="margin:0;font:700 72px/.95 var(--font-display);letter-spacing:-.03em;color:#035F1D">Three models,<br>drawn to scale</h3><span style="max-width:360px;font:400 16px/1.6 var(--font-body);color:#4A4237">Photo widths follow typical floor area. Areas are draft, to be confirmed by Development.</span></div>
+<div style="display:flex;gap:24px;align-items:flex-end">
+<sc-for list="{{ scaleB }}" as="f" hint-placeholder-count="3">
+<div style="flex:{{ f.flex }};display:flex;flex-direction:column;gap:16px;min-width:0">
+<div style="height:{{ f.h }}px;border-radius:6px;background:url({{ f.img }}) {{ f.pos }}/cover"></div>
+<div style="height:14px;border-left:2px solid #035F1D;border-right:2px solid #035F1D;display:flex;align-items:center"><span style="flex:1;height:2px;background:#035F1D"></span></div>
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:700 36px/1 var(--font-display);color:#035F1D">{{ f.name }}</span><span style="font:700 14px/1 var(--font-body);color:#692128">{{ f.area }}</span></div>
+<p style="margin:0;font:400 15px/1.6 var(--font-body);color:#4A4237;text-wrap:pretty">{{ f.p }}</p>
+<span style="font:700 11px/1 var(--font-body);letter-spacing:.2em;color:#685C20">{{ f.n }} STORES · {{ f.where }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="margin-top:110px;height:110px;background:url(assets/pattern-primary-weave.png) left top/auto 240px repeat-x"></div>
+<div style="background:#035F1D;color:#FBF6E6;padding:96px 88px;display:grid;grid-template-columns:520px minmax(0,1fr);gap:72px;align-items:center">
+<svg viewBox="0 0 600 638" style="width:100%;height:auto;display:block;overflow:visible">
+<path d="{{ vnD }}" fill="#0E4A1F" stroke="#3E7A2E" stroke-width="1"></path>
+<sc-for list="{{ mapD }}" as="c" hint-placeholder-count="0"><circle cx="{{ c.x }}" cy="{{ c.y }}" r="{{ c.R }}" fill="{{ c.fill }}" opacity=".3"></circle></sc-for>
+<sc-for list="{{ mapD }}" as="c" hint-placeholder-count="0"><circle cx="{{ c.x }}" cy="{{ c.y }}" r="{{ c.r }}" fill="{{ c.fill }}"></circle></sc-for>
+<circle cx="387" cy="293" r="3" fill="#E9E887"></circle><circle cx="395" cy="298" r="2" fill="#E9E887"></circle><text x="387" y="275" text-anchor="middle" style="font:400 italic 12px var(--font-body)" fill="#DAE0C1">Quần đảo Hoàng Sa</text>
+<circle cx="464" cy="551" r="3" fill="#E9E887"></circle><circle cx="456" cy="560" r="2" fill="#E9E887"></circle><text x="464" y="580" text-anchor="middle" style="font:400 italic 12px var(--font-body)" fill="#DAE0C1">Quần đảo Trường Sa</text>
+</svg>
+<div style="display:flex;flex-direction:column;gap:28px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#E9E887">WHERE WE ARE · 2026</span><h3 style="margin:0;font:700 72px/.95 var(--font-display);letter-spacing:-.03em">Strong in the cities.<br>Room to grow everywhere.</h3>
+<div style="display:flex;flex-direction:column;border-top:1px solid rgba(251,246,230,.25)"><sc-for list="{{ regionRows }}" as="r" hint-placeholder-count="4"><div style="display:grid;grid-template-columns:minmax(0,1fr) 200px 70px;gap:20px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(251,246,230,.25)"><span style="font:700 26px/1 var(--font-display)">{{ r.t }}</span><div style="height:8px;background:rgba(251,246,230,.15);border-radius:4px"><div style="height:8px;width:{{ r.pct }}%;background:#E9E887;border-radius:4px"></div></div><span style="font:700 26px/1 var(--font-display);text-align:right">{{ r.n }}</span></div></sc-for></div>
+<div style="display:flex;gap:16px;flex-wrap:wrap;font:400 12px/1 var(--font-body);color:#DAE0C1"><sc-for list="{{ legendD }}" as="l" hint-placeholder-count="4"><span style="display:flex;align-items:center;gap:6px"><span style="width:12px;height:12px;border-radius:50%;background:{{ l.c }}"></span>{{ l.t }}</span></sc-for></div></div>
+</div>
+<div style="padding:96px 88px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px"><h3 style="margin:0;font:700 56px/.95 var(--font-display);letter-spacing:-.03em;color:#035F1D">Store directory</h3><input value="{{ dB.q }}" onChange="{{ dB.onQ }}" placeholder="Search 234 stores" style="width:420px;border:none;border-bottom:2px solid #035F1D;padding:12px 0;font:400 18px/1 var(--font-body);background:transparent;color:#2B2416;outline:none"></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ dB.pills }}" as="p" hint-placeholder-count="5"><button onClick="{{ p.pick }}" style="cursor:pointer;border:1px solid #035F1D;border-radius:999px;padding:10px 16px;background:{{ p.bg }};color:{{ p.fg }};font:700 13px/1 var(--font-body)">{{ p.t }} · {{ p.c }}</button></sc-for><span style="width:24px"></span><sc-for list="{{ dB.fpills }}" as="p" hint-placeholder-count="4"><button onClick="{{ p.pick }}" style="cursor:pointer;border:1px solid #692128;border-radius:999px;padding:10px 16px;background:{{ p.bg }};color:{{ p.fg }};font:700 13px/1 var(--font-body)">{{ p.t }}</button></sc-for></div>
+<div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1.8fr) minmax(0,1fr) 120px 110px;gap:20px;padding:12px 4px;border-bottom:2px solid #2B2416;font:700 11px/1 var(--font-body);letter-spacing:.18em;color:#685C20"><span>STORE</span><span>ADDRESS</span><span>CITY</span><span>FORMAT</span><span style="text-align:right">HOURS</span></div>
+<div style="height:520px;overflow:auto;margin-top:-28px"><sc-for list="{{ dB.rows }}" as="r" hint-placeholder-count="8"><div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1.8fr) minmax(0,1fr) 120px 110px;gap:20px;align-items:center;padding:14px 4px;border-bottom:1px solid #E4DACE;font:400 14px/1.4 var(--font-body);color:#4A4237"><span style="font:700 15px/1.3 var(--font-body);color:#035F1D">{{ r.name }}</span><span>{{ r.addr }}</span><span>{{ r.city }}</span><span style="color:{{ r.fc }};font-weight:700">{{ r.fmt }}</span><span style="text-align:right">{{ r.hours }}</span></div></sc-for></div>
+</div>
+<footer style="background:#1C4220;color:#FBF6E6;padding:40px 88px;display:flex;justify-content:space-between;align-items:center;gap:24px"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:30px;width:auto"><div style="display:flex;gap:22px"><sc-for list="{{ navD }}" as="n" hint-placeholder-count="6"><a href="{{ n.href }}" style="font:600 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6">{{ n.t }}</a></sc-for></div><div style="display:flex;align-items:center;gap:22px"><a href="#" style="font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;background:#FDF8E1;color:#035F1D;padding:12px 18px;border-radius:999px">Contact us →</a><span style="font:500 12px/1 var(--font-body);opacity:.8">© Phúc Long Heritage</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const REG = [
+  { k: 'north', vi: 'MIỀN BẮC', en: 'The North', img: 'assets/photos/store-flagship-hanoi-night.png', pos: 'center 40%', p: 'Hà Nội leads, with heritage flagships around Hồ Gươm, then Hải Phòng, Hạ Long and up to Sa Pa.' },
+  { k: 'central', vi: 'MIỀN TRUNG & TÂY NGUYÊN', en: 'Central & Highlands', img: 'assets/photos/store-hoian.jpg', pos: 'center 45%', p: 'Coastal cities and destinations: Đà Nẵng, Hội An, Huế, Nha Trang, and Đà Lạt in the tea and coffee highlands.' },
+  { k: 'south', vi: 'TP.HCM & ĐÔNG NAM BỘ', en: 'Saigon & the South-East', img: 'assets/photos/store-opening-hcm.png', pos: 'center 30%', p: 'Where Phúc Long grew up. Flagships, neighbourhood stores and mall kiosks across the city and its satellites.' },
+  { k: 'mekong', vi: 'MIỀN TÂY', en: 'Mekong Delta', img: 'assets/photos/store-cantho.jpg', pos: 'center', p: 'Riverside towns from Mỹ Tho to Cà Mau, and the island of Phú Quốc.' }
+];
+const CITY = [['Hà Nội', 'north', 30], ['Hải Phòng', 'north', 4], ['Quảng Ninh', 'north', 3], ['Lào Cai', 'north', 1], ['Thanh Hóa', 'central', 1], ['Vinh', 'central', 1], ['Huế', 'central', 2], ['Đà Nẵng', 'central', 10], ['Hội An', 'central', 2], ['Quy Nhơn', 'central', 1], ['Nha Trang', 'central', 3], ['Đà Lạt', 'central', 3], ['Buôn Ma Thuột', 'central', 1], ['TP.HCM', 'south', 128], ['Bình Dương', 'south', 9], ['Đồng Nai', 'south', 7], ['Vũng Tàu', 'south', 4], ['Phan Thiết', 'south', 2], ['Cần Thơ', 'mekong', 9], ['Long Xuyên', 'mekong', 2], ['Mỹ Tho', 'mekong', 4], ['Phú Quốc', 'mekong', 5], ['Cà Mau', 'mekong', 2]];
+const ST = ['Lê Lợi', 'Nguyễn Huệ', 'Trần Hưng Đạo', 'Hai Bà Trưng', 'Lý Thường Kiệt', 'Nguyễn Trãi', 'Phan Chu Trinh', 'Quang Trung', 'Lê Duẩn', 'Điện Biên Phủ', 'Võ Văn Tần', 'Pasteur', 'Nguyễn Thị Minh Khai', 'Bạch Đằng', 'Hùng Vương', 'Trần Phú', 'Lê Thánh Tôn', 'Cách Mạng Tháng 8', 'Nguyễn Văn Linh', 'Phạm Văn Đồng', 'Hoàng Diệu', 'Ngô Quyền', 'Lý Tự Trọng', 'Tôn Đức Thắng', 'Võ Thị Sáu', 'Nam Kỳ Khởi Nghĩa', 'Xuân Thủy', 'Kim Mã', 'Tràng Tiền', 'Hàng Bài', 'Nguyễn Đình Chiểu', 'Lê Văn Sỹ', 'Phan Xích Long', 'Sư Vạn Hạnh', 'Nguyễn Văn Cừ', 'Lạc Long Quân', 'Âu Cơ', 'Cộng Hòa', 'Trường Chinh', 'Phan Văn Trị'];
+const DIST = { 'TP.HCM': ['Quận 1', 'Quận 3', 'Bình Thạnh', 'Phú Nhuận', 'Quận 7', 'Thủ Đức', 'Tân Bình', 'Gò Vấp', 'Quận 10', 'Quận 5'], 'Hà Nội': ['Hoàn Kiếm', 'Ba Đình', 'Đống Đa', 'Cầu Giấy', 'Tây Hồ', 'Hai Bà Trưng', 'Long Biên', 'Nam Từ Liêm'] };
+const FLAG = { 'Hà Nội': ['Hàng Bài', 'Bưu Điện Hà Nội'], 'TP.HCM': ['Nguyễn Huệ', 'Lý Tự Trọng'], 'Đà Nẵng': ['Bạch Đằng'], 'Hội An': ['Phố cổ Hội An'] };
+const KIOSK = { 'TP.HCM': ['Vincom Đồng Khởi', 'AEON Tân Phú', 'Crescent Mall', 'SC VivoCity', 'Gigamall'], 'Hà Nội': ['Vincom Bà Triệu', 'AEON Long Biên', 'Lotte Mall Tây Hồ'] };
+const FMT = { Flagship: '#692128', Standard: '#035F1D', Kiosk: '#685C20' };
+const STORES = (() => { const out = []; let seed = 7; CITY.forEach(([city, reg, n]) => { const fl = FLAG[city] || [], ki = KIOSK[city] || [], d = DIST[city]; for (let i = 0; i < n; i++) { seed = (seed * 9301 + 49297) % 233280; let fmt = 'Standard', label; if (i < fl.length) { fmt = 'Flagship'; label = fl[i]; } else if (i < fl.length + ki.length) { fmt = 'Kiosk'; label = ki[i - fl.length]; } else label = ST[(seed + i * 7) % ST.length]; const num = 10 + (seed % 380); const dist = d ? d[(i + seed) % d.length] : ''; out.push({ city, reg, fmt, name: 'Phúc Long ' + label + (fmt === 'Standard' && d ? ' · ' + dist : ''), short: label + (fmt === 'Standard' && d ? ', ' + dist : ''), addr: (fmt === 'Kiosk' ? 'Tầng 1, ' + label : num + ' ' + label) + (dist ? ', ' + dist : ''), hours: fmt === 'Kiosk' ? '9:00–22:00' : '7:00–22:30', fc: FMT[fmt], f1: fmt === 'Standard' ? '' : fmt[0] }); } }); return out; })();
+const tier = n => n >= 30 ? 0 : n >= 8 ? 1 : n >= 3 ? 2 : 3;
+const LIGHT = ['#035F1D', '#658D1B', '#AAC939', '#C0AD7C'], DARK = ['#FDFFA3', '#E9E887', '#AAC939', '#C0AD7C'];
+const LBL = { 'Hà Nội': ['end', -14, 4], 'Đà Nẵng': ['start', 16, 4], 'TP.HCM': ['end', -20, -14], 'Cần Thơ': ['end', -14, 18], 'Nha Trang': ['start', 14, 4], 'Hải Phòng': ['start', 12, -8], 'Bình Dương': ['start', 18, -18], 'Phú Quốc': ['end', -12, 4], 'Đà Lạt': ['end', -10, 18], 'Lào Cai': ['end', -10, 4] };
+const regCount = k => STORES.filter(s => s.reg === k).length;
+class Component extends DCLogic {
+  componentDidUpdate() { if (window.PL) { const __v = this.state.vi !== undefined ? (this.state.vi ? 'vi' : 'en') : this.state.lang; if ((__v === 'vi' || __v === 'en') && __v !== PL.lang) PL.lang = __v; } }
+  state = { vn: null, hlA: null, hlD: 'south', q: {}, f: {}, ff: {} };
+  fit = () => { const el = document.getElementById('st-scale'); if (el) el.style.zoom = Math.max(0.3, document.documentElement.clientWidth / 1440); };
+  componentWillUnmount() { window.removeEventListener('resize', this.fit); }
+  componentDidMount() { this.fit(); window.addEventListener('resize', this.fit); fetch(window.PLres ? PLres('assets/map/vn-map.json') : 'assets/map/vn-map.json').then(r => r.json()).then(vn => this.setState({ vn })); }
+  dots(pal, hl, pick) { const vn = this.state.vn; if (!vn) return []; return CITY.map(([name, reg, n]) => { const [x, y] = vn.cities[name]; const on = !hl || hl === reg; return { name, n, x, y, R: 8 + Math.sqrt(n) * 6.5, r: 3 + Math.sqrt(n) * 0.9, fill: pal[tier(n)], hop: on ? 0.3 : 0.06, op: on ? 1 : 0.25, pick: pick ? () => pick(reg) : undefined }; }); }
+  labels(hl) { const vn = this.state.vn; if (!vn) return []; return CITY.filter(c => LBL[c[0]]).map(([name, reg, n]) => { const [x, y] = vn.cities[name], [anchor, dx, dy] = LBL[name]; return { name, n, lx: x + dx, ly: y + dy, anchor, op: !hl || hl === reg ? 1 : 0.25 }; }); }
+  dir(key, opts = {}) { const q = (this.state.q[key] || '').toLowerCase().trim(), f = opts.fixed || this.state.f[key] || 'all', ff = this.state.ff[key] || 'all';
+    const set = (o) => this.setState(s => ({ [o.k]: { ...s[o.k], [key]: o.v } }));
+    let rows = STORES.filter(s => (f === 'all' || s.reg === f) && (ff === 'all' || s.fmt === ff) && (!q || (s.name + ' ' + s.addr + ' ' + s.city).toLowerCase().includes(q)));
+    const dark = opts.dark;
+    const pills = [{ k: 'all', t: 'All regions', c: STORES.length }].concat(REG.map(r => ({ k: r.k, t: r.en, c: regCount(r.k) }))).map(p => ({ ...p, bg: f === p.k ? '#035F1D' : (dark ? 'transparent' : '#FFFFFF'), fg: f === p.k ? '#FBF6E6' : '#035F1D', tc: f === p.k ? '#035F1D' : '#8A7F6E', pick: () => set({ k: 'f', v: p.k }) }));
+    const fpills = ['all', 'Flagship', 'Standard', 'Kiosk'].map(k => ({ t: k === 'all' ? 'All formats' : k, bg: ff === k ? '#692128' : 'transparent', fg: ff === k ? '#FBF6E6' : '#692128', pick: () => set({ k: 'ff', v: k }) }));
+    const groups = []; rows.forEach(r => { let g = groups[groups.length - 1]; if (!g || g.city !== r.city) groups.push(g = { city: r.city, rows: [] }); g.rows.push(r); }); groups.forEach(g => g.n = g.rows.length);
+    const all = rows.length; rows = rows.slice(0, q ? 234 : 60);
+    return { q: this.state.q[key] || '', n: all, rows, pills, fpills, groups, onQ: e => { const v = e.target.value; this.setState(s => ({ q: { ...s.q, [key]: v } })); } };
+  }
+  renderVals() {
+    const h = ['#our-story', '#our-drink', '#tea-leaf', '#our-stores', '#our-people', '#media'], T = ['Our Story', 'Our Drink', 'Our Products', 'Our Stores', 'Our People', 'Media'];
+    const navD = T.map((t, i) => ({ t, href: h[i], c: i === 3 ? '#EFF4A4' : '#FBF6E6', ul: i === 3 ? '#EFF4A4' : 'transparent' }));
+    const navL = T.map((t, i) => ({ t, href: h[i], c: i === 3 ? '#692128' : '#035F1D', ul: i === 3 ? '#692128' : 'transparent' }));
+    const cnt = f => STORES.filter(s => s.fmt === f).length;
+    const pickD = k => this.setState({ hlD: k }); const rd = REG.find(r => r.k === this.state.hlD);
+    const stories = [
+      { k: 'north', lat: '22°N', img: 'assets/photos/store-flagship-hanoi-night.png', pos: 'center 40%', h: 'A five-storey corner in Hà Nội', p: 'Our northern flagships sit in the Old Quarter. One has a lattice façade lit warm at night, another has a post-office board painted inside. From there we reach Hải Phòng, Hạ Long and Sa Pa.' },
+      { k: 'central', lat: '16°N', img: 'assets/photos/store-hoian.jpg', pos: 'center 45%', h: 'Shophouses on the coast', p: 'In Đà Nẵng and Hội An we open where travellers walk: a restored yellow shophouse, green shutters, tables on the street. Nha Trang and Đà Lạt follow.' },
+      { k: 'south', lat: '11°N', img: 'assets/photos/store-opening-hcm.png', pos: 'center 30%', h: 'Saigon, where it all began', p: 'Since 1968 Saigon has been home. Today it has flagships on Nguyễn Huệ, neighbourhood stores in every district and kiosks in the malls.' },
+      { k: 'mekong', lat: '10°N', img: 'assets/photos/store-cantho.jpg', pos: 'center', h: 'Down the river to Cà Mau', p: 'Along the Mekong, a two-storey store on a Cần Thơ riverside street, then Mỹ Tho, Long Xuyên, Cà Mau and the island of Phú Quốc.' }
+    ].map(s => { const r = REG.find(x => x.k === s.k); return { ...s, region: r.vi, n: regCount(s.k), kc: this.state.hlA === s.k ? '#035F1D' : '#692128', enter: () => this.setState({ hlA: s.k }) }; });
+    const lg = pal => ['30+ stores', '8–29', '3–7', '1–2'].map((t, i) => ({ t, c: pal[i] }));
+    return {
+      vnD: this.state.vn ? this.state.vn.d : '', navD, navL,
+      formats: [{ k: 'FLAGSHIP', n: cnt('Flagship') }, { k: 'STANDARD', n: cnt('Standard') }, { k: 'KIOSK', n: cnt('Kiosk') }],
+      storiesA: stories, mapA: this.dots(LIGHT, this.state.hlA), labelsA: this.labels(this.state.hlA),
+      mapC: this.dots(LIGHT, null), labelsC: this.labels(null), mapD: this.dots(DARK, null), mapF: this.dots(['#2B2416', '#685C20', '#C0AD7C', '#C0AD7C'], null),
+      mapE: this.dots(DARK, this.state.hlD, pickD), labelsE: this.labels(this.state.hlD).map(l => ({ ...l, op: l.op === 1 ? 1 : 0.35 })),
+      legend: lg(LIGHT), legendD: lg(DARK),
+      regionRows: REG.map(r => ({ t: r.en, n: regCount(r.k), pct: Math.round(regCount(r.k) / 150 * 100), cities: CITY.filter(c => c[1] === r.k).map(c => c[0]).join(' · ') })),
+      scaleB: [
+        { name: 'Flagship', area: '≈ 300 m²', flex: 300, h: 520, img: 'assets/photos/store-flagship-int.jpg', pos: 'center', n: cnt('Flagship'), where: 'CITY LANDMARKS', p: 'A tea house with seating, events and a local story built into the design.' },
+        { name: 'Standard', area: '≈ 120 m²', flex: 160, h: 420, img: 'assets/photos/store-cantho.jpg', pos: 'center', n: cnt('Standard'), where: 'STREETS & DISTRICTS', p: 'The neighbourhood store: dine-in, take-away and delivery under one roof.' },
+        { name: 'Kiosk', area: '≈ 15 m²', flex: 90, h: 320, img: 'assets/photos/store-kiosk.jpg', pos: 'center', n: cnt('Kiosk'), where: 'MALLS & TRANSIT', p: 'A full tea bar in a small footprint, open within weeks.' }
+      ],
+      facades: [
+        { city: 'Hà Nội', no: '01', fmt: 'FLAGSHIP', img: 'assets/photos/store-flagship-hanoi-night.png', pos: 'center 40%', w: 520, cap: 'Hàng Bài · lattice façade, five floors' },
+        { city: 'Sài Gòn', no: '02', fmt: 'FLAGSHIP', img: 'assets/photos/store-opening-hcm.png', pos: 'center 20%', w: 640, cap: 'Opening day · oak portal, green corner' },
+        { city: 'Hội An', no: '03', fmt: 'DESTINATION', img: 'assets/photos/store-hoian.jpg', pos: 'center 45%', w: 560, cap: 'Old town shophouse at blue hour' },
+        { city: 'Cần Thơ', no: '04', fmt: 'STANDARD', img: 'assets/photos/store-cantho.jpg', pos: 'center', w: 560, cap: 'Riverside street, two storeys' },
+        { city: 'Sài Gòn', no: '05', fmt: 'KIOSK', img: 'assets/photos/store-kiosk.jpg', pos: 'center', w: 400, cap: 'Mall kiosk · oak and woven lattice' }
+      ],
+      regD: REG.map(r => ({ t: r.en, bg: this.state.hlD === r.k ? '#E9E887' : 'transparent', fg: this.state.hlD === r.k ? '#035F1D' : '#E9E887', pick: () => pickD(r.k) })),
+      R: { ...rd, n: regCount(rd.k) },
+      dA: this.dir('a'), dB: this.dir('b'), dC: this.dir('c'), dD: this.dir('d', { fixed: this.state.hlD }), dE: this.dir('e')
+    };
+  }
+}
+</script>
+</body>
+</html>

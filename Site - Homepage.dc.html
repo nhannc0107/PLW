@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/colors_and_type.css">
+<script src="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/_ds_bundle.js"></script>
+<style>html{scroll-behavior:smooth}body{margin:0;background:#FDF8E1;font-family:var(--font-body);color:#1C2A1E}*{box-sizing:border-box}a{color:#035F1D;text-decoration:none}a:hover{color:#658D1B}</style>
+</helmet>
+<div style="width:100%;overflow-x:hidden;position:relative">
+
+<section data-screen-label="01 Hero" style="width:100%;height:clamp(780px,100vh,1040px);position:relative;overflow:hidden;background:#AAC939">
+<img src="assets/photos/p19-select.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.1) saturate(1.15)">
+<video data-hero="1" preload="auto" src="assets/video/farm-to-table.mp4" poster="assets/photos/p19-select.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.12) saturate(1.2)"></video>
+<div style="position: absolute; inset: 0; background: linear-gradient(180deg,rgba(3,70,25,.32) 0%,rgba(3,70,25,0) 26%,rgba(3,70,25,0) 50%,rgba(3,70,25,.55) 100%); "><div style="position:absolute;left:clamp(24px,4.6vw,100px);bottom:clamp(170px,26vh,280px);width:min(62%,1100px);color:#FBF6E6;display:flex;flex-direction:column;gap:20px;text-shadow:0 2px 28px rgba(3,50,15,.35)"><span style="font:700 12px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:#EFF4A4">{{ t.eyebrow }}</span>
+<h1 style="margin: 0; font: 700 clamp(64px,7.6vw,150px)/.94 var(--font-display); letter-spacing: -.03em; text-wrap: balance">{{ t.headline }}</h1><p style="margin: 0; font: 400 clamp(17px,1.3vw,22px)/1.6 var(--font-body); max-width: 520px">{{ t.sub }}</p>
+</div></div>
+<div style="position:absolute;left:clamp(24px,4vw,88px);right:clamp(24px,4vw,88px);top:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#FBF6E6;z-index:3">
+<img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:36px;width:auto">
+<div style="display:flex;gap:clamp(16px,2vw,34px);align-items:center;flex-wrap:wrap;justify-content:center"><sc-for list="{{ nav }}" as="n" hint-placeholder-count="6"><div data-dd="{{ n.href }}" style="position:relative;display:flex"><a href="{{ n.href }}" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ n.t }}</a><div data-ddm="1" style="display:none;position:absolute;top:100%;left:-18px;padding-top:14px;z-index:60"><div style="background:#FBF6E6;border:1px solid #E4DACE;border-radius:12px;box-shadow:0 14px 34px rgba(3,40,15,.2);padding:8px;display:flex;flex-direction:column;min-width:190px"><a href="#tea-leaf" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Tea Leaf</a><a href="#coffee" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Coffee</a></div></div></div></sc-for></div>
+<div style="display:flex;gap:18px;align-items:center;font:700 12px/1 var(--font-body);letter-spacing:.12em"><span onClick="{{ toggleLang }}" style="cursor:pointer">EN <span style="opacity:.5">/ VI</span></span><a href="#shop" style="text-decoration:none;border:1px solid rgba(251,246,230,.7);border-radius:999px;padding:9px 16px;color:#FBF6E6" style-hover="background:#FBF6E6;color:#035F1D">{{ t.shop }}</a></div></div>
+
+<div style="position:absolute;right:clamp(24px,4vw,88px);bottom:0;display:flex;gap:12px">
+<sc-for list="{{ doors }}" as="d" hint-placeholder-count="4"><a href="{{ d.href }}" style="text-decoration:none;display:block;width:150px;height:56px;position:relative"><div style="position:absolute;right:0;bottom:0;width:150px;height:230px;border-radius:75px 75px 0 0;overflow:hidden;cursor:pointer;opacity:.94;transform:translateY(calc(100% - 56px));transition:transform .7s cubic-bezier(.2,.7,.2,1);z-index:1" style-hover="transform:translateY(0);z-index:5"><img src="{{ d.img }}" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(1.1) saturate(1.1)"><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,70,25,.5) 0%,rgba(3,70,25,.05) 40%,rgba(3,70,25,.6) 100%)"></div><span style="position:absolute;left:0;right:0;top:24px;text-align:center;font:700 15px/1.1 var(--font-display);color:#FBF6E6;padding:0 8px">{{ d.t }}</span><span style="position:absolute;left:0;right:0;bottom:22px;text-align:center;font:700 11px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:#FBF6E6">{{ t.explore }} →</span></div></a></sc-for>
+</div>
+</section>
+
+
+
+<div id="plh-scale" style="width:1440px;zoom:1">
+
+<section id="dna" data-screen-label="02 Brand DNA" style="position:relative;height:800px;overflow:hidden;background:#FDF8E1">
+<span style="position:absolute;left:80px;top:70px;font:700 12px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:#658D1B">{{ t.dnaEyebrow }}</span>
+<div style="position:absolute;left:80px;top:130px;display:flex;flex-direction:column;color:#035F1D;font:700 150px/1.1 var(--font-display);letter-spacing:-.04em;white-space:nowrap">
+<span>{{ t.dna1 }}</span>
+<span style="display:flex;align-items:center;gap:28px;margin:10px 0 14px">{{ t.dna2a }}<span style="display:block;width:470px;height:128px;border-radius:64px;overflow:hidden;background:#AAC939;position:relative"><video data-hero="1" muted="" loop="" playsinline="" preload="auto" src="assets/video/highland-to-sip.mp4" poster="assets/photos/p02-bud.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video></span>{{ t.dna2b }}</span>
+<span style="color:#8CAB19">{{ t.dna3 }}</span></div>
+<p style="position: absolute; left: 88px; width: 420px; margin: 0px; font: 300 18px/1.65 var(--font-body); color: rgb(58, 58, 46); top: 642px">{{ t.dnaBody }}</p>
+<div style="position:absolute;right:90px;bottom:60px;width:220px;height:220px"><svg viewBox="0 0 220 220" width="220" height="220" style="position:absolute;inset:0"><defs><path id="ring6" d="M110 110 m-92 0 a92 92 0 1 1 184 0 a92 92 0 1 1 -184 0"></path></defs><text style="font:700 13px var(--font-body);letter-spacing:.2em" fill="#035F1D"><textPath href="#ring6">ROOTED IN HERITAGE · BREWED FOR TODAY · </textPath></text></svg><span style="position:absolute;left:55px;top:55px;width:110px;height:110px;background:url(assets/logo-stamp-green.png) center/contain no-repeat"></span></div></section>
+
+<section id="story" data-screen-label="03 Story" style="position:relative;height:840px;overflow:hidden;background:url(assets/photos/p01-highlands.jpg) center/cover">
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,70,25,.3) 0%,rgba(3,70,25,0) 30%,rgba(3,70,25,.62) 100%)"></div>
+<span style="position:absolute;left:80px;top:60px;font:700 11px/1 var(--font-body);letter-spacing:.24em;text-transform:uppercase;color:#FBF6E6">{{ c1.n }} · {{ c1.eyebrow }}</span>
+<h2 style="position:absolute;left:80px;bottom:150px;width:900px;margin:0;font:700 168px/.86 var(--font-display);letter-spacing:-.045em;color:#FDF8E1;text-shadow:0 2px 30px rgba(3,50,15,.3);text-wrap:balance">{{ c1.t }}</h2>
+<div style="position:absolute;right:80px;bottom:160px;width:360px;color:#FBF6E6;display:flex;flex-direction:column;gap:16px"><p style="margin:0;font:400 17px/1.65 var(--font-body)">{{ c1.b }}</p><a href="#our-story" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ c1.cta }} →</a></div>
+<div style="position:absolute;left:80px;right:80px;bottom:70px;height:1px;background:rgba(251,246,230,.6)"></div><span style="position:absolute;left:80px;bottom:40px;font:700 12px/1 var(--font-body);letter-spacing:.2em;color:#FBF6E6">1968</span><span style="position:absolute;right:80px;bottom:40px;font:700 12px/1 var(--font-body);letter-spacing:.2em;color:#FBF6E6">{{ t.today }}</span></section>
+
+<section id="tea" data-screen-label="04 Tea" style="position:relative;height:840px;overflow:hidden;background:#1C4220;color:#FBF6E6">
+<span style="position:absolute;left:80px;top:50px;font:700 11px/1 var(--font-body);letter-spacing:.24em;text-transform:uppercase;color:#EFF4A4">{{ c2.n }} · {{ c2.eyebrow }}</span>
+<h2 style="position:absolute;left:0;right:0;top:100px;margin:0;text-align:center;font:700 84px/1 var(--font-display);letter-spacing:-.03em">{{ c2.t }}</h2>
+<img src="assets/products/tin-lai.png" alt="" style="position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);height:560px;width:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))">
+<div style="position:absolute;left:80px;bottom:100px;width:300px"><span style="font:700 11px/1.8 var(--font-body);letter-spacing:.2em;text-transform:uppercase;color:#EFF4A4">{{ t.pressed }}<br>{{ t.bags }}<br>{{ t.cans }}</span></div>
+<div style="position:absolute;right:80px;bottom:100px;width:320px;display:flex;flex-direction:column;gap:14px;text-align:right"><p style="margin:0;font:300 17px/1.65 var(--font-body)">{{ c2.b }}</p><a href="#tea-leaf" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#EFF4A4" style-hover="color:#FBF6E6">{{ c2.cta }} →</a></div></section>
+
+<section id="stores" data-screen-label="05 Stores" style="position:relative;height:780px;overflow:hidden;display:flex"><div style="width:50%;background:url(assets/photos/ls-street.jpg) center/cover"></div><div style="width:50%;background:url(assets/photos/ls-rooftop.jpg) center/cover"></div>
+<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:440px;background:#FDFBF0;padding:44px 40px 36px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center"><span style="font:700 11px/1 var(--font-body);letter-spacing:.24em;text-transform:uppercase;color:#035F1D">{{ c3.n }} · {{ c3.eyebrow }}</span><h2 style="margin:0;font:700 52px/1 var(--font-display);letter-spacing:-.02em;color:#035F1D">{{ c3.t }}</h2><span style="width:40px;height:1px;background:#035F1D"></span><div style="display:flex;gap:36px"><div style="display:flex;flex-direction:column;gap:4px"><span style="font:700 52px/1 var(--font-display);color:#035F1D">237</span><span style="font:600 10px/1.3 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#3A3A2E">{{ t.statVn }}</span></div><div style="display:flex;flex-direction:column;gap:4px"><span style="font:700 52px/1 var(--font-display);color:#035F1D">3</span><span style="font:600 10px/1.3 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#3A3A2E">{{ t.statUs }}</span></div></div><a href="#our-stores" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#035F1D" style-hover="color:#658D1B">→ {{ c3.cta }}</a></div></section>
+
+<section id="people" data-screen-label="06 People" style="position:relative;height:820px;overflow:hidden;background:#FFEDEF">
+<div style="position:absolute;left:80px;top:70px;width:560px;height:700px;border-radius:28px;background:url(assets/photos/p24-share.jpg) center/cover"></div>
+<div style="position:absolute;left:520px;top:170px;width:440px;background:#FDF8E1;padding:40px 38px;display:flex;flex-direction:column;gap:16px;box-shadow:0 24px 50px rgba(28,66,32,.16)"><span style="font:700 12px/1 var(--font-body);letter-spacing:.22em;text-transform:uppercase;color:#035F1D">{{ c4.n }} · {{ c4.eyebrow }}</span><h2 style="margin:0;font:700 56px/1 var(--font-display);letter-spacing:-.03em;color:#035F1D">{{ c4.t }}</h2><p style="margin:0;font:300 17px/1.65 var(--font-body);color:#4F2C1D">{{ c4.b }}</p><a href="#our-people" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#035F1D" style-hover="color:#658D1B">{{ c4.cta }} →</a></div>
+<div style="position:absolute;left:1030px;top:70px;width:290px;height:380px;background:url(assets/photos/p19-select.jpg) center/cover;border-radius:145px 145px 0 0"></div>
+<div style="position:absolute;left:990px;top:440px;width:310px;height:310px;border-radius:50%;overflow:hidden;border:8px solid #FFEDEF;background:#AAC939"><video data-hero="1" muted="" loop="" playsinline="" preload="auto" src="assets/video/ugc-desk.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video></div></section>
+
+
+</div>
+
+<footer style="background:#1C4220;color:#FBF6E6;padding:40px clamp(24px,5vw,120px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:30px;width:auto"><div style="display:flex;gap:22px;flex-wrap:wrap"><sc-for list="{{ nav }}" as="n" hint-placeholder-count="6"><a href="{{ n.href }}" style="text-decoration:none;font:600 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ n.t }}</a></sc-for></div><div style="display:flex;align-items:center;gap:22px"><a href="#" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;background:#FDF8E1;color:#035F1D;padding:12px 18px;border-radius:999px" style-hover="background:#EFF4A4;color:#035F1D">{{ t.contact }} →</a><span style="font:500 12px/1 var(--font-body);letter-spacing:.08em;opacity:.8">© Phúc Long Heritage</span></div></footer>
+
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;vi&quot;],&quot;default&quot;:&quot;en&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Language&quot;},&quot;teaBackground&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;weave&quot;,&quot;flat&quot;],&quot;default&quot;:&quot;flat&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Our Tea block&quot;}}">
+class Component extends DCLogic {
+  componentDidUpdate() { if (window.PL) { const __v = this.state.vi !== undefined ? (this.state.vi ? 'vi' : 'en') : this.state.lang; if ((__v === 'vi' || __v === 'en') && __v !== PL.lang) PL.lang = __v; } }
+  state = { lang: window.PL ? PL.lang : null, rw: 0, rh: 0, rd: 'M 0 0', nodes: [], segs: [] };
+  wrapRef = el => {
+    if (el && el !== this._wrap) { this._wrap = el; if (window.ResizeObserver) { this._ro = new ResizeObserver(() => this.layoutRibbon()); this._ro.observe(el); } this.layoutRibbon(); }
+  };
+  clipMedia(d, W) {
+    const w = this._wrap; if (!w) return;
+    const p = document.createElementNS('http://www.w3.org/2000/svg', 'path'); p.setAttribute('d', d);
+    const L = p.getTotalLength(), pts = [];
+    for (let l = 0; l <= L; l += 4) { const q = p.getPointAtLength(l); pts.push([q.x, q.y]); }
+    const cx = y => { for (let i = 1; i < pts.length; i++) { if (pts[i][1] >= y) { const a = pts[i - 1], b = pts[i], t = b[1] === a[1] ? 0 : (y - a[1]) / (b[1] - a[1]); return a[0] + (b[0] - a[0]) * t; } } return pts[pts.length - 1][0]; };
+    const half = 25;
+    w.querySelectorAll('[data-media]').forEach(m => {
+      const wr = w.getBoundingClientRect(), mr = m.getBoundingClientRect(), mx = mr.left - wr.left, my = mr.top - wr.top, mw = m.offsetWidth, mh = m.offsetHeight, left = mx + mw / 2 < W / 2 + 1 && mx < W / 2;
+      const pl = [];
+      for (let y = 0; y <= mh; y += 12) { const x = Math.max(0, Math.min(mw, cx(my + y) + (left ? -half : half) - mx)); pl.push(x.toFixed(1) + 'px ' + y + 'px'); }
+      const e = Math.max(0, Math.min(mw, cx(my + mh) + (left ? -half : half) - mx));
+      pl.push(e.toFixed(1) + 'px ' + mh + 'px');
+      m.style.clipPath = 'polygon(' + (left ? '0px 0px, ' + pl.join(', ') + ', 0px ' + mh + 'px' : mw + 'px 0px, ' + pl.join(', ') + ', ' + mw + 'px ' + mh + 'px') + ')';
+    });
+  }
+  layoutRibbon() {
+    const w = this._wrap; if (!w) return;
+    const W = w.clientWidth, H = w.clientHeight; if (!W || !H) return;
+    const secs = Array.from(w.children).filter(c => c.tagName === 'SECTION');
+    const xs = [0.565, 0.435, 0.565, 0.435];
+    const hrefs = ['#story', '#tea', '#stores', '#people'];
+    const icons = ['assets/icons/solid/tea-hill.png', 'assets/icons/solid/tea-leaf.png', 'assets/icons/solid/location.png', 'assets/icons/solid/tea-table.png'];
+    const nodes = secs.slice(0, 4).map((c, i) => ({ x: Math.round(W * xs[i]), y: Math.round(c.offsetTop + c.offsetHeight / 2), href: hrefs[i], icon: icons[i] }));
+    let px = W * 0.5, py = 0, d = 'M ' + px + ' ' + py;
+    nodes.forEach(n => { const dy = (n.y - py) / 2; d += ' C ' + px + ' ' + (py + dy) + ', ' + n.x + ' ' + (n.y - dy) + ', ' + n.x + ' ' + n.y; px = n.x; py = n.y; });
+    const dy = (H - py) / 2; d += ' C ' + px + ' ' + (py + dy) + ', ' + (W * 0.5) + ' ' + (H - dy) + ', ' + (W * 0.5) + ' ' + H;
+    this.clipMedia(d, W);
+    const sp = document.createElementNS('http://www.w3.org/2000/svg', 'path'); sp.setAttribute('d', d);
+    const SL = sp.getTotalLength(), segs = [];
+    for (let l = 0; l < SL; l += 24) { const c = sp.getPointAtLength(Math.min(SL, l + 12)), a = sp.getPointAtLength(Math.max(0, l + 10)), b = sp.getPointAtLength(Math.min(SL, l + 14)); const ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI; segs.push({ tf: 'translate(' + c.x.toFixed(1) + ' ' + c.y.toFixed(1) + ') rotate(' + ang.toFixed(1) + ')', vb: (l - 3) + ' 22 30 44', ox: l - 3 }); }
+    if (this.state.rw !== W || this.state.rh !== H || this.state.rd !== d) this.setState({ rw: W, rh: H, rd: d, nodes, segs });
+  }
+
+  fit = () => { const el = document.getElementById('plh-scale'); if (el) el.style.zoom = Math.max(0.3, document.documentElement.clientWidth / 1440); };
+  componentWillUnmount() { window.removeEventListener('resize', this.fit); }
+  componentDidMount() {
+    this.fit(); window.addEventListener('resize', this.fit);
+    document.querySelectorAll('video[data-hero]').forEach(v => { v.muted = true; v.loop = true; v.playsInline = true; v.play().catch(() => {}); });
+  }
+  renderVals() {
+    const lang = this.state.lang || this.props.lang || 'en';
+    const vi = lang === 'vi';
+    const P = 'assets/photos/';
+    const T = vi ? {
+      dna1: 'Trà không chỉ là', dna2a: 'một', dna2b: 'thức uống.', dna3: 'Trà là một cây cầu.', today: 'NAY', pressed: 'Trà ép', bags: 'Trà túi lọc', cans: 'Trà lon',
+      shop: 'Mua sắm', eyebrow: 'Từ 1968', headline: 'Gốc di sản, vị cho hôm nay',
+      sub: 'Gần sáu mươi năm trà Việt, ủ chậm rãi và pha cho hôm nay.', explore: 'Khám phá',
+      dnaEyebrow: 'Bản sắc thương hiệu', dnaTitle: 'Trà không chỉ là một thức uống. Trà là một cây cầu.',
+      dnaBody: 'Nối ta với chính mình, với cội nguồn và với nhau. Gần sáu mươi năm qua, Phúc Long gìn giữ nghề làm trà Việt và làm mới nó cho hôm nay.',
+      statVn: 'cửa hàng tại Việt Nam', statUs: 'cửa hàng tại California',
+      closeEyebrow: 'Ủ vị tâm giao', closeBody: 'Cùng chúng tôi tìm hiểu thêm về Phúc Long, hoặc nói chuyện với đội ngũ của chúng tôi.', contact: 'Liên hệ'
+    } : {
+      dna1: 'Tea is not only', dna2a: 'a', dna2b: 'drink.', dna3: 'It is a bridge.', today: 'TODAY', pressed: 'Pressed tea', bags: 'Tea bags', cans: 'Canned tea',
+      shop: 'Shop', eyebrow: 'Since 1968', headline: 'Rooted in heritage, brewed for today',
+      sub: 'Nearly sixty years of Vietnamese tea, steeped slowly and brewed for today.', explore: 'Explore',
+      dnaEyebrow: 'Brand DNA', dnaTitle: 'Tea is not only a drink. It is a bridge.',
+      dnaBody: 'To yourself, to your roots, to one another. For nearly sixty years Phúc Long has honoured Vietnamese tea-making and reimagined it for today.',
+      statVn: 'stores in Vietnam', statUs: 'stores in California',
+      closeEyebrow: 'Pure connections', closeBody: 'Learn more about Phúc Long, or talk to our team.', contact: 'Contact us'
+    };
+    const nav = (vi ? ['Câu chuyện', 'Đồ uống', 'Sản phẩm', 'Cửa hàng', 'Con người', 'Truyền thông'] : ['Our Story', 'Our Drink', 'Our Products', 'Our Stores', 'Our People', 'Media'])
+      .map((t, i) => ({ t, href: ['#our-story', '#our-drink', '#tea-leaf', '#our-stores', '#our-people', '#media'][i] }));
+    const dn = vi ? ['Câu chuyện', 'Trà', 'Cửa hàng', 'Con người'] : ['Our Story', 'Our Tea', 'Our Stores', 'Our People'];
+    const doors = [
+      { href: '#our-story', img: 'assets/photos/p19-select.jpg' }, { href: '#tea-leaf', img: 'assets/photos/p02-bud.jpg' },
+      { href: '#our-stores', img: 'assets/photos/p27-mood-bright.jpg' }, { href: '#our-people', img: 'assets/photos/p20-sort.jpg' }
+    ].map((d, i) => ({ ...d, t: dn[i], n: '0' + (i + 1) }));
+    const pillars = vi ? [
+      { n: '01', t: 'Nghề làm trà di sản', b: 'Kỹ thuật ép trà được truyền lại và hoàn thiện từ năm 1968.' },
+      { n: '02', t: 'Cội nguồn cao nguyên', b: 'Một tôm hai lá non, hái tay trên vùng đất Lâm Đồng.' },
+      { n: '03', t: 'Tinh thần hiện đại', b: 'Hương vị tươi mới và không gian cho thế hệ mới.' }
+    ] : [
+      { n: '01', t: 'Heritage craft', b: 'The pressed-tea technique, handed down and refined since 1968.' },
+      { n: '02', t: 'Highland origin', b: 'A bud and two young leaves, picked by hand in Lâm Đồng.' },
+      { n: '03', t: 'Modern spirit', b: 'Fresh flavours and spaces for a new generation.' }
+    ];
+    const ch = (n, eyebrow, t, b, cta) => ({ n, eyebrow, t, b, cta });
+    return {
+      rw: this.state.rw, rh: this.state.rh, rd: this.state.rd, nodes: this.state.nodes, segs: this.state.segs, wrapRef: this.wrapRef,
+      t: T, nav, doors, pillars, teaPat: (this.props.teaBackground ?? 'weave') === 'weave' ? 1 : 0,
+      c1: vi ? ch('01', 'Câu chuyện', 'Nơi mọi thứ bắt đầu', 'Sáu thập kỷ, một nghề kiên nhẫn. Theo chân lá trà từ cao nguyên Lâm Đồng đến ngụm đầu tiên.', 'Đọc câu chuyện') : ch('01', 'Our Story', 'Where it begins', 'Six decades, one patient craft. Follow tea from the Lâm Đồng highlands to the first sip.', 'Read our story'),
+      c2: vi ? ch('02', 'Trà', 'Điều chúng tôi ủ', 'Trà ép, trà túi lọc và trà lon để mang về nhà. Luôn đặt lá trà lên trước.', 'Khám phá trà') : ch('02', 'Our Tea', 'What we steep', 'Pressed-tea blends, tea bags and canned teas to take home. Leaf first, always.', 'Explore our tea'),
+      c3: vi ? ch('03', 'Cửa hàng', 'Nơi chúng ta gặp nhau', 'Từ phố nhỏ đến sân thượng, một ly Phúc Long luôn ở gần bạn.', 'Tìm cửa hàng') : ch('03', 'Our Stores', 'Where we gather', 'From corner streets to rooftops, a cup of Phúc Long is never far.', 'Find a store'),
+      c4: vi ? ch('04', 'Con người', 'Những bàn tay phía sau', 'Người trồng trà, nghệ nhân và barista. Bàn tay đứng sau mỗi ly trà.', 'Gặp đội ngũ') : ch('04', 'Our People', 'The hands behind every cup', 'Growers, tea masters and baristas who bring each cup to life.', 'Meet our people'),
+      toggleLang: () => this.setState({ lang: lang === 'en' ? 'vi' : 'en' })
+    };
+  }
+}
+</script>
+</body>
+</html>

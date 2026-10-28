@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/colors_and_type.css">
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/phuc-long-design/colors_and_type.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Mrs+Saint+Delafield&amp;display=swap">
+<script src="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/_ds_bundle.js"></script>
+<style>body{margin:0;background:#FDF8E1;color:#1C2A1E;font-family:var(--font-body)}*{box-sizing:border-box}a{color:#035F1D}a:hover{color:#658D1B}button{font-family:var(--font-body)}input,textarea{font-family:var(--font-body)}@keyframes plSparkRay{0%{transform:rotate(var(--a)) translateY(0) scaleY(.2);opacity:0}25%{opacity:1}100%{transform:rotate(var(--a)) translateY(-22px) scaleY(1);opacity:0}}@keyframes plSparkCore{0%{transform:translate(-50%,-50%) scale(.2);opacity:0}30%{transform:translate(-50%,-50%) scale(1.3);opacity:1}100%{transform:translate(-50%,-50%) scale(.6);opacity:0}}@keyframes plSparkSweep{0%{transform:translateX(-100%);opacity:0}20%{opacity:1}100%{transform:translateX(100%);opacity:0}}@keyframes plSparkPts{0%{transform:translate(-50%,0);opacity:0}20%{opacity:1}100%{transform:translate(-50%,-26px);opacity:0}}</style>
+</helmet>
+<div style="min-height:100vh;background:#FDF8E1;position:relative">
+
+<header style="position:sticky;top:0;z-index:20;background:rgba(253,248,225,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid #E4DACE">
+<div style="background:#035F1D"><div style="max-width:1440px;margin:0 auto;padding:18px 88px;display:flex;align-items:center;justify-content:space-between;gap:24px"><a href="#home" style="text-decoration:none;display:flex;flex:none"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:36px;width:auto"></a><div style="display:flex;gap:34px;align-items:center;flex-wrap:wrap;justify-content:center"><sc-for list="{{ siteNav }}" as="n" hint-placeholder-count="6"><div data-dd="{{ n.href }}" style="position:relative;display:flex"><a href="{{ n.href }}" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ n.t }}</a><div data-ddm="1" style="display:none;position:absolute;top:100%;left:-18px;padding-top:14px;z-index:60"><div style="background:#FBF6E6;border:1px solid #E4DACE;border-radius:12px;box-shadow:0 14px 34px rgba(3,40,15,.2);padding:8px;display:flex;flex-direction:column;min-width:190px"><a href="#tea-leaf" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Tea Leaf</a><a href="#coffee" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Coffee</a></div></div></div></sc-for></div><div style="display:flex;gap:18px;align-items:center;font:700 12px/1 var(--font-body);letter-spacing:.12em;color:#FBF6E6;flex:none"><span onClick="{{ toggleSite }}" style="cursor:pointer">{{ siteLangA }} <span style="opacity:.5">/ {{ siteLangB }}</span></span><button onClick="{{ openCart }}" style="position:relative;flex:none;white-space:nowrap;border:0;background:#FDF8E1;color:#035F1D;border-radius:999px;padding:9px 16px;font:700 14px/1 var(--font-body);cursor:pointer;display:flex;align-items:center;gap:10px;transform:scale({{ cartPulse }});transition:transform .25s ease-out" style-hover="background:#EFF4A4">{{ s.cart }}<span style="min-width:24px;height:24px;border-radius:999px;background:#035F1D;color:#FBF6E6;display:flex;align-items:center;justify-content:center;font:800 12px/1 var(--font-body);padding:0 6px">{{ cartCount }}</span></button></div></div></div>
+<div style="max-width:1320px;margin:0 auto;padding:14px 40px 14px;display:flex;align-items:center;gap:18px"><div style="flex:0 1 320px;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #E4DACE;border-radius:999px;padding:11px 18px;min-width:0"><span style="font:700 14px/1 var(--font-body);color:#8A7A6B">⌕</span><input placeholder="{{ s.search }}" style="border:0;outline:0;background:transparent;font:500 14px/1 var(--font-body);width:100%;color:#1C2A1E"></div>
+<div style="display:flex;align-items:center;gap:10px;flex:none"><span style="width:34px;height:34px;border-radius:50%;background:#035F1D url(assets/logo-stamp-green.png) center/0 no-repeat;color:#FBF6E6;display:flex;align-items:center;justify-content:center;font:800 13px/1 var(--font-body)">LA</span><div style="display:flex;flex-direction:column;gap:3px"><span style="font:700 13px/1 var(--font-body);white-space:nowrap">{{ s.hello }}</span><span style="font:700 11px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:{{ tier.color }};white-space:nowrap">{{ tier.name }} · {{ pts.shown }} {{ s.pts }}</span></div></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:6px">
+<div style="position:relative"><div style="position:relative;height:10px;border-radius:999px;background:#E4DACE;overflow:hidden">
+<div style="position:absolute;left:0;top:0;bottom:0;width:{{ pts.pendW }}%;background:repeating-linear-gradient(135deg,#8CAB19 0 6px,#B5CC4A 6px 12px);border-radius:999px;transition:width .6s cubic-bezier(.2,.7,.2,1)"></div>
+<div style="position:absolute;left:0;top:0;bottom:0;width:{{ pts.baseW }}%;background:#035F1D;border-radius:999px;transition:width 1.2s cubic-bezier(.2,.7,.2,1)"></div>
+{{ sparkSweep }}
+</div>{{ spark }}</div>
+<div style="display:flex;justify-content:space-between;font:600 12px/1 var(--font-body);color:#4F2C1D"><span>{{ pts.left }}</span><span style="color:#658D1B;font-weight:800">{{ pts.right }}</span></div>
+</div>
+<div style="display:flex;gap:6px;flex:none"><sc-for list="{{ tiers }}" as="t" hint-placeholder-count="3"><span style="padding:8px 14px;border-radius:999px;font:800 12px/1 var(--font-body);letter-spacing:.06em;text-transform:uppercase;background:{{ t.bg }};color:{{ t.fg }};box-shadow:0 0 0 2px #FDF8E1,0 0 0 3px #E8B21C,0 4px 14px rgba(232,178,28,.45);white-space:nowrap">{{ t.name }}</span></sc-for></div>
+</div>
+</header>
+
+<sc-if value="{{ isShop }}" hint-placeholder-val="{{ true }}">
+<main style="max-width:1320px;margin:0 auto;padding:28px 40px 120px;display:flex;flex-direction:column;gap:28px">
+
+<div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px">
+<div style="background:#fff;border:1px solid #E4DACE;border-radius:24px;padding:16px 18px;display:flex;align-items:center;gap:16px">
+<div style="display:flex;flex:none"><sc-for list="{{ lastOrder.imgs }}" as="im" hint-placeholder-count="0"><div style="width:58px;height:58px;border-radius:50%;background:#F2EBE7;display:flex;align-items:center;justify-content:center;margin-right:-14px;border:3px solid #fff;overflow:hidden"><div style="width:52px;height:52px;background:url({{ im.src }}) center/contain no-repeat"></div></div></sc-for></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:5px;padding-left:12px"><span style="font:700 11px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#658D1B">{{ s.reorderEyebrow }}</span><span style="font:700 16px/1.25 var(--font-body)">{{ lastOrder.label }}</span></div>
+<button onClick="{{ reorder }}" style="border:0;background:#035F1D;color:#FBF6E6;border-radius:999px;padding:12px 18px;font:700 13px/1 var(--font-body);cursor:pointer;flex:none" style-hover="background:#658D1B">{{ s.reorder }} · {{ lastOrder.total }}</button>
+</div>
+<sc-if value="{{ showRemind }}" hint-placeholder-val="{{ true }}">
+<div style="background:#EFF4A4;border-radius:24px;padding:16px 18px;display:flex;align-items:center;gap:14px">
+<img src="assets/products/cup-peach.png" alt="" style="height:58px;width:auto;flex:none;transform:rotate(-8deg)">
+<div style="flex:1;display:flex;flex-direction:column;gap:5px"><span style="font:700 11px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#035F1D">{{ s.remindEyebrow }}</span><span style="font:700 15px/1.3 var(--font-body);color:#1C4220">{{ s.remindText }}</span></div>
+<button onClick="{{ resume }}" style="border:0;background:#1C2A1E;color:#FBF6E6;border-radius:999px;padding:11px 16px;font:700 13px/1 var(--font-body);cursor:pointer;flex:none">{{ s.resume }}</button>
+<button onClick="{{ dismissRemind }}" style="border:0;background:transparent;color:#1C4220;font:700 18px/1 var(--font-body);cursor:pointer;flex:none;padding:4px">×</button>
+</div>
+</sc-if>
+</div>
+
+<section onMouseEnter="{{ hero.pause }}" onMouseLeave="{{ hero.resume }}" style="position:relative;height:600px;border-radius:32px;overflow:hidden;background:#1C2A1E;isolation:isolate;container-type:inline-size">
+<sc-for list="{{ hero.slides }}" as="h" hint-placeholder-count="0"><div style="position:absolute;inset:0;opacity:{{ h.op }};transition:opacity 1.1s ease-out"><div style="position:absolute;inset:-4%;background:url({{ h.bg }}) center/cover;transform:scale({{ h.zoom }});transition:transform 6s ease-out"></div><sc-if value="{{ h.isVid }}" hint-placeholder-val="{{ false }}"><video ref="{{ h.vref }}" src="{{ hero.video }}" playsInline="{{ true }}" muted="{{ true }}" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video></sc-if><div style="position:absolute;inset:0;background:linear-gradient(180deg,{{ h.c2 }}cc 0%,{{ h.c2 }}55 34%,transparent 55%,{{ h.c2 }}aa 82%,{{ h.c2 }}ee 100%)"></div><div style="position:absolute;inset:0;background:radial-gradient(45% 55% at 50% 58%,{{ h.c1 }}66 0%,transparent 70%)"></div></div></sc-for>
+<div style="position:absolute;inset:0;background:url(assets/pattern-primary-green.png) center/220px;opacity:.05;mix-blend-mode:screen"></div>
+<div style="position:absolute;left:-90px;top:120px;width:260px;height:260px;border-radius:50%;background:{{ hero.accent }};filter:blur(70px);opacity:.55;transition:background 1s ease-out"></div>
+<div style="position:absolute;right:-70px;bottom:60px;width:220px;height:220px;border-radius:50%;background:{{ hero.accent }};filter:blur(70px);opacity:.45;transition:background 1s ease-out"></div>
+<sc-for list="{{ hero.slides }}" as="h" hint-placeholder-count="0"><h2 style="position:absolute;left:0;right:0;top:46px;margin:0;text-align:center;font:800 clamp(56px,10cqw,124px)/1 var(--font-display);letter-spacing:-.01em;color:#FBF6E6;white-space:nowrap;text-transform:uppercase;opacity:{{ h.op }};transform:translateY({{ h.ty }}px);transition:opacity .7s ease-out,transform 1s cubic-bezier(.2,.7,.2,1)">{{ h.title }}</h2></sc-for>
+<sc-for list="{{ hero.slides }}" as="h" hint-placeholder-count="0"></sc-for>
+<div style="position:absolute;left:0;right:0;top:calc(60px + clamp(56px,10cqw,124px));display:flex;justify-content:space-between;padding:0 clamp(28px,9cqw,120px);font:700 clamp(10px,1.1cqw,13px)/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:#FBF6E6"><span>Since 1968</span><span>{{ hero.tag }}</span></div>
+<div style="position:absolute;left:50%;bottom:-40px;width:min(460px,46cqw);height:min(200px,20cqw);transform:translateX(-50%);border-radius:999px 999px 0 0;background:{{ hero.base }};transition:background 1s ease-out,opacity .6s ease-out;opacity:{{ hero.pedOp }};overflow:hidden;box-shadow:inset 0 18px 40px rgba(0,0,0,.18)"></div>
+<sc-for list="{{ hero.slides }}" as="h" hint-placeholder-count="0"><img src="{{ h.img }}" alt="{{ h.title }}" style="position:absolute;left:50%;bottom:110px;height:min(50cqw,calc(444px - clamp(56px,10cqw,124px) * .66));width:auto;border-radius:{{ h.rad }}px;opacity:{{ h.cupOp }};transform:translateX(calc(-50% + {{ h.tx }}px)) translateY({{ h.cy }}px) rotate({{ h.rot }}deg) scale({{ h.sc }});transition:opacity .8s ease-out,transform 1s cubic-bezier(.2,.7,.2,1);filter:drop-shadow(0 30px 34px rgba(0,0,0,.35));pointer-events:none;z-index:2"></sc-for>
+<div style="position:absolute;left:0;right:0;bottom:0;padding:0 clamp(20px,3.6cqw,48px) clamp(20px,2.6cqw,32px);display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:clamp(12px,2cqw,28px);z-index:3">
+<div style="display:flex;flex-direction:column;gap:10px;color:#FBF6E6;min-width:0;max-width:300px;padding-bottom:16px">
+<span style="align-self:flex-start;padding:7px 12px;border-radius:999px;background:rgba(251,246,230,.16);border:1px solid rgba(251,246,230,.35);font:700 11px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase">{{ hero.kind }}</span>
+<span style="font:500 clamp(12px,1.3cqw,15px)/1.45 var(--font-body);text-wrap:pretty;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">{{ hero.desc }}</span>
+<span style="font:800 clamp(20px,2.3cqw,28px)/1 var(--font-body)">{{ hero.price }}</span>
+</div>
+<div style="display:flex;gap:clamp(6px,.8cqw,10px);align-items:flex-end">
+<sc-for list="{{ hero.slides }}" as="h" hint-placeholder-count="0"><button onClick="{{ h.pick }}" style="width:clamp(58px,7.2cqw,88px);height:{{ h.thH }}px;border:0;border-radius:16px;background:{{ h.thBg }};cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:5px;padding:6px 4px 8px;box-shadow:0 10px 24px rgba(0,0,0,.18);transition:height .4s cubic-bezier(.2,.7,.2,1),background .4s ease-out"><img src="{{ h.img }}" alt="" style="height:{{ h.thImg }}px;width:{{ h.thW }};max-width:100%;object-fit:{{ h.thFit }};border-radius:10px;transition:height .4s cubic-bezier(.2,.7,.2,1)"><span style="font:700 10px/1.1 var(--font-body);color:#1C2A1E;text-align:center">{{ h.short }}</span></button></sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;justify-self:end;width:100%;max-width:220px;padding-bottom:16px">
+<button onClick="{{ hero.add }}" style="border:0;background:#FBF6E6;color:#1C2A1E;border-radius:999px;padding:14px 18px;font:800 clamp(13px,1.2cqw,15px)/1 var(--font-body);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:transform .2s ease-out" style-hover="transform:translateY(-2px)" style-active="transform:scale(.98)"><span>{{ s.heroAdd }}</span><span style="width:26px;height:26px;border-radius:50%;background:#035F1D;color:#FBF6E6;display:flex;align-items:center;justify-content:center;font:800 16px/1 var(--font-body)">+</span></button>
+<button onClick="{{ hero.explore }}" style="border:1.5px solid rgba(251,246,230,.6);background:transparent;color:#FBF6E6;border-radius:999px;padding:13px 18px;font:700 clamp(12px,1.1cqw,14px)/1 var(--font-body);cursor:pointer;text-align:left" style-hover="background:rgba(251,246,230,.12)">{{ s.heroExplore }} →</button>
+</div>
+</div>
+<button onClick="{{ hero.prev }}" style="position:absolute;left:28px;top:300px;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(251,246,230,.45);background:rgba(0,0,0,.1);color:#FBF6E6;font:700 18px/1 var(--font-body);cursor:pointer;z-index:3" style-hover="background:rgba(251,246,230,.18)">←</button>
+<button onClick="{{ hero.next }}" style="position:absolute;right:28px;top:300px;width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(251,246,230,.45);background:rgba(0,0,0,.1);color:#FBF6E6;font:700 18px/1 var(--font-body);cursor:pointer;z-index:3" style-hover="background:rgba(251,246,230,.18)">→</button>
+</section>
+
+<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px">
+<sc-for list="{{ cats }}" as="c" hint-placeholder-count="0">
+<button onClick="{{ c.pick }}" style="position:relative;overflow:hidden;border:2px solid {{ c.border }};background:{{ c.bg }};border-radius:24px;padding:18px 18px 16px;height:132px;cursor:pointer;text-align:left;display:flex;flex-direction:column;justify-content:space-between;transition:background .3s ease-out,border-color .3s ease-out" style-hover="border-color:#8CAB19">
+
+<span style="position:relative;z-index:1;font:700 21px/1.05 var(--font-display);color:{{ c.fg }};max-width:62%">{{ c.label }}</span>
+<img src="{{ c.img }}" alt="" style="position:absolute;right:-6px;bottom:-18px;height:128px;max-width:42%;width:auto;object-fit:contain;object-position:right bottom;transform:rotate(8deg);filter:drop-shadow(0 10px 14px rgba(28,42,30,.2))">
+</button>
+</sc-for>
+</div>
+<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#8A7A6B;margin-right:6px">{{ s.moment }}</span><sc-for list="{{ moments }}" as="m" hint-placeholder-count="5"><button onClick="{{ m.pick }}" style="border:1px solid {{ m.border }};background:{{ m.bg }};color:{{ m.fg }};border-radius:999px;padding:9px 15px;font:700 13px/1 var(--font-body);cursor:pointer">{{ m.label }}</button></sc-for></div>
+
+<sc-for list="{{ sections }}" as="sec" hint-placeholder-count="2">
+<section style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:end;gap:20px"><div style="display:flex;flex-direction:column;gap:6px"><h2 style="margin:0;font:700 44px/1 var(--font-display);letter-spacing:-.01em">{{ sec.title }}</h2></div></div>
+<div style="display:grid;grid-template-columns:repeat({{ sec.cols }},minmax(0,1fr));gap:20px">
+<sc-for list="{{ sec.items }}" as="p" hint-placeholder-count="4">
+<div style="position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid #E4DACE;border-radius:28px;overflow:visible;cursor:pointer;transition:transform .3s ease-out,box-shadow .3s ease-out" style-hover="transform:translateY(-6px);box-shadow:0 22px 40px rgba(28,66,32,.12)">
+<div onClick="{{ p.open }}" style="position:relative;height:{{ p.h }}px;margin:10px 10px 0;border-radius:999px 999px 20px 20px;background:{{ p.tint }};display:flex;align-items:flex-end;justify-content:center;overflow:visible">
+<div style="position:absolute;inset:0;border-radius:999px 999px 20px 20px;background:url(assets/pattern-primary-green.png) center/180px;opacity:.07"></div>
+<img src="{{ p.img }}" alt="{{ p.name }}" style="position:relative;height:{{ p.imgH }}px;width:auto;max-width:92%;object-fit:contain;margin-bottom:{{ p.imgMb }}px;filter:drop-shadow(0 18px 20px rgba(28,42,30,.2))">
+<sc-if value="{{ p.hasImg2 }}" hint-placeholder-val="{{ false }}"></sc-if>
+<sc-if value="{{ p.hasBadge }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:18%;left:14px;padding:6px 11px;border-radius:999px;background:{{ p.badgeBg }};color:{{ p.badgeFg }};font:700 11px/1 var(--font-body);letter-spacing:.06em;text-transform:uppercase">{{ p.badge }}</span></sc-if>
+</div>
+<div style="padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1">
+<span onClick="{{ p.open }}" style="font:700 19px/1.2 var(--font-display)">{{ p.name }}</span>
+<span style="font:500 13px/1.45 var(--font-body);color:#8A7A6B;min-height:19px">{{ p.sub }}</span>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px">
+<div style="display:flex;align-items:baseline;gap:8px"><span style="font:800 17px/1 var(--font-body);color:#035F1D">{{ p.priceLabel }}</span><sc-if value="{{ p.hasWas }}" hint-placeholder-val="{{ false }}"><span style="font:600 13px/1 var(--font-body);color:#8A7A6B;text-decoration:line-through">{{ p.was }}</span></sc-if></div>
+<button onClick="{{ p.quick }}" title="{{ s.quickAdd }}" style="width:42px;height:42px;border-radius:50%;border:0;background:#035F1D;color:#FBF6E6;font:700 22px/1 var(--font-body);cursor:pointer;flex:none" style-hover="background:#658D1B" style-active="transform:scale(.92)">+</button>
+</div>
+</div>
+</div>
+</sc-for>
+</div>
+</section>
+</sc-for>
+
+<sc-if value="{{ isGift }}" hint-placeholder-val="{{ false }}">
+<section style="background:#035F1D;color:#FBF6E6;border-radius:32px;padding:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;position:relative;overflow:hidden">
+<div style="position:absolute;inset:0;background:url(assets/pattern-primary-green.png) center/260px;opacity:.12"></div>
+<div style="position:relative;display:flex;flex-direction:column;gap:18px">
+<span style="font:700 12px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:#E8E987">{{ s.builderEyebrow }}</span>
+<h2 style="margin:0;font:700 52px/1 var(--font-display)">{{ s.builderTitle }}</h2>
+<div style="display:flex;gap:10px"><sc-for list="{{ boxSizes }}" as="b" hint-placeholder-count="2"><button onClick="{{ b.pick }}" style="border:1px solid {{ b.border }};background:{{ b.bg }};color:{{ b.fg }};border-radius:16px;padding:14px 18px;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:6px"><span style="font:700 18px/1 var(--font-display)">{{ b.label }}</span><span style="font:600 12px/1 var(--font-body)">{{ b.price }}</span></button></sc-for></div>
+<span style="font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#E8E987">{{ s.builderPick }}</span>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px"><sc-for list="{{ giftCands }}" as="g" hint-placeholder-count="4"><button onClick="{{ g.add }}" style="border:0;background:#FDF8E1;border-radius:16px;padding:10px 6px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;opacity:{{ g.op }}" style-hover="background:#EFF4A4"><div style="height:74px;display:flex;align-items:center"><img src="{{ g.img }}" alt="" style="max-height:74px;max-width:70px;width:auto;border-radius:8px"></div><span style="font:700 11px/1.2 var(--font-body);color:#1C2A1E;text-align:center">{{ g.name }}</span><span style="font:700 11px/1 var(--font-body);color:#035F1D">{{ g.price }}</span></button></sc-for></div>
+<textarea placeholder="{{ s.cardPh }}" style="border:0;border-radius:16px;padding:14px;font:500 14px/1.5 var(--font-body);min-height:72px;resize:none;background:rgba(253,248,225,.95);color:#1C2A1E;outline:0"></textarea>
+</div>
+<div style="position:relative;display:flex;flex-direction:column;gap:18px;background:#FDF8E1;border-radius:24px;padding:26px;color:#1C2A1E">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font:700 22px/1 var(--font-display)">{{ s.yourBox }}</span><span style="font:700 13px/1 var(--font-body);color:#658D1B">{{ giftFill }}</span></div>
+<div style="flex:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:18px;border-radius:20px;background:#1C4220 url(assets/pattern-primary-green.png) center/160px;min-height:300px">
+<sc-for list="{{ giftSlots }}" as="g" hint-placeholder-count="3"><button onClick="{{ g.remove }}" style="border:2px dashed {{ g.dash }};background:{{ g.bg }};border-radius:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;min-height:130px;padding:8px;transition:background .3s ease-out"><sc-if value="{{ g.filled }}" hint-placeholder-val="{{ false }}"><img src="{{ g.img }}" alt="" style="max-height:120px;max-width:100%;width:auto;border-radius:8px"></sc-if><sc-if value="{{ g.empty }}" hint-placeholder-val="{{ true }}"><span style="font:700 26px/1 var(--font-body);color:rgba(253,248,225,.6)">+</span></sc-if></button></sc-for>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center"><div style="display:flex;flex-direction:column;gap:4px"><span style="font:600 13px/1 var(--font-body);color:#8A7A6B">{{ s.total }}</span><span style="font:800 26px/1 var(--font-body);color:#035F1D">{{ giftTotal }}</span></div><button onClick="{{ addGift }}" style="border:0;background:{{ giftBtnBg }};color:#FBF6E6;border-radius:999px;padding:16px 26px;font:700 15px/1 var(--font-body);cursor:pointer">{{ s.addGift }}</button></div>
+</div>
+</section>
+</sc-if>
+
+</main>
+</sc-if>
+
+<sc-if value="{{ isCheckout }}" hint-placeholder-val="{{ false }}">
+<main style="max-width:1320px;margin:0 auto;padding:32px 40px 100px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:18px">
+<button onClick="{{ goShop }}" style="align-self:flex-start;border:0;background:transparent;color:#035F1D;font:700 14px/1 var(--font-body);cursor:pointer;padding:0">← {{ s.backShop }}</button>
+<h1 style="margin:0;font:700 56px/1 var(--font-display);color:#035F1D">{{ s.checkout }}</h1>
+<div style="background:#fff;border:1px solid #E4DACE;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<span style="font:700 20px/1 var(--font-display)">1 · {{ s.receive }}</span>
+<div style="display:flex;gap:10px"><sc-for list="{{ fulfil }}" as="o" hint-placeholder-count="2"><button onClick="{{ o.pick }}" style="flex:1;border:2px solid {{ o.border }};background:{{ o.bg }};border-radius:16px;padding:16px;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:6px"><span style="font:700 16px/1 var(--font-body);color:#1C2A1E">{{ o.label }}</span><span style="font:500 13px/1.3 var(--font-body);color:#8A7A6B">{{ o.sub }}</span></button></sc-for></div>
+<div style="display:flex;align-items:center;gap:12px;border:1px solid #E4DACE;border-radius:14px;padding:14px 16px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:#658D1B;flex:none">{{ addrLabel }}</span><span style="font:600 14px/1.3 var(--font-body);flex:1">{{ addrValue }}</span><span style="font:700 13px/1 var(--font-body);color:#035F1D;cursor:pointer">{{ s.change }}</span></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ times }}" as="o" hint-placeholder-count="5"><button onClick="{{ o.pick }}" style="border:1px solid {{ o.border }};background:{{ o.bg }};color:{{ o.fg }};border-radius:999px;padding:10px 15px;font:700 13px/1 var(--font-body);cursor:pointer">{{ o.label }}</button></sc-for></div>
+<sc-if value="{{ hasCpg }}" hint-placeholder-val="{{ false }}"><div style="background:#F2EBE7;border-radius:14px;padding:12px 14px;font:600 13px/1.45 var(--font-body);color:#4F2C1D">{{ s.splitNote }}</div></sc-if>
+</div>
+<div style="background:#fff;border:1px solid #E4DACE;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font:700 20px/1 var(--font-display)">2 · {{ s.contact }}</span>
+<div style="display:flex;gap:10px"><button onClick="{{ zaloLogin }}" style="flex:1;border:0;background:#035F1D;color:#FBF6E6;border-radius:14px;padding:16px;font:700 14px/1 var(--font-body);cursor:pointer">{{ zaloLabel }}</button><div style="flex:1;display:flex;align-items:center;border:1px solid #E4DACE;border-radius:14px;padding:0 14px"><input placeholder="{{ s.guestPh }}" style="border:0;outline:0;width:100%;font:500 14px/1 var(--font-body);padding:15px 0;background:transparent"></div></div>
+</div>
+<div style="background:#fff;border:1px solid #E4DACE;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px">
+<span style="font:700 20px/1 var(--font-display)">3 · {{ s.payment }}</span>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px"><sc-for list="{{ pays }}" as="o" hint-placeholder-count="4"><button onClick="{{ o.pick }}" style="border:2px solid {{ o.border }};background:{{ o.bg }};border-radius:16px;padding:16px 10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px"><span style="width:38px;height:38px;border-radius:12px;background:{{ o.chip }};color:#fff;display:flex;align-items:center;justify-content:center;font:800 13px/1 var(--font-body)">{{ o.mark }}</span><span style="font:700 13px/1 var(--font-body);color:#1C2A1E">{{ o.label }}</span></button></sc-for></div>
+<button onClick="{{ toggleVat }}" style="display:flex;align-items:center;gap:12px;border:0;background:transparent;cursor:pointer;padding:4px 0;text-align:left"><span style="width:44px;height:26px;border-radius:999px;background:{{ vatTrack }};position:relative;flex:none;transition:background .25s ease-out"><span style="position:absolute;top:3px;left:{{ vatKnob }}px;width:20px;height:20px;border-radius:50%;background:#fff;transition:left .25s ease-out"></span></span><span style="font:700 14px/1.3 var(--font-body);color:#1C2A1E">{{ s.vat }}</span></button>
+<sc-if value="{{ vat }}" hint-placeholder-val="{{ false }}"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><input placeholder="{{ s.vatCo }}" style="border:1px solid #E4DACE;border-radius:12px;padding:13px 14px;font:500 14px/1 var(--font-body);outline:0"><input placeholder="{{ s.vatTax }}" style="border:1px solid #E4DACE;border-radius:12px;padding:13px 14px;font:500 14px/1 var(--font-body);outline:0"><input placeholder="{{ s.vatMail }}" style="grid-column:span 2;border:1px solid #E4DACE;border-radius:12px;padding:13px 14px;font:500 14px/1 var(--font-body);outline:0"></div></sc-if>
+</div>
+</div>
+<aside style="position:sticky;top:150px;background:#fff;border:1px solid #E4DACE;border-radius:28px;padding:24px;display:flex;flex-direction:column;gap:16px;box-shadow:0 20px 50px rgba(28,66,32,.08)">
+<span style="font:700 22px/1 var(--font-display)">{{ s.summary }}</span>
+<div style="display:flex;flex-direction:column;gap:12px;max-height:280px;overflow:auto"><sc-for list="{{ lines }}" as="l" hint-placeholder-count="2"><div style="display:flex;gap:12px;align-items:center"><div style="width:52px;height:52px;border-radius:14px;background:{{ l.tint }};display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden"><img src="{{ l.img }}" alt="" style="max-height:48px;max-width:46px;width:auto"></div><div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0"><span style="font:700 14px/1.2 var(--font-body)">{{ l.qty }}× {{ l.name }}</span><span style="font:500 12px/1.3 var(--font-body);color:#8A7A6B">{{ l.opts }}</span></div><span style="font:700 14px/1 var(--font-body)">{{ l.total }}</span></div></sc-for></div>
+<div style="border-radius:18px;background:#F2EBE7;padding:14px;display:flex;flex-direction:column;gap:10px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:#C05131">{{ dealMsg }}</span><div style="display:flex;gap:8px"><sc-for list="{{ addons }}" as="a" hint-placeholder-count="3"><button onClick="{{ a.add }}" style="flex:1;border:0;background:#fff;border-radius:14px;padding:8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px"><img src="{{ a.img }}" alt="" style="height:46px;width:auto"><span style="font:700 11px/1.2 var(--font-body);text-align:center">{{ a.name }}</span><span style="font:800 11px/1 var(--font-body);color:#035F1D">+ {{ a.price }}</span></button></sc-for></div></div>
+<div style="display:flex;flex-direction:column;gap:8px;font:600 14px/1 var(--font-body)"><div style="display:flex;justify-content:space-between"><span style="color:#8A7A6B">{{ s.subtotal }}</span><span>{{ totals.sub }}</span></div><div style="display:flex;justify-content:space-between"><span style="color:#8A7A6B">{{ s.shipping }}</span><span style="color:{{ totals.shipColor }}">{{ totals.ship }}</span></div><sc-if value="{{ totals.hasDisc }}" hint-placeholder-val="{{ false }}"><div style="display:flex;justify-content:space-between"><span style="color:#8A7A6B">{{ s.deal }}</span><span style="color:#C05131">{{ totals.disc }}</span></div></sc-if><div style="display:flex;justify-content:space-between;padding-top:10px;border-top:1px solid #E4DACE;font:800 20px/1 var(--font-body)"><span>{{ s.total }}</span><span style="color:#035F1D">{{ totals.grand }}</span></div></div>
+<div style="display:flex;align-items:center;gap:10px;background:#EFF4A4;border-radius:14px;padding:12px 14px"><span style="font:800 18px/1 var(--font-body);color:#035F1D">+{{ pts.pending }}</span><span style="font:600 13px/1.35 var(--font-body);color:#1C4220">{{ pts.checkoutMsg }}</span></div>
+<button onClick="{{ placeOrder }}" style="border:0;background:#035F1D;color:#FBF6E6;border-radius:999px;padding:18px;font:700 16px/1 var(--font-body);cursor:pointer" style-hover="background:#658D1B" style-active="transform:scale(.98)">{{ s.place }} · {{ totals.grand }}</button>
+</aside>
+</main>
+</sc-if>
+
+<sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+<main style="max-width:880px;margin:0 auto;padding:56px 40px 100px;display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center">
+<div style="width:150px;height:150px;border-radius:50%;background:#035F1D;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 50px rgba(3,95,29,.3)"><img src="assets/logo-stamp-green.png" alt="" style="width:118px;height:auto;background:#FDF8E1;border-radius:50%;padding:6px"></div>
+<span style="font-family:{{ scriptFamily }};font-style:{{ scriptStyle }};font-size:48px;line-height:1;color:#658D1B">{{ s.thanksScript }}</span>
+<h1 style="margin:0;font:700 60px/1 var(--font-display);color:#035F1D">{{ s.thanks }}</h1>
+<p style="margin:0;font:500 17px/1.6 var(--font-body);color:#4F2C1D;max-width:560px">{{ s.thanksBody }}</p>
+<div style="width:100%;background:#fff;border:1px solid #E4DACE;border-radius:24px;padding:24px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px">
+<sc-for list="{{ track }}" as="t" hint-placeholder-count="4"><div style="display:flex;flex-direction:column;align-items:center;gap:10px"><span style="width:44px;height:44px;border-radius:50%;background:{{ t.bg }};color:{{ t.fg }};display:flex;align-items:center;justify-content:center;font:800 15px/1 var(--font-body)">{{ t.n }}</span><span style="font:700 14px/1.2 var(--font-body)">{{ t.label }}</span><span style="font:500 12px/1 var(--font-body);color:#8A7A6B">{{ t.time }}</span></div></sc-for>
+</div>
+<div style="width:100%;background:#1C4220;color:#FBF6E6;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:14px;text-align:left">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font:700 22px/1 var(--font-display)">{{ s.earned }} +{{ lastEarned }}</span><span style="font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#E8E987">{{ tier.name }} · {{ pts.shown }} {{ s.pts }}</span></div>
+<div style="height:14px;border-radius:999px;background:rgba(253,248,225,.18);overflow:hidden"><div style="height:100%;width:{{ pts.baseW }}%;background:linear-gradient(90deg,#8CAB19,#E8E987);border-radius:999px;transition:width 1.4s cubic-bezier(.2,.7,.2,1)"></div></div>
+<span style="font:600 14px/1.4 var(--font-body)">{{ pts.left }}</span>
+</div>
+<div style="display:flex;gap:12px"><button onClick="{{ goShop }}" style="border:0;background:#035F1D;color:#FBF6E6;border-radius:999px;padding:16px 26px;font:700 15px/1 var(--font-body);cursor:pointer">{{ s.keepShopping }}</button><button style="border:1px solid #035F1D;background:transparent;color:#035F1D;border-radius:999px;padding:16px 26px;font:700 15px/1 var(--font-body);cursor:pointer">{{ s.trackOrder }}</button></div>
+</main>
+</sc-if>
+
+<sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ closeModal }}" style="position:fixed;inset:0;z-index:40;background:rgba(28,42,30,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)"></div>
+<div style="position:fixed;z-index:41;left:50%;top:50%;transform:translate(-50%,-50%);width:min(1180px,94vw);height:min(720px,92vh);background:#FDF8E1;border-radius:32px;overflow:hidden;display:grid;grid-template-columns:150px minmax(0,1.1fr) minmax(0,1fr);box-shadow:0 40px 100px rgba(0,0,0,.35)">
+<div onWheel="{{ wheelRoulette }}" style="position:relative;background:#F2EBE7;overflow:hidden">
+<div style="position:absolute;left:0;right:0;top:50%;height:110px;margin-top:-55px;border-top:1px solid #E4DACE;border-bottom:1px solid #E4DACE;background:rgba(255,255,255,.55)"></div>
+<sc-for list="{{ roulette }}" as="r" hint-placeholder-count="5"><button onClick="{{ r.pick }}" style="position:absolute;left:50%;top:50%;width:96px;height:96px;margin:-48px 0 0 -48px;border:0;background:transparent;cursor:pointer;transform:{{ r.tf }};opacity:{{ r.op }};transition:transform .5s cubic-bezier(.2,.7,.2,1),opacity .5s ease-out;display:flex;align-items:center;justify-content:center;padding:0"><img src="{{ r.img }}" alt="{{ r.name }}" style="max-height:92px;max-width:84px;width:auto"></button></sc-for>
+<span style="position:absolute;left:0;right:0;bottom:14px;text-align:center;font:700 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#8A7A6B">{{ s.scrollHint }}</span>
+</div>
+<div style="position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(60% 55% at 50% 55%,{{ mp.tint }} 0%,rgba(253,248,225,0) 100%);perspective:1200px;overflow:hidden">
+<div style="position:absolute;width:420px;height:420px;border-radius:50%;background:{{ mp.tint }};opacity:.65;transition:background .5s ease-out"></div>
+<div style="position:absolute;width:520px;height:520px;border-radius:50%;border:1px dashed rgba(3,95,29,.25)"></div>
+<img src="{{ mp.img }}" alt="{{ mp.name }}" style="position:relative;max-height:{{ mp.bigH }}px;max-width:86%;width:auto;transform:rotateY({{ spin }}deg) rotate(-4deg);transition:transform .9s cubic-bezier(.2,.7,.2,1);filter:drop-shadow(0 40px 40px rgba(28,42,30,.3))">
+<sc-if value="{{ mp.hasImg2 }}" hint-placeholder-val="{{ false }}"><img src="{{ mp.img2 }}" alt="" style="position:absolute;right:12%;bottom:16%;height:180px;width:auto;transform:rotateY({{ spin }}deg);transition:transform .9s cubic-bezier(.2,.7,.2,1);filter:drop-shadow(0 26px 26px rgba(28,42,30,.3))"></sc-if>
+<span style="position:absolute;left:24px;top:22px;padding:7px 12px;border-radius:999px;background:#035F1D;color:#FBF6E6;font:700 11px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase">{{ mp.catLabel }}</span>
+<span style="position:absolute;left:24px;bottom:22px;font:700 12px/1 var(--font-body);color:#4F2C1D">{{ mp.pos }}</span>
+</div>
+<div style="background:#fff;display:flex;flex-direction:column;min-height:0">
+<div style="padding:26px 28px 12px;display:flex;justify-content:space-between;align-items:start;gap:12px"><div style="display:flex;flex-direction:column;gap:8px"><h3 style="margin:0;font:700 34px/1.05 var(--font-display)">{{ mp.name }}</h3><p style="margin:0;font:500 14px/1.55 var(--font-body);color:#4F2C1D">{{ mp.desc }}</p></div><button onClick="{{ closeModal }}" style="width:40px;height:40px;border-radius:50%;border:1px solid #E4DACE;background:#fff;font:700 18px/1 var(--font-body);cursor:pointer;flex:none">×</button></div>
+<div style="flex:1;overflow:auto;padding:4px 28px 16px;display:flex;flex-direction:column;gap:16px">
+<sc-for list="{{ optGroups }}" as="g" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:#658D1B">{{ g.label }}</span><div style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ g.opts }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.pick }}" style="border:1px solid {{ o.border }};background:{{ o.bg }};color:{{ o.fg }};border-radius:999px;padding:9px 13px;font:700 13px/1 var(--font-body);cursor:pointer;transition:background .2s ease-out">{{ o.label }}</button></sc-for></div></div>
+</sc-for>
+<sc-if value="{{ mp.isDrink }}" hint-placeholder-val="{{ false }}"><input placeholder="{{ s.notePh }}" style="border:1px solid #E4DACE;border-radius:12px;padding:12px 14px;font:500 13px/1 var(--font-body);outline:0"></sc-if>
+<sc-if value="{{ mp.isCpg }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toggleSub }}" style="display:flex;align-items:center;gap:12px;border:1px solid {{ subBorder }};background:{{ subBg }};border-radius:16px;padding:14px;cursor:pointer;text-align:left"><span style="width:22px;height:22px;border-radius:6px;border:2px solid #035F1D;background:{{ subBox }};flex:none"></span><span style="display:flex;flex-direction:column;gap:3px"><span style="font:700 14px/1.2 var(--font-body)">{{ s.subTitle }}</span><span style="font:500 12px/1.3 var(--font-body);color:#8A7A6B">{{ s.subBody }}</span></span></button></sc-if>
+</div>
+<div style="padding:16px 28px 22px;border-top:1px solid #E4DACE;display:flex;align-items:center;gap:12px">
+<div style="display:flex;align-items:center;border:1px solid #E4DACE;border-radius:999px;flex:none"><button onClick="{{ qtyDown }}" style="width:42px;height:46px;border:0;background:transparent;font:700 18px/1 var(--font-body);cursor:pointer">−</button><span style="min-width:26px;text-align:center;font:800 15px/1 var(--font-body)">{{ qty }}</span><button onClick="{{ qtyUp }}" style="width:42px;height:46px;border:0;background:transparent;font:700 18px/1 var(--font-body);cursor:pointer">+</button></div>
+<button onClick="{{ addFromModal }}" style="flex:1;border:0;background:#035F1D;color:#FBF6E6;border-radius:999px;padding:16px;font:700 15px/1 var(--font-body);cursor:pointer;display:flex;justify-content:center;gap:10px" style-hover="background:#658D1B" style-active="transform:scale(.98)"><span>{{ addLabel }}</span><span>·</span><span>{{ modalPrice }}</span></button>
+</div>
+<div style="padding:0 28px 18px;display:flex;justify-content:space-between;font:600 12px/1 var(--font-body);color:#658D1B"><span>+{{ modalPts }} {{ s.pts }}</span><span>{{ toast }}</span></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ cartOpen }}" hint-placeholder-val="{{ false }}">
+<div onClick="{{ closeCart }}" style="position:fixed;inset:0;z-index:30;background:rgba(28,42,30,.45)"></div>
+<aside style="position:fixed;z-index:31;top:0;right:0;bottom:0;width:min(460px,100vw);background:#FDF8E1;display:flex;flex-direction:column;box-shadow:-30px 0 80px rgba(0,0,0,.25)">
+<div style="padding:22px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #E4DACE"><span style="font:700 26px/1 var(--font-display)">{{ s.yourCart }} ({{ cartCount }})</span><button onClick="{{ closeCart }}" style="width:40px;height:40px;border-radius:50%;border:1px solid #E4DACE;background:#fff;font:700 18px/1 var(--font-body);cursor:pointer">×</button></div>
+<div style="padding:16px 24px;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid #E4DACE">
+<sc-for list="{{ thresholds }}" as="t" hint-placeholder-count="2"><div style="display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;font:700 12px/1.3 var(--font-body)"><span style="color:{{ t.color }}">{{ t.msg }}</span><span style="color:#8A7A6B">{{ t.goal }}</span></div><div style="height:8px;border-radius:999px;background:#E4DACE;overflow:hidden"><div style="height:100%;width:{{ t.w }}%;background:{{ t.bar }};border-radius:999px;transition:width .5s cubic-bezier(.2,.7,.2,1)"></div></div></div></sc-for>
+</div>
+<div style="flex:1;overflow:auto;padding:16px 24px;display:flex;flex-direction:column;gap:12px">
+<sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:40px 0;text-align:center;font:600 15px/1.5 var(--font-body);color:#8A7A6B">{{ s.empty }}</div></sc-if>
+<sc-for list="{{ lines }}" as="l" hint-placeholder-count="2">
+<div style="background:#fff;border:1px solid #E4DACE;border-radius:20px;padding:12px;display:flex;gap:12px;align-items:center">
+<div style="width:70px;height:70px;border-radius:16px;background:{{ l.tint }};display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden"><img src="{{ l.img }}" alt="" style="max-height:64px;max-width:62px;width:auto"></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font:700 15px/1.2 var(--font-body)">{{ l.name }}</span><span style="font:500 12px/1.35 var(--font-body);color:#8A7A6B">{{ l.opts }}</span><span style="font:700 11px/1 var(--font-body);letter-spacing:.06em;text-transform:uppercase;color:{{ l.shipColor }}">{{ l.ship }}</span></div>
+<div style="display:flex;flex-direction:column;align-items:end;gap:8px"><span style="font:800 14px/1 var(--font-body)">{{ l.total }}</span><div style="display:flex;align-items:center;border:1px solid #E4DACE;border-radius:999px"><button onClick="{{ l.dec }}" style="width:30px;height:30px;border:0;background:transparent;font:700 15px/1 var(--font-body);cursor:pointer">−</button><span style="min-width:18px;text-align:center;font:800 13px/1 var(--font-body)">{{ l.qty }}</span><button onClick="{{ l.inc }}" style="width:30px;height:30px;border:0;background:transparent;font:700 15px/1 var(--font-body);cursor:pointer">+</button></div></div>
+</div>
+</sc-for>
+<div style="display:flex;flex-direction:column;gap:10px;margin-top:6px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#658D1B">{{ s.goesWith }}</span><div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px"><sc-for list="{{ addons }}" as="a" hint-placeholder-count="3"><button onClick="{{ a.add }}" style="border:1px solid #E4DACE;background:#fff;border-radius:18px;padding:10px 8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px" style-hover="border-color:#8CAB19"><img src="{{ a.img }}" alt="" style="height:64px;width:auto"><span style="font:700 12px/1.2 var(--font-body);text-align:center">{{ a.name }}</span><span style="font:800 12px/1 var(--font-body);color:#035F1D">+ {{ a.price }}</span></button></sc-for></div></div>
+</div>
+<div style="padding:18px 24px 24px;border-top:1px solid #E4DACE;display:flex;flex-direction:column;gap:12px;background:#fff">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 14px/1 var(--font-body);color:#8A7A6B">{{ s.subtotal }}</span><span style="font:800 22px/1 var(--font-body)">{{ totals.sub }}</span></div>
+<div style="display:flex;align-items:center;gap:8px;font:700 13px/1.3 var(--font-body);color:#035F1D"><span style="padding:5px 9px;border-radius:999px;background:#EFF4A4">+{{ pts.pending }} {{ s.pts }}</span><span>{{ pts.cartMsg }}</span></div>
+<button onClick="{{ goCheckout }}" style="border:0;background:{{ checkoutBg }};color:#FBF6E6;border-radius:999px;padding:18px;font:700 16px/1 var(--font-body);cursor:pointer" style-hover="background:#658D1B">{{ s.toCheckout }} →</button>
+</div>
+</aside>
+</sc-if>
+
+<sc-if value="{{ hasFlyToast }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:50;background:#1C2A1E;color:#FBF6E6;border-radius:999px;padding:12px 18px 12px 12px;display:flex;align-items:center;gap:12px;box-shadow:0 18px 40px rgba(0,0,0,.25)"><img src="{{ flyImg }}" alt="" style="height:40px;width:auto"><span style="font:700 14px/1 var(--font-body)">{{ flyMsg }}</span><span style="padding:5px 9px;border-radius:999px;background:#8CAB19;color:#1C2A1E;font:800 12px/1 var(--font-body)">+{{ flyPts }} {{ s.pts }}</span></div>
+</sc-if>
+
+</div>
+<footer style="background:#1C4220;color:#FBF6E6;padding:40px clamp(24px,5vw,120px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap"><a href="#home" style="text-decoration:none;display:flex"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:30px;width:auto"></a><div style="display:flex;gap:22px;flex-wrap:wrap"><sc-for list="{{ siteNav }}" as="n" hint-placeholder-count="6"><a href="{{ n.href }}" style="text-decoration:none;font:600 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ n.t }}</a></sc-for></div><div style="display:flex;align-items:center;gap:22px"><a href="#" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;background:#FDF8E1;color:#035F1D;padding:12px 18px;border-radius:999px" style-hover="background:#EFF4A4;color:#035F1D">{{ siteContact }} →</a><span style="font:500 12px/1 var(--font-body);letter-spacing:.08em;opacity:.8">© Phúc Long Heritage</span></div></footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const P = 'assets/products/';
+const fmt = (n) => Math.round(n).toLocaleString('vi-VN') + 'đ';
+const BASE_PTS = 1240, TIERS = [['Welcome', 0], ['VIP', 500], ['Diamond', 2000]];
+const PRODUCTS = [
+  { id: 'cb1', cat: 'combo', name: 'Combo Sáng', nameEn: 'Morning Combo', img: 'assets/products/cup-lai.png', img2: 'assets/products/food-croissant.png', price: 75000, was: 89000, tint: '#EFF4A4', moment: ['morning'], badge: ['Tiết kiệm 14k', 'Save 14k'], desc: ['Trà Lài Đậm Thơm size M cùng Croissant bơ nướng giòn. Khởi đầu ngày mới thật nhẹ.', 'Jasmine Tea (M) with a flaky butter croissant. A light start to the day.'] },
+  { id: 'cb2', cat: 'combo', name: 'Combo Đôi Trà Đào', nameEn: 'Peach Tea for Two', img: 'assets/products/cup-peach.png', img2: 'assets/products/cup-peach.png', price: 99000, was: 110000, tint: '#FFCDA3', moment: ['go'], badge: ['2 ly M', '2 × M'], desc: ['Hai ly Trà Đào size M. Rủ thêm một người, chia đôi niềm vui.', 'Two Peach Teas, size M. Bring someone along.'] },
+  { id: 'cb3', cat: 'combo', name: 'Combo Ô Long & Tiramisu', nameEn: 'Oolong & Tiramisu', img: 'assets/products/cup-oolong.png', img2: 'assets/products/food-tiramisu.png', price: 85000, was: 99000, tint: '#F2EBE7', moment: ['office'], badge: ['Mới', 'New'], desc: ['Trà Sữa Ô Long đậm vị rang cùng Tiramisu mini. Cặp đôi cho buổi chiều.', 'Roasted Oolong Milk Tea with a mini tiramisu. Your 3pm pairing.'] },
+  { id: 'cb4', cat: 'combo', name: 'Combo Văn Phòng', nameEn: 'Office Combo', img: 'assets/products/cup-vai.png', img2: 'assets/products/food-banhmique.png', price: 299000, was: 356000, tint: '#FFC0C8', moment: ['office'], badge: ['4 ly + 4 bánh', '4 cups + 4 bites'], desc: ['Bốn ly tự chọn kèm bốn phần Bánh Mì Que. Gọi một lần, cả team vui.', 'Four cups of your choice with four pâté sticks. One order, the whole team sorted.'] },
+  { id: 'd1', cat: 'drink', name: 'Trà Đào', nameEn: 'Peach Tea', img: 'assets/products/cup-peach.png', price: 55000, tint: '#FFCDA3', moment: ['go'], badge: ['Bán chạy', 'Best seller'], desc: ['Trà đen ủ lạnh với đào ngâm giòn ngọt. Mát lành cho ngày nắng.', 'Cold-steeped black tea with sweet, crisp peach.'] },
+  { id: 'd2', cat: 'drink', name: 'Trà Vải Lài', nameEn: 'Lychee Jasmine', img: 'assets/products/cup-vai.png', price: 55000, tint: '#FFC0C8', moment: ['go'], desc: ['Trà lài thơm hoa, vải mọng và chút chanh tươi.', 'Floral jasmine tea, plump lychee and a squeeze of lime.'] },
+  { id: 'd3', cat: 'drink', name: 'Trà Sữa Ô Long', nameEn: 'Oolong Milk Tea', img: 'assets/products/cup-oolong.png', price: 59000, tint: '#F2EBE7', moment: ['office'], badge: ['Đặc trưng', 'Signature'], desc: ['Ô long rang đậm, sữa béo dịu, hậu vị ngọt lâu.', 'Deep roasted oolong with soft, creamy milk.'] },
+  { id: 'd4', cat: 'drink', name: 'Trà Lài Đậm Thơm', nameEn: 'Jasmine Tea', img: 'assets/products/cup-lai.png', price: 55000, tint: '#EFF4A4', moment: ['morning'], desc: ['Trà xanh ướp hoa lài tươi. Thanh, dịu và sảng khoái.', 'Green tea scented with fresh jasmine. Clean and uplifting.'] },
+  { id: 'd5', cat: 'drink', name: 'Hồng Trà Sữa', nameEn: 'Black Milk Tea', img: 'assets/products/cup-hongtra.png', price: 55000, tint: '#E4DACE', moment: ['morning'], desc: ['Hồng trà Lâm Đồng đậm vị, sữa béo. Vị quen thuộc từ 1968.', 'Full-bodied Lâm Đồng black tea with milk.'] },
+  { id: 'd6', cat: 'drink', name: 'TS Nhãn Sen', nameEn: 'Longan Lotus Milk Tea', img: 'assets/products/cup-nhansen.png', price: 62000, tint: '#FFC0C8', moment: ['go'], desc: ['Trà sữa thơm sen, nhãn ngọt thanh.', 'Lotus-scented milk tea with sweet longan.'] },
+  { id: 'd7', cat: 'drink', name: 'Ô Long Thạch Dâu', nameEn: 'Oolong Strawberry Jelly', img: 'assets/products/cup-thachdau.png', price: 62000, tint: '#FFC0C8', moment: ['go'], desc: ['Ô long thanh mát cùng thạch dâu dai mềm.', 'Bright oolong with chewy strawberry jelly.'] },
+  { id: 'd8', cat: 'drink', name: 'Oatcha Matcha Latte', nameEn: 'Oatcha Matcha Latte', img: 'assets/products/cup-matcha.png', price: 65000, tint: '#EFF4A4', moment: ['morning'], badge: ['Mới', 'New'], desc: ['Matcha đậm vị cùng sữa yến mạch béo nhẹ.', 'Rich matcha with creamy oat milk.'] },
+  { id: 'd9', cat: 'drink', name: 'Cappuccino Đá Xay', nameEn: 'Cappuccino Frappé', img: 'assets/products/cup-cappu.png', price: 65000, tint: '#E4DACE', moment: ['office'], desc: ['Cà phê đá xay mịn, phủ kem tươi.', 'Blended iced coffee topped with whipped cream.'] },
+  { id: 'd10', cat: 'drink', name: 'Lucky Tea', nameEn: 'Lucky Tea', img: 'assets/products/cup-lucky.png', price: 59000, tint: '#FFCDA3', moment: ['go'], desc: ['Trà trái cây nhiệt đới, vải và cam tươi.', 'Tropical fruit tea with lychee and orange.'] },
+  { id: 'k4', cat: 'drink', name: 'Cà Phê Đen Đá', nameEn: 'Iced Black Coffee', img: 'assets/products/cup-cf-den.png', price: 35000, tint: '#E4DACE', moment: ['morning', 'office'], desc: ['Robusta pha phin đậm đặc, lớp bọt sánh trên đá.', 'Strong phin-dripped robusta over ice, with a rich crema.'] },
+  { id: 'k5', cat: 'drink', name: 'Americano Đá', nameEn: 'Iced Americano', img: 'assets/products/cup-americano.png', price: 45000, tint: '#FFCDA3', moment: ['office', 'go'], desc: ['Espresso pha loãng với nước và đá, thanh và sạch vị.', 'Espresso lengthened with water over ice, clean and bright.'] },
+  { id: 'k3', cat: 'drink', name: 'Cà Phê Muối', nameEn: 'Salted Cream Coffee', img: 'assets/products/cup-cf-muoi.png', price: 49000, tint: '#E4DACE', moment: ['office'], badge: ['Mới', 'New'], desc: ['Kem muối béo mặn nhẹ phủ trên cà phê phin, cảm hứng xứ Huế.', 'Lightly salted cream over phin coffee, inspired by Huế.'] },
+  { id: 'k2', cat: 'drink', name: 'Cà Phê Sữa Đá', nameEn: 'Iced Milk Coffee', img: 'assets/products/cup-cf-suada.png', price: 39000, tint: '#E4DACE', moment: ['morning', 'go'], desc: ['Robusta Buôn Ma Thuột pha phin, sữa đặc và đá.', 'Buôn Ma Thuột robusta, phin-dripped over condensed milk and ice.'] },
+  { id: 'k1', cat: 'drink', name: 'Bạc Xỉu', nameEn: 'Saigon White Coffee', img: 'assets/products/cup-bacxiu.png', price: 45000, tint: '#F2EBE7', moment: ['morning'], desc: ['Sữa nhiều, cà phê ít, đậm chất Sài Gòn xưa.', 'More milk, less coffee, the old Saigon way.'] },
+  { id: 'f1', cat: 'food', name: 'Croissant Bơ', nameEn: 'Butter Croissant', img: 'assets/products/food-croissant.png', price: 35000, tint: '#F2EBE7', moment: ['morning'], desc: ['Bơ nguyên chất, nướng giòn mỗi sáng.', 'Pure butter, baked crisp every morning.'] },
+  { id: 'f2', cat: 'food', name: 'Croissant Sô-cô-la', nameEn: 'Chocolate Croissant', img: 'assets/products/food-choc-croissant.png', price: 39000, tint: '#E4DACE', moment: ['morning'], desc: ['Vỏ bơ giòn, nhân sô-cô-la đậm.', 'Flaky butter pastry, rich chocolate.'] },
+  { id: 'f3', cat: 'food', name: 'Tiramisu Mini', nameEn: 'Mini Tiramisu', img: 'assets/products/food-tiramisu.png', price: 45000, tint: '#F2EBE7', moment: ['office'], desc: ['Kem mascarpone, cà phê và ca cao.', 'Mascarpone, coffee and cocoa.'] },
+  { id: 'f4', cat: 'food', name: 'Bánh Mì Thịt Nướng', nameEn: 'Grilled Pork Bánh Mì', img: 'assets/products/food-banhmi.png', price: 39000, tint: '#FFCDA3', moment: ['go'], desc: ['Bánh mì giòn, thịt nướng, đồ chua.', 'Crusty bánh mì, grilled pork and pickles.'] },
+  { id: 'f5', cat: 'food', name: 'Mousse Trà Xanh', nameEn: 'Green Tea Mousse', img: 'assets/products/food-matcha-cake.png', price: 45000, tint: '#EFF4A4', moment: ['office'], desc: ['Mousse trà xanh mịn, cốt bánh mềm.', 'Silky green tea mousse on soft sponge.'] },
+  { id: 'f6', cat: 'food', name: 'Bánh Mì Que', nameEn: 'Pâté Stick Bread', img: 'assets/products/food-banhmique.png', price: 25000, tint: '#F2EBE7', moment: ['go'], desc: ['Que bánh giòn rụm, nhân pa-tê.', 'Crisp stick bread with pâté.'] },
+  { id: 'c1', cat: 'cpg', name: 'Trà Xanh · Lon giấy 100g', nameEn: 'Green Tea · 100g tin', img: 'assets/products/tin-xanh.png', price: 180000, tint: '#EFF4A4', moment: ['office','gift'], badge: ['Cao cấp', 'Premium'], desc: ['Dòng cao cấp. Búp trà xanh non hái sớm, nước vàng xanh, hậu ngọt thanh.', 'Premium line. Early-picked green tea buds with a clean, sweet finish.'] },
+  { id: 'c2', cat: 'cpg', name: 'Trà Lài · Lon giấy 100g', nameEn: 'Jasmine Tea · 100g tin', img: 'assets/products/tin-lai.png', price: 180000, tint: '#F2EBE7', moment: ['office','gift'], badge: ['Cao cấp', 'Premium'], desc: ['Dòng cao cấp. Trà xanh ướp bông lài tự nhiên, hương thơm thanh thoát.', 'Premium line. Green tea scented with fresh jasmine blossoms.'] },
+  { id: 'c3', cat: 'cpg', name: 'Trà Xanh · Hộp 150g', nameEn: 'Green Tea · 150g box', img: 'assets/products/box150-xanh.png', price: 120000, tint: '#EFF4A4', moment: ['office'], desc: ['Trà lá rời. Lá trà non sấy ngay sau thu hái, giữ trọn độ tươi.', 'Loose leaf. Young leaves dried right after harvest to keep them fresh.'] },
+  { id: 'c4', cat: 'cpg', name: 'Trà Lài · Hộp 150g', nameEn: 'Jasmine Tea · 150g box', img: 'assets/products/box150-lai.png', price: 120000, tint: '#F2EBE7', moment: ['office'], desc: ['Trà lá rời ướp lài, nhẹ nhàng và tao nhã.', 'Loose-leaf jasmine tea, light and graceful.'] },
+  { id: 'c5', cat: 'cpg', name: 'Trà Hương Sen · Hộp 150g', nameEn: 'Lotus Tea · 150g box', img: 'assets/products/box150-sen.png', price: 130000, tint: '#FFC0C8', moment: ['office','gift'], desc: ['Trà lá rời ướp hương sen, thơm dịu dàng, hậu ngọt.', 'Loose-leaf tea infused with lotus, gently fragrant.'] },
+  { id: 'c6', cat: 'cpg', name: 'Hồng Trà · 25 túi lọc', nameEn: 'Black Tea · 25 bags', img: 'assets/products/teabag-den.png', price: 65000, tint: '#FFC0C8', moment: ['office','morning'], desc: ['Hồng trà túi lọc, đậm vị, tiện pha mỗi sáng.', 'Black tea bags, full-bodied and easy for busy mornings.'] },
+  { id: 'c7', cat: 'cpg', name: 'Trà Ô Long · 25 túi lọc', nameEn: 'Oolong Tea · 25 bags', img: 'assets/products/teabag-olong.png', price: 65000, tint: '#EFF4A4', moment: ['office'], desc: ['Ô long túi lọc, hương rang nhẹ, vị êm.', 'Oolong tea bags with a light roasted note.'] },
+  { id: 'c8', cat: 'cpg', name: 'Trà Hương Vải · 25 túi lọc', nameEn: 'Lychee Tea · 25 bags', img: 'assets/products/teabag-vai.png', price: 65000, tint: '#FFC0C8', moment: ['office','go'], desc: ['Trà túi lọc hương vải, ngọt thơm dễ uống.', 'Lychee-scented tea bags, sweet and easy-drinking.'] },
+  { id: 'c9', cat: 'cpg', name: 'Cà Phê King · 250g', nameEn: 'King Coffee Beans · 250g', img: 'assets/products/coffee-king.png', price: 150000, tint: '#EFF4A4', moment: ['office','morning'], desc: ['Rang mộc nguyên hạt: Moka, Robusta, Culi, Mít. Phức hợp, cacao đậm.', 'Whole-bean pure roast blend of Moka, Robusta, Culi and Liberica. Complex, dark cocoa.'] },
+  { id: 'c10', cat: 'cpg', name: 'Cà Phê Moka · 250g', nameEn: 'Moka Coffee Beans · 250g', img: 'assets/products/coffee-moka.png', price: 160000, tint: '#FFE3B8', moment: ['office','morning'], desc: ['100% Moka rang mộc nguyên hạt. Hoa quả chín, sô-cô-la.', '100% Moka whole bean, pure roast. Ripe fruit and chocolate.'] },
+  { id: 'c12', cat: 'cpg', name: 'Trà Đào – Ổi · lon', nameEn: 'Peach – Guava · can', img: 'assets/products/can-dao-oi.jpg', price: 18000, tint: '#81be57', moment: ['go'], badge: ['Ít đường', 'Low sugar'], desc: ['Trà trái cây đào và ổi, ít đường, lon 320ml mát lạnh.', 'Peach and guava fruit tea, low sugar, 320ml can.'] },
+  { id: 'c13', cat: 'cpg', name: 'TS Ô Long – Phong Lan · lon', nameEn: 'Oolong Orchid Milk Tea · can', img: 'assets/products/can-olong-lan.jpg', price: 20000, tint: '#cc6f34', moment: ['go'], badge: ['Ít đường', 'Low sugar'], desc: ['Trà sữa ô long hương phong lan, ít đường, lon 320ml.', 'Oolong milk tea with orchid notes, low sugar, 320ml can.'] },
+  { id: 'c11', cat: 'cpg', name: 'Cà Phê Robusta · 250g', nameEn: 'Robusta Coffee Beans · 250g', img: 'assets/products/coffee-robusta.png', price: 130000, tint: '#FFCDA3', moment: ['office','morning'], desc: ['100% Robusta rang mộc nguyên hạt. Đậm đà, hương hạt rang.', '100% Robusta whole bean, pure roast. Bold and nutty.'] },
+  { id: 'g1', cat: 'gift', name: 'Hộp Quà Tết Ủ Vị', nameEn: 'Tết Gift Box', imgPhoto: 'assets/photos/p09-tet-gift.jpg', price: 450000, tint: '#EFF4A4', moment: ['gift'], badge: ['Tết 2027', 'Tết 2027'], desc: ['Ba hộp trà tuyển chọn trong hộp đan xanh, kèm thiệp viết tay.', 'Three selected teas in a woven green box with a handwritten card.'] },
+  { id: 'g2', cat: 'gift', name: 'Hộp Quà Tâm Giao', nameEn: 'Tâm Giao Gift Set', imgPhoto: 'assets/photos/p16-gift-hero.jpg', price: 350000, tint: '#F2EBE7', moment: ['gift'], desc: ['Trà, ấm sứ và hai chén nhỏ. Món quà cho người thân thương.', 'Tea, a ceramic pot and two cups. For someone close.'] }
+];
+const byId = Object.fromEntries(PRODUCTS.map(p => [p.id, p]));
+const COFFEE = ['d9', 'k1', 'k2', 'k3', 'k4', 'k5'], SEASONAL = ['d7', 'd8', 'd2', 'd6', 'd10', 'd9', 'k3', 'f3', 'f5'];
+const isCoffee = (p) => COFFEE.includes(p.id);
+const imgOf = (p) => p.imgPhoto || p.img;
+const HERO = [
+  { id: 'd8', bg: 'assets/photos/hero-bg-matcha.jpg', title: ['Matcha Oatcha', 'Matcha Oatcha'], short: ['Matcha', 'Matcha'], kind: ['Món của tháng', 'Drink of the month'], tag: ['Tháng 10 · 2026', 'October 2026'], c1: '#5E8A1E', c2: '#0F3A16', accent: '#B5CC4A', base: '#8CAB19' },
+  { id: 'd7', bg: 'assets/photos/hero-bg-berry.jpg', title: ['Ô Long Dâu', 'Berry Oolong'], short: ['Ô Long Dâu', 'Berry Oolong'], kind: ['Theo mùa', 'Seasonal'], tag: ['Mùa dâu Đà Lạt', 'Dalat berry season'], c1: '#A2405A', c2: '#3E1424', accent: '#FF7A8F', base: '#C9667C' },
+  { id: 'd6', bg: 'assets/photos/hero-bg-lotus.jpg', title: ['Nhãn Sen', 'Longan Lotus'], short: ['Nhãn Sen', 'Longan Lotus'], kind: ['Đặc biệt', 'Special'], tag: ['Hương sen Tây Hồ', 'West Lake lotus'], c1: '#B0705E', c2: '#4A2219', accent: '#FFC0C8', base: '#D9A08B' },
+  { id: 'd1', bg: 'assets/photos/hero-bg-peach.jpg', title: ['Trà Đào', 'Peach Tea'], short: ['Trà Đào', 'Peach Tea'], kind: ['Bán chạy', 'Best seller'], tag: ['Từ 1968', 'Loved since 1968'], c1: '#D2683A', c2: '#5C2410', accent: '#FFCDA3', base: '#E89A62' },
+  { id: 'd2', bg: 'assets/photos/hero-bg-lychee.jpg', title: ['Vải Lài', 'Lychee Jasmine'], short: ['Vải Lài', 'Lychee'], kind: ['Theo mùa', 'Seasonal'], tag: ['Vải thiều Lục Ngạn', 'Luc Ngan lychee'], c1: '#C25670', c2: '#4E1A2A', accent: '#FFD9DF', base: '#E08A9C' },
+];
+const HB = 'assets/photos/';
+const HERO_BY = {
+  combo: HERO, tea: HERO,
+  coffee: [
+    { id: 'k3', bg: 'assets/photos/hero-bg-coffee-hue.jpg', title: ['Cà Phê Muối', 'Salted Coffee'], short: ['Cà Phê Muối', 'Salted'], kind: ['Theo mùa', 'Seasonal'], tag: ['Cảm hứng xứ Huế', 'Inspired by Huế'], c1: '#8A6A52', c2: '#2A1C14', accent: '#E4DACE', base: '#B08B6E' },
+    { id: 'k2', bg: 'assets/photos/hero-bg-coffee-bmt.jpg', title: ['Cà Phê Sữa Đá', 'Iced Milk Coffee'], short: ['Sữa Đá', 'Iced Milk'], kind: ['Signature', 'Signature'], tag: ['Robusta Buôn Ma Thuột', 'Buôn Ma Thuột robusta'], c1: '#9A5A2E', c2: '#2E160A', accent: '#E89A62', base: '#B9774A' },
+    { id: 'k1', bg: 'assets/photos/hero-bg-coffee-saigon.jpg', title: ['Bạc Xỉu', 'White Coffee'], short: ['Bạc Xỉu', 'White'], kind: ['Signature', 'Signature'], tag: ['Sài Gòn xưa', 'Old Saigon'], c1: '#A4774E', c2: '#33200F', accent: '#F2D2A8', base: '#C9A27A' },
+    { id: 'k4', bg: 'assets/photos/hero-bg-coffee-bmt.jpg', title: ['Cà Phê Đen', 'Black Coffee'], short: ['Đen Đá', 'Black'], kind: ['Signature', 'Signature'], tag: ['Pha phin truyền thống', 'Traditional phin'], c1: '#8E6244', c2: '#2A170C', accent: '#E4DACE', base: '#B08B6E' }
+  ],
+  bakes: [
+    { id: 'f1', mode: 'video', title: ['Croissant', 'Croissant'], script: ['nướng thủ công', 'freshly baked'], short: ['Croissant Bơ', 'Butter'], kind: ['Signature', 'Signature'], tag: ['Bơ nguyên chất · mỗi sáng', 'Pure butter · every morning'], c1: '#C98A4B', c2: '#3A1E0C', accent: '#F2C38A', base: '#C98A4B' },
+    { id: 'f2', mode: 'photo', bg: 'assets/photos/hero-bg-bake-choc.jpg', title: ['Pain au Chocolat', 'Pain au Chocolat'], script: ['giòn tan', 'flaky & rich'], short: ['Sô-cô-la', 'Chocolate'], kind: ['Signature', 'Signature'], tag: ['Sô-cô-la đen', 'Dark chocolate'], c1: '#8E5530', c2: '#2A140A', accent: '#E8B07A', base: '#8E5530' },
+    { id: 'f3', mode: 'photo', bg: 'assets/photos/hero-bg-bake-tiramisu.jpg', title: ['Tiramisu', 'Tiramisu'], script: ['ngọt ngào', 'softly sweet'], short: ['Tiramisu', 'Tiramisu'], kind: ['Theo mùa', 'Seasonal'], tag: ['Mascarpone & cà phê', 'Mascarpone & coffee'], c1: '#9A6A44', c2: '#2E1A0E', accent: '#E4C29A', base: '#9A6A44' },
+    { id: 'f5', mode: 'photo', bg: 'assets/photos/hero-bg-bake-matcha.jpg', title: ['Mousse Trà Xanh', 'Matcha Mousse'], script: ['thanh mát', 'gently green'], short: ['Mousse', 'Mousse'], kind: ['Theo mùa', 'Seasonal'], tag: ['Trà xanh Lâm Đồng', 'Lâm Đồng green tea'], c1: '#6E8A3A', c2: '#1E2A12', accent: '#B5CC4A', base: '#6E8A3A' }
+  ],
+  home: [
+    { id: 'c1', bg: 'assets/photos/hero-bg-home-tea.jpg', title: ['Trà Xanh', 'Green Tea'], short: ['Trà Xanh', 'Green'], kind: ['Dòng cao cấp', 'Premium line'], tag: ['Lon giấy 100g', '100g tin'], c1: '#5E8A3A', c2: '#163016', accent: '#B5CC4A', base: '#8CAB19' },
+    { id: 'c5', bg: 'assets/photos/hero-bg-lotus.jpg', title: ['Trà Hương Sen', 'Lotus Tea'], short: ['Hương Sen', 'Lotus'], kind: ['Tại nhà', 'At home'], tag: ['Lá rời · hộp 150g', 'Loose leaf · 150g'], c1: '#B5677E', c2: '#3A1622', accent: '#FFC0C8', base: '#D58AA0' },
+    { id: 'c8', bg: 'assets/photos/hero-bg-lychee.jpg', title: ['Trà Hương Vải', 'Lychee Tea'], short: ['Hương Vải', 'Lychee'], kind: ['Tại nhà', 'At home'], tag: ['25 túi lọc', '25 tea bags'], c1: '#B8475A', c2: '#3A0F18', accent: '#FFC0C8', base: '#C9566A' },
+    { id: 'c12', mode: 'can', bg: 'assets/photos/hero-bg-home-go.jpg', title: ['Đào – Ổi', 'Peach Guava'], short: ['Đào – Ổi', 'Peach Guava'], kind: ['Mang đi', 'On the go'], tag: ['Ít đường · lon 320ml', 'Low sugar · 320ml can'], c1: '#C9763A', c2: '#3A1C0A', accent: '#81BE57', base: '#E89A62' },
+    { id: 'c9', bg: 'assets/photos/hero-bg-coffee-bmt.jpg', title: ['Cà Phê King', 'King Coffee'], short: ['King', 'King'], kind: ['Rang mộc', 'Pure roast'], tag: ['Nguyên hạt · 250g', 'Whole bean · 250g'], c1: '#9A5A2E', c2: '#2E160A', accent: '#E8DC4A', base: '#B9774A' }
+  ],
+  gift: [
+    { id: 'g1', mode: 'photo', bg: 'assets/photos/p09-tet-gift.jpg', title: ['Quà Tết Ủ Vị', 'Tết Gift Box'], script: ['gửi trao tâm giao', 'from the heart'], short: ['Quà Tết', 'Tết box'], kind: ['Tết 2027', 'Tết 2027'], tag: ['Đặt trước · giao tận nơi', 'Pre-order · delivered'], c1: '#6E3A2A', c2: '#1E120C', accent: '#FFC0C8', base: '#6E3A2A' },
+    { id: 'g2', mode: 'photo', bg: 'assets/photos/p16-gift-hero.jpg', title: ['Hộp Quà Tâm Giao', 'Tâm Giao Set'], script: ['ủ vị tâm giao', 'pure connections'], short: ['Tâm Giao', 'Tâm Giao'], kind: ['Quanh năm', 'All year'], tag: ['Trà, ấm & tách', 'Tea, pot & cups'], c1: '#4F3A2A', c2: '#16100A', accent: '#EFF4A4', base: '#4F3A2A' }
+  ]
+};
+const VIDEO = 'assets/video/croissant-v2.mp4';
+const S = {
+  vi: { search: 'Tìm trà, bánh, quà tặng…', cart: 'Giỏ hàng', hello: 'Chào Lan Anh', heroAdd: 'Thêm vào giỏ', heroExplore: 'Khám phá thêm', pts: 'điểm', reorderEyebrow: 'Đơn gần nhất · 3 ngày trước', reorder: 'Đặt lại', remindEyebrow: 'Bạn còn giỏ hàng dang dở', remindText: '2 × Trà Đào đang chờ từ hôm qua', resume: 'Tiếp tục', moment: 'Theo khoảnh khắc', quickAdd: 'Thêm nhanh', builderEyebrow: 'Tự tay chọn quà', builderTitle: 'Hộp quà của riêng bạn', builderPick: 'Chạm để thêm vào hộp', cardPh: 'Lời nhắn trên thiệp…', yourBox: 'Hộp quà', total: 'Tổng cộng', addGift: 'Thêm hộp quà', backShop: 'Tiếp tục mua sắm', checkout: 'Thanh toán', receive: 'Nhận hàng', change: 'Đổi', splitNote: 'Đồ uống giao ngay từ cửa hàng gần nhất. Sản phẩm đóng gói đi cùng chuyến nếu cùng địa chỉ.', contact: 'Liên hệ', guestPh: 'Hoặc nhập SĐT (khách)', payment: 'Thanh toán', vat: 'Xuất hoá đơn VAT cho công ty', vatCo: 'Tên công ty', vatTax: 'Mã số thuế', vatMail: 'Email nhận hoá đơn', summary: 'Đơn hàng', subtotal: 'Tạm tính', shipping: 'Phí giao hàng', deal: 'Ưu đãi', place: 'Đặt hàng', thanksScript: 'cảm ơn bạn', thanks: 'Đơn đã được nhận', thanksBody: 'Ly trà của bạn đang được pha. Bạn sẽ nhận thông báo qua Zalo khi tài xế lên đường.', earned: 'Điểm vừa tích', keepShopping: 'Mua tiếp', trackOrder: 'Theo dõi đơn', scrollHint: 'Cuộn để đổi món', notePh: 'Ghi chú cho barista…', subTitle: 'Đăng ký giao định kỳ · tiết kiệm 15%', subBody: 'Giao mỗi 4 tuần, huỷ bất kỳ lúc nào.', yourCart: 'Giỏ hàng', empty: 'Giỏ hàng đang trống. Chọn một ly trà nhé.', goesWith: 'Ăn kèm thêm ngon', toCheckout: 'Thanh toán' },
+  en: { search: 'Search tea, bakes, gifts…', cart: 'Cart', hello: 'Hi Lan Anh', heroAdd: 'Add to cart', heroExplore: 'Explore more', pts: 'pts', reorderEyebrow: 'Last order · 3 days ago', reorder: 'Reorder', remindEyebrow: 'You left something behind', remindText: '2 × Peach Tea waiting since yesterday', resume: 'Resume', moment: 'By moment', quickAdd: 'Quick add', builderEyebrow: 'Build your own', builderTitle: 'A gift box, your way', builderPick: 'Tap to add to the box', cardPh: 'Message for the card…', yourBox: 'Your box', total: 'Total', addGift: 'Add gift box', backShop: 'Keep shopping', checkout: 'Checkout', receive: 'Delivery', change: 'Change', splitNote: 'Drinks come from your nearest store. Packaged items ride along when the address matches.', contact: 'Contact', guestPh: 'Or phone number (guest)', payment: 'Payment', vat: 'Company VAT invoice', vatCo: 'Company name', vatTax: 'Tax code', vatMail: 'Invoice email', summary: 'Your order', subtotal: 'Subtotal', shipping: 'Delivery', deal: 'Deal', place: 'Place order', thanksScript: 'thank you', thanks: 'Order received', thanksBody: 'Your tea is being brewed. We will message you on Zalo when the rider sets off.', earned: 'Points earned', keepShopping: 'Keep shopping', trackOrder: 'Track order', scrollHint: 'Scroll to switch', notePh: 'Note for the barista…', subTitle: 'Subscribe & save 15%', subBody: 'Delivered every 4 weeks, cancel any time.', yourCart: 'Your cart', empty: 'Your cart is empty. Pick a cup to start.', goesWith: 'Goes well with', toCheckout: 'Checkout' }
+};
+const CATS = [
+  { key: 'combo', vi: 'Combo đặc biệt', en: 'Special combos', img: 'assets/products/cup-peach.png', bg: '#FFCDA3' },
+  { key: 'tea', vi: 'Trà', en: 'Tea', img: 'assets/products/cup-oolong.png', bg: '#EFF4A4' },
+  { key: 'coffee', vi: 'Cà phê', en: 'Coffee', img: 'assets/products/cup-cappu.png', bg: '#E4DACE' },
+  { key: 'bakes', vi: 'Bánh', en: 'Bakes', img: 'assets/products/food-croissant.png', bg: '#FFE3B8' },
+  { key: 'home', vi: 'Tại nhà & Mang đi', en: 'Home & on the go', img: 'assets/products/box150-lai.png', bg: '#F2EBE7' },
+  { key: 'gift', vi: 'Quà tặng', en: 'Gifting', img: 'assets/products/cup-vai.png', bg: '#FFC0C8' }
+];
+const MOMENTS = [['all', 'Tất cả', 'All'], ['morning', 'Buổi sáng', 'Morning'], ['office', 'Văn phòng', 'Office'], ['go', 'Mang đi', 'On the go'], ['gift', 'Tặng quà', 'Gifting']];
+const DRINK_OPTS = [
+  { key: 'size', vi: 'Kích cỡ', en: 'Size', opts: [['S', 0], ['M', 6000], ['L', 10000]], def: 1 },
+  { key: 'temp', vi: 'Nóng / Đá', en: 'Hot / Iced', opts: [['Đá|Iced', 0], ['Nóng|Hot', 0]], def: 0 },
+  { key: 'tea', vi: 'Độ đậm trà', en: 'Tea strength', opts: [['Ít|Light', 0], ['Vừa|Regular', 0], ['Đậm|Strong', 0]], def: 1 },
+  { key: 'sweet', vi: 'Độ ngọt', en: 'Sweetness', opts: [['0%', 0], ['30%', 0], ['50%', 0], ['70%', 0], ['100%', 0]], def: 3 },
+  { key: 'ice', vi: 'Lượng đá', en: 'Ice', opts: [['Ít|Less', 0], ['Vừa|Regular', 0], ['Nhiều|Extra', 0]], def: 1 },
+  { key: 'top', vi: 'Topping (chọn nhiều)', en: 'Toppings (multi)', multi: true, opts: [['Trân châu trắng|White pearls', 8000], ['Thạch đào|Peach jelly', 8000], ['Thạch lài|Jasmine jelly', 8000], ['Kem cheese|Cheese foam', 10000]] }
+];
+const lab = (s, vi) => s.includes('|') ? s.split('|')[vi ? 0 : 1] : s;
+class Component extends DCLogic {
+  siteChrome(vi, cur) { const h = ['#our-story', '#our-drink', '#tea-leaf', '#our-stores', '#our-people', '#media']; return { siteNav: (vi ? ['Câu chuyện', 'Đồ uống', 'Sản phẩm', 'Cửa hàng', 'Con người', 'Truyền thông'] : ['Our Story', 'Our Drink', 'Our Products', 'Our Stores', 'Our People', 'Media']).map((t, i) => ({ t, href: h[i], ul: i === cur ? '#EFF4A4' : 'transparent' })), siteLangA: vi ? 'VI' : 'EN', siteLangB: vi ? 'EN' : 'VI', siteContact: vi ? 'Liên hệ' : 'Contact us' }; }
+
+  state = { lang: window.PL ? PL.lang : 'vi', screen: 'shop', cat: 'combo', moment: 'all', cart: (window.PL && PL.shopCart) || [], cartOpen: !!(window.PL && PL.openCart), modal: null, idx: 0, spin: 0, qty: 1, opt: {}, sub: false, remind: true, vat: false, fulfil: 0, time: 0, pay: 0, zalo: false, pts: BASE_PTS, lastEarned: 0, boxSize: 3, box: [], pulse: 1, fly: null, toast: '' };
+  _unusedSync() { const el = this._vid; if (!el) return; const HL = HERO_BY[this.state.cat] || HERO, cur = HL[Math.min(this.state.hero || 0, HL.length - 1)]; const on = cur && cur.mode === 'video'; if (on && !this._vidOn) { el.currentTime = 0; const p = el.play(); if (p) p.catch(() => {}); } else if (!on && this._vidOn) el.pause(); this._vidOn = on; }
+  
+  componentDidMount() { if (window.PL) { PL.openCart = false; PL.pending.splice(0).forEach(id => { if (byId[id]) this.add(byId[id], 1, this.defOpts()); }); }  this._hero = setInterval(() => { if (this._heroPaused || this.state.cat === 'bakes') return; this.setState(s => ({ hero: ((s.hero || 0) + 1) % (HERO_BY[s.cat] || HERO).length })); }, 5500); }
+  componentWillUnmount() { clearTimeout(this._ft); clearTimeout(this._pt); clearInterval(this._hero); }
+  defOpts() { const o = {}; DRINK_OPTS.forEach(g => { o[g.key] = g.multi ? [] : g.def; }); return o; }
+  unitPrice(p, opt, sub) { let v = p.price; if (p.cat === 'drink' && opt) DRINK_OPTS.forEach(g => { if (g.multi) (opt[g.key] || []).forEach(i => v += g.opts[i][1]); else v += g.opts[opt[g.key] ?? g.def][1]; }); if (p.cat === 'cpg' && sub) v = Math.round(v * 0.85 / 1000) * 1000; return v; }
+  optText(p, opt, sub, vi) {
+    if (p.cat === 'drink') { const parts = []; DRINK_OPTS.forEach(g => { if (g.multi) (opt[g.key] || []).forEach(i => parts.push(lab(g.opts[i][0], vi))); else { const i = opt[g.key] ?? g.def; if (g.key === 'size' || i !== g.def) parts.push((g.key === 'sweet' ? (vi ? 'Ngọt ' : 'Sweet ') : g.key === 'tea' ? (vi ? 'Trà ' : 'Tea ') : g.key === 'ice' ? (vi ? 'Đá ' : 'Ice ') : '') + lab(g.opts[i][0], vi)); } }); return parts.join(' · '); }
+    if (p.cat === 'cpg' && sub) return vi ? 'Giao định kỳ 4 tuần · −15%' : 'Every 4 weeks · −15%';
+    if (p.cat === 'combo') return vi ? 'Size M · mặc định' : 'Size M · default';
+    return '';
+  }
+  add(p, qty = 1, opt = null, sub = false, note) {
+    opt = opt || (p.cat === 'drink' ? this.defOpts() : {});
+    const key = p.id + JSON.stringify(opt) + (sub ? 's' : '');
+    const unit = this.unitPrice(p, opt, sub);
+    this.setState(s => { const c = s.cart.slice(); const i = c.findIndex(l => l.key === key); if (i >= 0) c[i] = { ...c[i], qty: c[i].qty + qty }; else c.push({ key, id: p.id, opt, sub, unit, qty }); return { cart: c, pulse: 1.12, fly: { img: imgOf(p), name: this.state.lang === 'vi' ? p.name : p.nameEn, pts: Math.floor(unit * qty / 10000) } }; });
+    clearTimeout(this._pt); this._pt = setTimeout(() => this.setState({ pulse: 1 }), 220);
+    clearTimeout(this._ft); this._ft = setTimeout(() => this.setState({ fly: null }), 1800);
+  }
+  openProduct(p) { const list = this.modalList(p); this.setState({ modal: p.cat, idx: list.findIndex(x => x.id === p.id), qty: 1, opt: this.defOpts(), sub: false, toast: '' }); }
+  modalList(p) { const c = p.cat === 'food' || p.cat === 'drink' ? p.cat : p.cat; return PRODUCTS.filter(x => x.cat === c); }
+  step(d) { const list = PRODUCTS.filter(x => x.cat === this.state.modal); this.setState(s => ({ idx: (s.idx + d + list.length) % list.length, spin: s.spin + (d > 0 ? 360 : -360), qty: 1, opt: this.defOpts(), toast: '' })); }
+  componentDidUpdate(pp, ps) { if (window.PL) PL.setShopCart(this.state.cart); if (window.PL) { const __v = this.state.vi !== undefined ? (this.state.vi ? 'vi' : 'en') : this.state.lang; if ((__v === 'vi' || __v === 'en') && __v !== PL.lang) PL.lang = __v; }
+    const gain = Math.floor(this.state.cart.reduce((a, l) => a + l.unit * l.qty, 0) / 10000) - Math.floor(ps.cart.reduce((a, l) => a + l.unit * l.qty, 0) / 10000);
+    if (gain > 0) { this.setState({ sparkKey: Date.now(), sparkGain: gain }); }
+  }
+  renderSpark(pendW) {
+    const k = this.state.sparkKey; if (!k) return { spark: null, sparkSweep: null };
+    const e = React.createElement;
+    const rays = Array.from({ length: 10 }, (_, i) => e('span', { key: i, style: { position: 'absolute', left: -1.5, top: -14, width: 3, height: 14, borderRadius: 3, transformOrigin: '50% 14px', background: i % 2 ? '#FFE27A' : '#E8B21C', boxShadow: '0 0 6px #FFD24A', '--a': (i * 36) + 'deg', animation: 'plSparkRay .9s cubic-bezier(.2,.7,.2,1) ' + (i % 2 ? '.08s' : '0s') + ' both' } }));
+    const spark = e('div', { key: 'sp' + k, style: { position: 'absolute', left: pendW + '%', top: 5, width: 0, height: 0, pointerEvents: 'none', zIndex: 3 } },
+      e('span', { style: { position: 'absolute', left: 0, top: 0, width: 22, height: 22, borderRadius: '50%', background: 'radial-gradient(circle,#FFF6C8 0%,#FFD24A 40%,rgba(232,178,28,0) 70%)', animation: 'plSparkCore .9s ease-out both' } }),
+      e('span', { style: { position: 'absolute', left: 0, top: 0 } }, rays),
+      e('span', { style: { position: 'absolute', left: 0, top: -30, whiteSpace: 'nowrap', font: '800 12px/1 var(--font-body)', color: '#B8860B', textShadow: '0 0 8px rgba(255,210,74,.8)', animation: 'plSparkPts 1.4s ease-out both' } }, '+' + this.state.sparkGain + ' pts'));
+    const sparkSweep = e('div', { key: 'sw' + k, style: { position: 'absolute', inset: 0, background: 'linear-gradient(90deg,transparent,rgba(255,226,122,.95),transparent)', animation: 'plSparkSweep 1s ease-out both', pointerEvents: 'none' } });
+    return { spark, sparkSweep };
+  }
+  renderVals() {
+    const st = this.state, vi = st.lang === 'vi', s = S[st.lang];
+    const nm = (p) => vi ? p.name : p.nameEn;
+    const lines = st.cart.map((l, i) => { const p = byId[l.id]; return { name: nm(p), img: imgOf(p), tint: p.tint, qty: l.qty, opts: this.optText(p, l.opt, l.sub, vi), total: fmt(l.unit * l.qty), ship: p.cat === 'cpg' || p.cat === 'gift' ? (vi ? 'Giao tiêu chuẩn · 1–2 ngày' : 'Standard · 1–2 days') : (vi ? 'Giao ngay · ~30 phút' : 'Express · ~30 min'), shipColor: p.cat === 'cpg' || p.cat === 'gift' ? '#8A7A6B' : '#658D1B', inc: () => this.setState(x => { const c = x.cart.slice(); c[i] = { ...c[i], qty: c[i].qty + 1 }; return { cart: c }; }), dec: () => this.setState(x => { const c = x.cart.slice(); if (c[i].qty <= 1) c.splice(i, 1); else c[i] = { ...c[i], qty: c[i].qty - 1 }; return { cart: c }; }) }; });
+    const sub = st.cart.reduce((a, l) => a + l.unit * l.qty, 0);
+    const count = st.cart.reduce((a, l) => a + l.qty, 0);
+    const FREE = 150000, DEAL = 250000;
+    const ship = sub === 0 || sub >= FREE ? 0 : 18000, disc = sub >= DEAL ? 35000 : 0, grand = sub + ship - disc;
+    const pending = Math.floor(sub / 10000);
+    const cur = st.pts, tIdx = cur >= 2000 ? 2 : cur >= 500 ? 1 : 0;
+    const floor = TIERS[tIdx][1], next = TIERS[tIdx + 1];
+    const span = next ? next[1] - floor : 1;
+    const baseW = next ? Math.min(100, (cur - floor) / span * 100) : 100;
+    const pendW = next ? Math.min(100, (cur + pending - floor) / span * 100) : 100;
+    const toNext = next ? Math.max(0, next[1] - cur - pending) : 0;
+    const tierColor = ['#8A7A6B', '#658D1B', '#C05131'][tIdx];
+    const modalList = st.modal ? PRODUCTS.filter(x => x.cat === st.modal) : [];
+    const mpP = modalList[st.idx] || PRODUCTS[0];
+    const mPrice = this.unitPrice(mpP, st.opt, st.sub) * st.qty;
+    const inCat = (k, p) => k === 'combo' ? p.cat === 'combo' : k === 'tea' ? p.cat === 'drink' && !isCoffee(p) : k === 'coffee' ? isCoffee(p) : k === 'bakes' ? p.cat === 'food' : k === 'home' ? p.cat === 'cpg' : p.cat === 'gift';
+    const mom = st.moment;
+    const card = (p, h) => ({ name: nm(p), sub: vi ? (p.desc[0].split('.')[0]) : (p.desc[1].split('.')[0]), img: imgOf(p), tint: p.tint, priceLabel: fmt(p.price), hasWas: !!p.was, was: p.was ? fmt(p.was) : '', hasBadge: !!p.badge, badge: p.badge ? p.badge[vi ? 0 : 1] : '', badgeBg: p.cat === 'combo' ? '#C05131' : '#035F1D', badgeFg: '#FBF6E6', h, imgH: p.imgPhoto ? h : (p.cat === 'cpg' && p.img.endsWith('.jpg') ? h - 30 : h - 24), imgMb: p.imgPhoto ? 0 : 6, hasImg2: !!p.img2, img2: p.img2 ? p.img2 : '', img2H: Math.round(h * 0.55), open: () => this.openProduct(p), quick: (e) => { e.stopPropagation(); this.add(p); } });
+    const filt = (arr) => mom === 'all' ? arr : arr.filter(p => p.moment.includes(mom));
+    const secDefs = st.cat === 'combo' ? [{ cats: ['combo'], script: vi ? 'ưu đãi hôm nay' : "today's deals", title: vi ? 'Combo đặc biệt' : 'Special combos', note: vi ? 'Đã gồm giá tốt nhất. Đổi vị trong mỗi combo khi thêm vào giỏ.' : 'Best price built in. Swap flavours inside each combo.', cols: 4, h: 300 }]
+      : st.cat === 'tea' ? [{ k: 'tea', season: true, title: vi ? 'Trà theo mùa' : 'Seasonal tea', note: '', cols: 5, h: 250 }, { k: 'tea', season: false, title: vi ? 'Trà Signature' : 'Signature tea', note: '', cols: 5, h: 250 }]
+      : st.cat === 'coffee' ? [{ k: 'coffee', season: true, title: vi ? 'Cà phê theo mùa' : 'Seasonal coffee', note: '', cols: 4, h: 250 }, { k: 'coffee', season: false, title: vi ? 'Cà phê Signature' : 'Signature coffee', note: '', cols: 4, h: 250 }]
+      : st.cat === 'bakes' ? [{ k: 'bakes', season: true, title: vi ? 'Bánh theo mùa' : 'Seasonal bakes', note: '', cols: 5, h: 200 }, { k: 'bakes', season: false, title: vi ? 'Bánh Signature' : 'Signature bakes', note: '', cols: 5, h: 200 }]
+      : st.cat === 'home' ? [{ cats: ['cpg'], script: vi ? 'mọi lúc, mọi nơi' : 'anytime, anywhere', title: vi ? 'Tại nhà & Mang đi' : 'At home & on the go', note: vi ? 'Đăng ký giao định kỳ để tiết kiệm 15%. Thùng văn phòng có hoá đơn VAT.' : 'Subscribe to save 15%. Office packs include VAT invoices.', cols: 5, h: 250 }]
+      : [{ cats: ['gift'], script: vi ? 'gửi trao tâm giao' : 'from the heart', title: vi ? 'Hộp quà sẵn có' : 'Ready-made gifts', note: '', cols: 2, h: 320 }];
+    const sections = secDefs.map(d => ({ ...d, items: filt(PRODUCTS.filter(p => d.k ? inCat(d.k, p) && SEASONAL.includes(p.id) === d.season : d.cats.includes(p.cat))).map(p => card(p, d.h)) })).filter(d => d.items.length);
+    const giftCands = PRODUCTS.filter(p => p.cat === 'cpg').concat([byId.f3, byId.f5]);
+    const boxBase = st.boxSize === 3 ? 50000 : 80000;
+    const giftTotal = boxBase + st.box.reduce((a, id) => a + byId[id].price, 0);
+    const addons = [byId.f1, byId.f3, byId.f6].map(p => ({ img: imgOf(p), name: nm(p), price: fmt(p.price), add: () => this.add(p) }));
+    const lastItems = [byId.d3, byId.f1];
+    const pick = (v, cur, onBg = '#035F1D', onFg = '#FBF6E6') => ({ bg: v === cur ? onBg : '#fff', fg: v === cur ? onFg : '#1C2A1E', border: v === cur ? onBg : '#E4DACE' });
+    const steps = [vi ? 'Đã nhận' : 'Received', vi ? 'Đang pha' : 'Brewing', vi ? 'Đang giao' : 'On the way', vi ? 'Đã giao' : 'Delivered'];
+    const hasCpg = st.cart.some(l => ['cpg', 'gift'].includes(byId[l.id].cat));
+    return { ...this.siteChrome(this.state.lang === 'vi', -1), toggleSite: () => this.setState(st => ({ lang: st.lang === 'vi' ? 'en' : 'vi' })), 
+      s, scriptFamily: "'Mrs Saint Delafield', cursive", scriptStyle: 'normal',
+      nav: (vi ? ['Trang chủ', 'Mua sắm', 'Câu chuyện', 'Cửa hàng', 'Thành viên'] : ['Home', 'Shop', 'Our story', 'Stores', 'Membership']).map((label, i) => ({ label, color: i === 1 ? '#035F1D' : '#4F2C1D', line: i === 1 ? '#035F1D' : 'transparent' })),
+      langs: [['vi', 'VI'], ['en', 'EN']].map(([k, label]) => ({ label, bg: st.lang === k ? '#035F1D' : 'transparent', fg: st.lang === k ? '#FBF6E6' : '#035F1D', pick: () => this.setState({ lang: k }) })),
+      cartCount: count, cartPulse: st.pulse, cartOpen: st.cartOpen, openCart: () => this.setState({ cartOpen: true }), closeCart: () => this.setState({ cartOpen: false }),
+      ...this.renderSpark(pendW.toFixed(1)),
+      hero: (() => { const HL = HERO_BY[st.cat] || HERO, a = Math.min(st.hero || 0, HL.length - 1), L = vi ? 0 : 1, cur = HL[a], hp = byId[cur.id], go = (i) => this.setState({ hero: (i + HL.length) % HL.length });
+        const still = st.cat === 'bakes' || st.cat === 'gift';
+        return { slides: HL.map((x, i) => { const p = byId[x.id], d = i - a, on = d === 0, mode = x.mode || 'cup', cup = mode === 'cup' || mode === 'can'; return { title: x.title[L], short: x.short[L], img: imgOf(p), c1: x.c1, c2: x.c2, bg: x.bg || '', zoom: on && !still ? 1.06 : 1, thRing: on ? x.accent : 'transparent', op: on ? 1 : 0, cupOp: on && cup ? 1 : 0, rad: mode === 'can' ? 28 : 0, ty: on ? 0 : (d < 0 ? -40 : 40), tx: on ? 0 : (d < 0 ? -240 : 240), cy: on ? 0 : 50, rot: on ? 0 : (d < 0 ? -12 : 12), sc: on ? 1 : 0.8, thH: on ? 104 : 88, thImg: on ? 70 : 54, thBg: on ? x.accent : '#FBF6E6', thFit: p.imgPhoto || mode === 'can' ? 'cover' : 'contain', thW: p.imgPhoto || mode === 'can' ? '100%' : 'auto', pick: () => go(i),
+            script: x.script ? x.script[L] : '', scriptOp: on && x.script ? 1 : 0,
+            isVid: mode === 'video',
+            vref: (el) => { if (!el) return; el.muted = true; const act = on; if (act && (!this._vidAct || el !== this._vid)) { setTimeout(() => { try { el.currentTime = 0; } catch (e) {} const p = el.play(); if (p) p.catch(() => {}); }, 30); } else if (!act && this._vidAct) el.pause(); this._vid = el; this._vidAct = act; },
+            }; }),
+          edit: false, note: st.cat === 'gift' ? (vi ? 'Trà tuyển chọn.\nGửi trao tâm giao.' : 'Hand-picked tea.\nGiven from the heart.') : (vi ? 'Nguyên liệu thật.\nNướng mới mỗi ngày.' : 'Real ingredients.\nBaked fresh daily.'),
+          accent: cur.accent, base: cur.base, pedOp: (cur.mode || 'cup') === 'cup' ? 1 : 0, tag: cur.tag[L], kind: cur.kind[L], desc: hp.desc[L], price: fmt(hp.price), video: VIDEO, videoStill: VIDEO + '#t=9.8',
+          add: () => this.add(hp), explore: () => this.openProduct(hp), prev: () => go(a - 1), next: () => go(a + 1),
+          pause: () => { this._heroPaused = true; }, resume: () => { this._heroPaused = false; } }; })(),
+      tier: { name: TIERS[tIdx][0], color: tierColor },
+      tiers: [next ? { name: '◆ ' + next[0], bg: 'linear-gradient(135deg,#F6D46B,#E8B21C 55%,#C9921A)', fg: '#3A2A08' } : { name: TIERS[tIdx][0], bg: '#035F1D', fg: '#FBF6E6' }],
+      pts: { shown: cur.toLocaleString('vi-VN'), pending, baseW: baseW.toFixed(1), pendW: pendW.toFixed(1),
+        left: next ? (vi ? `${cur.toLocaleString('vi-VN')} / ${next[1].toLocaleString('vi-VN')} điểm lên ${next[0]}` : `${cur.toLocaleString('vi-VN')} / ${next[1].toLocaleString('vi-VN')} pts to ${next[0]}`) : (vi ? 'Hạng cao nhất' : 'Top tier'),
+        right: pending ? (vi ? `+${pending} điểm từ giỏ · còn ${toNext} điểm` : `+${pending} pts in cart · ${toNext} to go`) : (vi ? '10.000đ = 1 điểm' : '10,000đ = 1 pt'),
+        cartMsg: next ? (vi ? `Còn ${toNext} điểm để lên ${next[0]}` : `${toNext} pts to ${next[0]}`) : '',
+        checkoutMsg: next ? (vi ? `điểm sau đơn này · còn ${toNext} điểm lên ${next[0]}` : `pts after this order · ${toNext} to ${next[0]}`) : '' },
+      isShop: st.screen === 'shop', isCheckout: st.screen === 'checkout', isDone: st.screen === 'done',
+      goShop: () => this.setState({ screen: 'shop' }),
+      lastOrder: { imgs: lastItems.map(p => ({ src: imgOf(p) })), label: vi ? 'Trà Sữa Ô Long (L, ngọt 50%) + Croissant Bơ' : 'Oolong Milk Tea (L, 50% sweet) + Butter Croissant', total: fmt(69000 + 35000) },
+      reorder: () => { const o = this.defOpts(); o.size = 2; o.sweet = 2; this.add(byId.d3, 1, o); this.add(byId.f1); this.setState({ cartOpen: true }); },
+      showRemind: st.remind, dismissRemind: () => this.setState({ remind: false }), resume: () => { this.add(byId.d1, 2); this.setState({ remind: false, cartOpen: true }); },
+      cats: CATS.map(c => { const on = st.cat === c.key; const n = PRODUCTS.filter(p => inCat(c.key, p)).length; return { label: vi ? c.vi : c.en, img: c.img, count: n + (vi ? ' món' : ' items'), bg: on ? '#035F1D' : c.bg, fg: on ? '#FBF6E6' : '#1C2A1E', sub: on ? '#E8E987' : '#658D1B', border: on ? '#035F1D' : 'transparent', pick: () => this.setState({ cat: c.key, moment: 'all', hero: 0 }) }; }),
+      moments: MOMENTS.map(([k, v, e]) => ({ label: vi ? v : e, ...pick(k, mom), pick: () => this.setState({ moment: k, cat: k === 'gift' ? 'gift' : st.cat, hero: k === 'gift' && st.cat !== 'gift' ? 0 : st.hero }) })),
+      sections, isGift: st.cat === 'gift',
+      boxSizes: [3, 6].map(n => ({ label: n + (vi ? ' món' : ' items'), price: (vi ? 'Hộp ' : 'Box ') + fmt(n === 3 ? 50000 : 80000), bg: st.boxSize === n ? '#FDF8E1' : 'transparent', fg: st.boxSize === n ? '#035F1D' : '#FBF6E6', border: st.boxSize === n ? '#FDF8E1' : 'rgba(253,248,225,.4)', pick: () => this.setState(x => ({ boxSize: n, box: x.box.slice(0, n) })) })),
+      giftCands: giftCands.map(p => ({ img: imgOf(p), name: nm(p).split(' · ')[0], price: fmt(p.price), op: st.box.length >= st.boxSize ? 0.5 : 1, add: () => this.setState(x => x.box.length >= x.boxSize ? null : { box: x.box.concat(p.id) }) })),
+      giftSlots: Array.from({ length: st.boxSize }, (_, i) => { const id = st.box[i]; return { filled: !!id, empty: !id, img: id ? imgOf(byId[id]) : '', bg: id ? '#FDF8E1' : 'rgba(253,248,225,.08)', dash: id ? 'transparent' : 'rgba(253,248,225,.45)', remove: () => this.setState(x => ({ box: x.box.filter((_, j) => j !== i) })) }; }),
+      giftFill: `${st.box.length} / ${st.boxSize}`, giftTotal: fmt(giftTotal), giftBtnBg: st.box.length ? '#035F1D' : '#8A7A6B',
+      addGift: () => { if (!st.box.length) return; const p = { id: 'gx', cat: 'gift', name: 'Hộp quà tự chọn', nameEn: 'Custom gift box', imgPhoto: imgOf(byId[st.box[0]]), price: giftTotal, tint: '#035F1D', moment: ['gift'], desc: ['', ''] }; byId.gx = p; this.add(p); this.setState({ box: [] }); },
+      modalOpen: !!st.modal, closeModal: () => this.setState({ modal: null }),
+      roulette: modalList.map((p, i) => { let d = i - st.idx; const n = modalList.length; if (d > n / 2) d -= n; if (d < -n / 2) d += n; const ad = Math.abs(d); return { img: imgOf(p), name: nm(p), tf: `translateY(${d * 118}px) translateX(${ad * ad * 9}px) scale(${Math.max(0.45, 1 - ad * 0.16)})`, op: ad > 3 ? 0 : 1 - ad * 0.22, pick: () => i !== st.idx && this.setState(x => ({ idx: i, spin: x.spin + (d > 0 ? 360 : -360), qty: 1, opt: this.defOpts(), toast: '' })) }; }),
+      wheelRoulette: (e) => { const now = Date.now(); if (now - (this._wt || 0) < 420) return; this._wt = now; this.step(e.deltaY > 0 ? 1 : -1); },
+      spin: st.spin,
+      mp: { name: nm(mpP), desc: mpP.desc[vi ? 0 : 1], img: imgOf(mpP), tint: mpP.tint, hasImg2: !!mpP.img2, img2: mpP.img2 ? mpP.img2 : '', bigH: mpP.imgPhoto ? 420 : 520, isDrink: mpP.cat === 'drink', isCpg: mpP.cat === 'cpg', catLabel: (CATS.find(c => inCat(c.key, mpP)) || CATS[0])[vi ? 'vi' : 'en'], pos: `${st.idx + 1} / ${modalList.length}` },
+      optGroups: mpP.cat === 'drink' ? DRINK_OPTS.map(g => ({ label: vi ? g.vi : g.en, opts: g.opts.map((o, i) => { const on = g.multi ? (st.opt[g.key] || []).includes(i) : (st.opt[g.key] ?? g.def) === i; return { label: lab(o[0], vi) + (o[1] ? ` +${o[1] / 1000}k` : ''), bg: on ? '#035F1D' : '#fff', fg: on ? '#FBF6E6' : '#1C2A1E', border: on ? '#035F1D' : '#E4DACE', pick: () => this.setState(x => { const opt = { ...x.opt }; if (g.multi) { const a = (opt[g.key] || []).slice(); const k = a.indexOf(i); k >= 0 ? a.splice(k, 1) : a.push(i); opt[g.key] = a; } else opt[g.key] = i; return { opt }; }) }; }) })) : [],
+      toggleSub: () => this.setState(x => ({ sub: !x.sub })), subBg: st.sub ? '#EFF4A4' : '#fff', subBorder: st.sub ? '#8CAB19' : '#E4DACE', subBox: st.sub ? '#035F1D' : '#fff',
+      qty: st.qty, qtyUp: () => this.setState(x => ({ qty: x.qty + 1 })), qtyDown: () => this.setState(x => ({ qty: Math.max(1, x.qty - 1) })),
+      modalPrice: fmt(mPrice), modalPts: Math.floor(mPrice / 10000), addLabel: vi ? 'Thêm vào giỏ' : 'Add to cart', toast: st.toast,
+      addFromModal: () => { this.add(mpP, st.qty, mpP.cat === 'drink' ? st.opt : null, st.sub); this.setState({ toast: vi ? 'Đã thêm · cuộn để chọn tiếp' : 'Added · scroll for the next one', qty: 1 }); },
+      lines, cartEmpty: !lines.length, addons,
+      thresholds: [
+        { msg: sub >= FREE ? (vi ? 'Đã được miễn phí giao hàng' : 'Free delivery unlocked') : (vi ? `Thêm ${fmt(FREE - sub)} để miễn phí giao` : `Add ${fmt(FREE - sub)} for free delivery`), goal: fmt(FREE), w: Math.min(100, sub / FREE * 100).toFixed(0), bar: '#035F1D', color: sub >= FREE ? '#035F1D' : '#1C2A1E' },
+        { msg: sub >= DEAL ? (vi ? 'Đã mở ưu đãi giảm 35.000đ' : '35,000đ off unlocked') : (vi ? `Thêm ${fmt(DEAL - sub)} để giảm 35.000đ` : `Add ${fmt(DEAL - sub)} to get 35,000đ off`), goal: fmt(DEAL), w: Math.min(100, sub / DEAL * 100).toFixed(0), bar: '#C05131', color: sub >= DEAL ? '#C05131' : '#1C2A1E' }
+      ],
+      totals: { sub: fmt(sub), ship: ship ? fmt(ship) : (vi ? 'Miễn phí' : 'Free'), shipColor: ship ? '#1C2A1E' : '#658D1B', hasDisc: !!disc, disc: '−' + fmt(disc), grand: fmt(grand) },
+      dealMsg: sub >= DEAL ? (vi ? 'Ưu đãi đã mở · thêm món ăn kèm?' : 'Deal unlocked · add a bite?') : (vi ? `Thêm ${fmt(DEAL - sub)} để giảm 35.000đ` : `${fmt(DEAL - sub)} more for 35,000đ off`),
+      checkoutBg: lines.length ? '#035F1D' : '#8A7A6B',
+      goCheckout: () => lines.length && this.setState({ screen: 'checkout', cartOpen: false }),
+      hasCpg,
+      fulfil: [[vi ? 'Giao tận nơi' : 'Delivery', vi ? 'Đồ uống ~30 phút' : 'Drinks in ~30 min'], [vi ? 'Lấy tại cửa hàng' : 'Pick up', vi ? 'Phúc Long Lê Thánh Tôn · 0,6km' : 'Phúc Long Le Thanh Ton · 0.6km']].map(([label, sb], i) => ({ label, sub: sb, bg: st.fulfil === i ? '#EFF4A4' : '#fff', border: st.fulfil === i ? '#8CAB19' : '#E4DACE', pick: () => this.setState({ fulfil: i }) })),
+      addrLabel: st.fulfil === 0 ? (vi ? 'Giao đến' : 'Deliver to') : (vi ? 'Cửa hàng' : 'Store'), addrValue: st.fulfil === 0 ? '42 Nguyễn Huệ, Bến Nghé, Quận 1, TP.HCM' : 'Phúc Long Lê Thánh Tôn, Quận 1',
+      times: (vi ? ['Ngay bây giờ', '11:30', '12:00', '15:00', 'Chọn giờ khác'] : ['As soon as possible', '11:30', '12:00', '15:00', 'Other time']).map((label, i) => ({ label, ...pick(i, st.time), pick: () => this.setState({ time: i }) })),
+      zaloLabel: st.zalo ? (vi ? '✓ Đã xác thực · 090•••4821' : '✓ Verified · 090•••4821') : (vi ? 'Đăng nhập Zalo / OTP' : 'Zalo / OTP login'), zaloLogin: () => this.setState({ zalo: true }),
+      pays: [['MoMo', 'Mo', '#A50064'], ['ZaloPay', 'Z', '#0068FF'], ['VNPay', 'VN', '#E2231A'], [vi ? 'Thẻ' : 'Card', '▭', '#1C2A1E']].map(([label, mark, chip], i) => ({ label, mark, chip, bg: st.pay === i ? '#EFF4A4' : '#fff', border: st.pay === i ? '#8CAB19' : '#E4DACE', pick: () => this.setState({ pay: i }) })),
+      vat: st.vat, toggleVat: () => this.setState(x => ({ vat: !x.vat })), vatTrack: st.vat ? '#035F1D' : '#E4DACE', vatKnob: st.vat ? 21 : 3,
+      placeOrder: () => { const earn = pending; this.setState({ screen: 'done', cart: [], lastEarned: earn }); setTimeout(() => this.setState(x => ({ pts: x.pts + earn })), 350); },
+      lastEarned: st.lastEarned,
+      track: steps.map((label, i) => ({ n: i + 1, label, time: ['12:04', '12:06', '~12:25', '~12:35'][i], bg: i < 2 ? '#035F1D' : '#F2EBE7', fg: i < 2 ? '#FBF6E6' : '#8A7A6B' })),
+      hasFlyToast: !!st.fly, flyImg: st.fly ? st.fly.img : '', flyMsg: st.fly ? (vi ? 'Đã thêm ' : 'Added ') + st.fly.name : '', flyPts: st.fly ? st.fly.pts : 0
+    };
+  }
+}
+</script>
+</body>
+</html>

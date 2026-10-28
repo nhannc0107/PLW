@@ -1,0 +1,199 @@
+/* ============================================================
+   PHUC LONG HERITAGE — Colors & Type Foundations
+   "Rooted in Heritage, Brewed for Today" / Ủ Vị Tâm Giao
+   ============================================================ */
+
+/* ---- Webfonts: body + connector scripts (CDN) ---- */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Mrs+Saint+Delafield&family=Playwrite+US+Modern:wght@400&display=swap');
+
+/* ---- Brand typeface: Phuc Long Heritage (self-hosted) ---- */
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_Light.otf') format('opentype');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_Light_Italic.otf') format('opentype');
+  font-weight: 300; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_Regular.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_Italic.otf') format('opentype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_Medium.otf') format('opentype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_Medium_Italic.otf') format('opentype');
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_DemiBold.otf') format('opentype');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_DemiBold_Italic.otf') format('opentype');
+  font-weight: 600; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_Bold.otf') format('opentype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_Bold_Italic.otf') format('opentype');
+  font-weight: 700; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_ExtraBold.otf') format('opentype');
+  font-weight: 800; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Phuc Long Heritage';
+  src: url('fonts/Phuc_Long_Heritage_ExtraBold_Italic.otf') format('opentype');
+  font-weight: 800; font-style: italic; font-display: swap;
+}
+
+:root {
+  /* ============================================================
+     COLOR — PRIMARY (greens from Vietnam's tea highlands)
+     Rule: stay on the WARM / yellow side of green. Never cool/blue.
+     ============================================================ */
+  --green-heritage: #035F1D;  /* Phuc Long Green — the hero color   */
+  --green-yellow:   #8CAB19;  /* Yellow Green — fresh young leaves   */
+  --green-fresh:    #658D1B;  /* Fresh Green                         */
+  --green-deep:     #1C4220;  /* Deep Green — grounding, ink         */
+
+  /* ============================================================
+     COLOR — SECONDARY (natural materials of Vietnamese tea culture)
+     Backgrounds & supporting blocks. Bring warmth + balance.
+     ============================================================ */
+  --ceramic:  #F2EBE7;  /* Ceramic Tea Tradition (Warm Gray) */
+  --steeped:  #FDF8E1;  /* Steeped Calm — warm cream         */
+  --weaving:  #C1A075;  /* Weaving Culture — bamboo / rattan */
+  --soil:     #4F2C1D;  /* Soil Origin / Organic — earth     */
+
+  /* ============================================================
+     COLOR — ADDITIONAL (tea flavors & seasonal campaigns)
+     Product-line coding + festive accents. Use sparingly.
+     ============================================================ */
+  --tea-jasmine: #EFF4A4;
+  --tea-lychee:  #C51D25;
+  --tea-lotus:   #D987C4;
+  --tea-peach:   #C05131;
+  --tea-oolong:  #C05131;
+  --accent-pink:    #FFC0C8;
+  --accent-coral:   #F2335E;
+  --accent-apricot: #FFCDA3;
+  --accent-sky:     #C6DAE7;
+  --accent-lavender:#DCABCC;
+  --accent-citron:  #E8E987;
+
+  /* ============================================================
+     SEMANTIC SURFACES & INK
+     ============================================================ */
+  --bg-page:     var(--steeped);   /* default warm page ground   */
+  --bg-surface:  #FFFFFF;          /* cards, clean logo lockups   */
+  --bg-warm:     var(--ceramic);   /* muted warm section blocks   */
+  --bg-ink:      var(--green-deep);/* dark sections, inverted     */
+
+  --ink-1: #1C2A1E;   /* primary text — deep green-black         */
+  --ink-2: #4F2C1D;   /* secondary text — soil brown             */
+  --ink-3: #8A7A6B;   /* muted / captions                        */
+  --ink-on-dark: #FBF6E6;   /* text on green/dark grounds        */
+  --hairline: #E4DACE; /* warm hairline borders                  */
+
+  --link:        var(--green-heritage);
+  --link-hover:  var(--green-fresh);
+  --focus-ring:  var(--green-yellow);
+
+  /* ============================================================
+     TYPE FAMILIES
+     ============================================================ */
+  --font-display: 'Phuc Long Heritage', 'Hoefler Text', Georgia, serif;
+  --font-body:    'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* LATIN / ENGLISH ONLY — the script faces lack Vietnamese diacritics.
+     NEVER set script on Vietnamese text (e.g. "Ủ Vị Tâm Giao"): use
+     --font-display instead. Falls back to display for safety. */
+  --font-script:  'Mrs Saint Delafield', 'Playwrite US Modern', 'Phuc Long Heritage', cursive;
+
+  /* Weights (Phuc Long Heritage) */
+  --w-light:   300; /* @kind font */
+  --w-regular: 400; /* @kind font */
+  --w-medium:  500; /* @kind font */
+  --w-demi:    600; /* @kind font */
+  --w-bold:    700; /* @kind font */
+  --w-extra:   800; /* @kind font */
+
+  /* ============================================================
+     TYPE SCALE  (display uses tight tracking; body relaxed)
+     Per brand: Heritage only for large/short lines (ornamental
+     diacritics need room). Manrope for all body & UI.
+     ============================================================ */
+  --fs-display:  clamp(3rem, 6vw, 5.5rem); /* @kind font */
+  --fs-h1:       clamp(2.25rem, 4vw, 3.5rem); /* @kind font */
+  --fs-h2:       clamp(1.75rem, 3vw, 2.5rem); /* @kind font */
+  --fs-h3:       1.5rem;                      /* @kind font */
+  --fs-subhead:  1.25rem;                     /* @kind font */
+  --fs-body:     1.0625rem;                   /* @kind font */
+  --fs-small:    0.9375rem;                   /* @kind font */
+  --fs-caption:  0.8125rem;                   /* @kind font */
+  --fs-script:   clamp(1.75rem, 3vw, 2.75rem); /* @kind font */
+
+  --lh-tight: 1.04;     /* @kind font */
+  --lh-snug:  1.18;     /* @kind font */
+  --lh-body:  1.6;      /* @kind font */
+
+  --tracking-display: -0.01em; /* @kind font */
+  --tracking-caps:    0.14em;  /* @kind font */
+
+  /* ============================================================
+     RADIUS / SHADOW / SPACING
+     ============================================================ */
+  --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(28,42,30,.06), 0 1px 3px rgba(28,42,30,.08);
+  --shadow-md: 0 4px 10px rgba(28,42,30,.07), 0 10px 24px rgba(28,42,30,.08);
+  --shadow-lg: 0 12px 30px rgba(28,42,30,.10), 0 24px 60px rgba(28,42,30,.12);
+
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT STYLES (opt-in via .pl-prose or direct use)
+   ============================================================ */
+.pl-display {
+  font-family: var(--font-display);
+  font-weight: var(--w-bold);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--ink-1);
+  text-wrap: balance;
+}
+.pl-h1 { font-family: var(--font-display); font-weight: var(--w-bold);  font-size: var(--fs-h1); line-height: var(--lh-tight); letter-spacing: var(--tracking-display); color: var(--ink-1); text-wrap: balance; }
+.pl-h2 { font-family: var(--font-display); font-weight: var(--w-demi);  font-size: var(--fs-h2); line-height: var(--lh-snug);  color: var(--ink-1); text-wrap: balance; }
+.pl-h3 { font-family: var(--font-display); font-weight: var(--w-medium);font-size: var(--fs-h3); line-height: var(--lh-snug);  color: var(--ink-1); }
+.pl-subhead { font-family: var(--font-body); font-weight: var(--w-demi); font-size: var(--fs-subhead); line-height: var(--lh-snug); color: var(--ink-2); }
+.pl-body { font-family: var(--font-body); font-weight: var(--w-regular); font-size: var(--fs-body); line-height: var(--lh-body); color: var(--ink-2); }
+.pl-small { font-family: var(--font-body); font-size: var(--fs-small); line-height: 1.5; color: var(--ink-2); }
+.pl-caption { font-family: var(--font-body); font-size: var(--fs-caption); line-height: 1.45; color: var(--ink-3); }
+.pl-eyebrow { font-family: var(--font-body); font-weight: var(--w-bold); font-size: var(--fs-caption); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--green-heritage); }
+.pl-script { font-family: var(--font-script); font-weight: 400; font-size: var(--fs-script); line-height: 1.1; color: var(--green-heritage); }
+/* Vietnamese tagline / any text with diacritics — script faces don't cover them.
+   Use the Heritage display face at script scale instead. */
+.pl-script-vi { font-family: var(--font-display); font-weight: var(--w-medium); font-size: var(--fs-script); line-height: 1.1; color: var(--green-heritage); }

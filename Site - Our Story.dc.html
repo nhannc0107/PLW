@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&amp;display=swap">
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/colors_and_type.css">
+<script src="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/_ds_bundle.js"></script>
+<style>body{margin:0;background:#035F1D;font-family:var(--font-body);color:#1C2A1E}*{box-sizing:border-box}a{color:#035F1D;text-decoration:none}a:hover{color:#658D1B}</style>
+</helmet>
+<div id="os-scale" data-screen-label="Our Story" style="width:1440px;margin:0 auto;zoom:1;position:relative;background:#035F1D;color:#FBF6E6;overflow:hidden">
+
+<div style="position:relative;height:900px;overflow:hidden">
+<div style="position:absolute;left:88px;right:88px;top:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#FBF6E6;z-index:5"><a href="#home" style="text-decoration:none;display:flex;flex:none"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:36px;width:auto"></a><div style="display:flex;gap:34px;align-items:center;flex-wrap:wrap;justify-content:center"><sc-for list="{{ siteNav }}" as="n" hint-placeholder-count="6"><div data-dd="{{ n.href }}" style="position:relative;display:flex"><a href="{{ n.href }}" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ n.t }}</a><div data-ddm="1" style="display:none;position:absolute;top:100%;left:-18px;padding-top:14px;z-index:60"><div style="background:#FBF6E6;border:1px solid #E4DACE;border-radius:12px;box-shadow:0 14px 34px rgba(3,40,15,.2);padding:8px;display:flex;flex-direction:column;min-width:190px"><a href="#tea-leaf" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Tea Leaf</a><a href="#coffee" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Coffee</a></div></div></div></sc-for></div><div style="display:flex;gap:18px;align-items:center;font:700 12px/1 var(--font-body);letter-spacing:.12em;color:#FBF6E6;flex:none"><span onClick="{{ toggleSite }}" style="cursor:pointer">{{ siteLangA }} <span style="opacity:.5">/ {{ siteLangB }}</span></span><a href="#shop" style="text-decoration:none;border:1px solid rgba(251,246,230,.7);border-radius:999px;padding:9px 16px;color:#FBF6E6" style-hover="background:#FBF6E6;color:#035F1D">Shop</a></div></div>
+<span style="position:absolute;left:88px;top:170px;font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#EFF4A4">{{ t.heroEb }}</span>
+<div style="position:absolute;left:88px;right:88px;top:260px;display:flex;justify-content:space-between;gap:40px;align-items:flex-end">
+<div style="display:flex;flex-direction:column;gap:18px"><span style="font:700 220px/.9 var(--font-display);letter-spacing:-.04em">Ủ</span><span style="font:700 12px/1.5 var(--font-body);letter-spacing:.22em;color:#EFF4A4;padding-left:14px">{{ t.w1 }}<br><span style="font-weight:400;letter-spacing:.04em;font-size:14px;color:#FBF6E6">{{ t.w1s }}</span></span></div>
+<div style="display:flex;flex-direction:column;gap:18px"><span style="font:700 220px/.9 var(--font-display);letter-spacing:-.04em">Vị</span><span style="font:700 12px/1.5 var(--font-body);letter-spacing:.22em;color:#EFF4A4;padding-left:14px">{{ t.w2 }}<br><span style="font-weight:400;letter-spacing:.04em;font-size:14px;color:#FBF6E6">{{ t.w2s }}</span></span></div>
+<div style="display:flex;flex-direction:column;gap:18px"><span style="font:700 220px/.9 var(--font-display);letter-spacing:-.04em;color:#AAC939">Tâm</span><span style="font:700 12px/1.5 var(--font-body);letter-spacing:.22em;color:#EFF4A4;padding-left:14px">{{ t.w3 }}<br><span style="font-weight:400;letter-spacing:.04em;font-size:14px;color:#FBF6E6">{{ t.w3s }}</span></span></div>
+<div style="display:flex;flex-direction:column;gap:18px"><span style="font:700 220px/.9 var(--font-display);letter-spacing:-.04em">Giao</span><span style="font:700 12px/1.5 var(--font-body);letter-spacing:.22em;color:#EFF4A4;padding-left:14px">{{ t.w4 }}<br><span style="font-weight:400;letter-spacing:.04em;font-size:14px;color:#FBF6E6">{{ t.w4s }}</span></span></div></div>
+<p style="position:absolute;left:88px;bottom:70px;margin:0;width:560px;font:300 19px/1.6 var(--font-body)">{{ t.heroP }}</p>
+</div>
+
+<div style="position:relative;height:920px;background:#FDF8E1;color:#1C2A1E;overflow:hidden">
+<span style="position:absolute;left:-30px;top:70px;font:700 860px/1.1 var(--font-display);color:#EFF4A4;letter-spacing:-.06em">Ủ</span>
+<div style="position:absolute;left:88px;top:110px;width:440px;display:flex;flex-direction:column;gap:18px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#658D1B">{{ t.c1eb }}</span><h2 style="margin:0;font:700 84px/.94 var(--font-display);letter-spacing:-.04em;color:#035F1D">{{ t.c1h }}</h2><p style="margin:0;font:300 18px/1.65 var(--font-body);color:#3A3A2E">{{ t.c1p }}</p></div>
+<div style="position:absolute;left:640px;top:110px;width:600px;height:700px;overflow:hidden;background:#035F1D">
+<sc-for list="{{ ustep }}" as="u" hint-placeholder-count="6"><div style="position:absolute;inset:0;background:url({{ u.img }}) center/cover;opacity:{{ u.op }};transform:scale({{ u.sc }});transition:opacity .6s ease-out,transform 1.2s ease-out"></div></sc-for>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,50,15,0) 50%,rgba(3,50,15,.75) 100%)"></div>
+<div style="position:absolute;left:36px;right:36px;bottom:34px;color:#FBF6E6;display:flex;flex-direction:column;gap:10px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#EFF4A4">{{ t.step }} {{ cur.n }} {{ t.of }} 06</span><span style="font:700 64px/1 var(--font-display);letter-spacing:-.03em">{{ cur.t }}</span><span style="font:400 16px/1.55 var(--font-body);max-width:440px">{{ cur.b }}</span></div>
+<span style="position:absolute;right:28px;top:20px;font:800 140px/1 var(--font-display);color:transparent;-webkit-text-stroke:2px #FDF8E1;letter-spacing:-.04em">{{ cur.n }}</span>
+</div>
+<div style="position:absolute;left:1262px;top:110px;height:700px;width:90px;display:flex;flex-direction:column;justify-content:space-between;align-items:center">
+<div style="position:absolute;left:44px;top:20px;bottom:150px;width:2px;background:#C8C0A8"></div>
+<div style="position:absolute;left:44px;top:20px;width:2px;height:{{ fill }}px;background:#035F1D;transition:height .5s ease-out"></div>
+<div style="display:flex;flex-direction:column;gap:56px;padding-top:6px;position:relative">
+<sc-for list="{{ ustep }}" as="u" hint-placeholder-count="6"><button onClick="{{ u.go }}" title="{{ u.t }}" style="width:{{ u.d }}px;height:{{ u.d }}px;margin:0 auto;border-radius:50%;border:2px solid #035F1D;background:{{ u.dot }};color:{{ u.dotInk }};font:700 11px/1 var(--font-body);cursor:pointer;transition:all .3s ease-out;display:flex;align-items:center;justify-content:center;padding:0" style-hover="background:#AAC939;color:#035F1D">{{ u.n }}</button></sc-for></div>
+<button onClick="{{ uNext }}" style="position:relative;width:90px;height:90px;border-radius:50%;border:0;padding:0;cursor:pointer;background:url({{ nxt.img }}) center/cover;box-shadow:0 0 0 4px #FDF8E1,0 0 0 6px #035F1D" style-hover="transform:scale(1.06)"><span style="position:absolute;inset:0;border-radius:50%;background:rgba(3,95,29,.55);color:#FBF6E6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font:700 10px/1 var(--font-body);letter-spacing:.14em">{{ t.next }}<span style="font:700 20px/1 var(--font-body)">→</span></span></button>
+</div>
+<span style="position:absolute;left:640px;top:830px;font:500 12px/1 var(--font-body);letter-spacing:.06em;color:#6B6A5E">{{ t.nextL }} {{ nxt.t }}</span>
+</div></div>
+
+<div style="position:relative;height:820px;background:#AAC939;color:#1C2A1E;overflow:hidden">
+<span style="position:absolute;right:-40px;top:-150px;font:700 1000px/1 var(--font-display);color:#8CAB19;letter-spacing:-.06em">Vị</span>
+<div style="position:absolute;right:88px;top:120px;width:420px;display:flex;flex-direction:column;gap:18px;text-align:right;align-items:flex-end;z-index:2"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#035F1D">{{ t.c2eb }}</span><h2 style="margin:0;font:700 84px/.94 var(--font-display);letter-spacing:-.04em;color:#035F1D">{{ t.c2h }}</h2><p style="margin:0;font:400 17px/1.65 var(--font-body)">{{ t.c2p }}</p><div style="display:flex;gap:12px"><a href="#shop" style="text-decoration:none;padding:14px 22px;border-radius:999px;background:#035F1D;color:#FBF6E6;font:700 14px/1 var(--font-body)">{{ t.shopTea }}</a><a href="#our-drink" style="text-decoration:none;padding:14px 22px;border-radius:999px;background:#FDF8E1;color:#035F1D;font:700 14px/1 var(--font-body)">{{ t.seeDrinks }}</a></div></div>
+<img src="assets/products/tin-lai.png" alt="" style="position:absolute;left:70px;bottom:-40px;height:600px;width:auto;transform:rotate(-6deg);filter:drop-shadow(0 30px 30px rgba(3,40,15,.3))"><img src="assets/products/box150-sen.png" alt="" style="position:absolute;left:360px;bottom:60px;height:400px;width:auto;filter:drop-shadow(0 26px 22px rgba(3,40,15,.3))"><img src="assets/products/cup-peach.png" alt="" style="position:absolute;left:560px;bottom:30px;height:470px;width:auto;z-index:2;filter:drop-shadow(0 26px 22px rgba(3,40,15,.35))"><img src="assets/products/cup-oolong.png" alt="" style="position:absolute;left:740px;bottom:50px;height:360px;width:auto;filter:drop-shadow(0 26px 22px rgba(3,40,15,.3))"></div>
+
+<div style="position:relative;height:900px;background:#FFEDEF;color:#1C2A1E;overflow:hidden">
+<span style="position:absolute;left:0;right:0;top:60px;text-align:center;font:700 620px/1 var(--font-display);color:#FFC9D4;letter-spacing:-.06em">Tâm</span>
+<div style="position:absolute;left:88px;top:110px;display:flex;flex-direction:column;gap:14px;z-index:2"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#C51D25">{{ t.c3eb }}</span><h2 style="margin:0;font:700 84px/.94 var(--font-display);letter-spacing:-.04em;color:#035F1D;width:640px">{{ t.c3h }}</h2></div>
+<div style="position:absolute;left:88px;right:88px;bottom:90px;display:grid;grid-template-columns:repeat(7,1fr);gap:12px;z-index:2">
+<sc-for list="{{ years }}" as="y" hint-placeholder-count="7"><div style="background:#FFFFFF;display:flex;flex-direction:column;box-shadow:0 14px 30px rgba(105,33,40,.12);margin-top:{{ y.mt }}px"><div style="height:150px;background:url({{ y.img }}) center/cover"></div><div style="padding:14px 14px 18px;display:flex;flex-direction:column;gap:6px"><span style="font:800 30px/1 var(--font-display);color:{{ y.ink }}">{{ y.year }}</span><span style="font:700 16px/1.15 var(--font-display);color:#035F1D">{{ y.title }}</span><span style="font:400 12.5px/1.5 var(--font-body);color:#3A3A2E">{{ y.body }}</span></div></div></sc-for>
+</div></div>
+
+<div style="position:relative;height:900px;background:#1C4220;color:#FBF6E6;overflow:hidden">
+<span style="position:absolute;left:40px;bottom:-140px;font:700 560px/1 var(--font-display);color:transparent;-webkit-text-stroke:1.5px rgba(239,244,164,.35);letter-spacing:-.05em">Giao</span>
+<div style="position:absolute;left:88px;top:110px;width:520px;display:flex;flex-direction:column;gap:22px;z-index:2"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#EFF4A4">{{ t.c4eb }}</span><h2 style="margin:0;font:700 84px/.94 var(--font-display);letter-spacing:-.04em;color:#FBF6E6">{{ t.c4h }}</h2><p style="margin:0;font:300 18px/1.6 var(--font-body);color:rgba(251,246,230,.85)">{{ t.c4p }}</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px">
+<button onClick="{{ gVN }}" style="text-align:left;border:1.5px solid {{ gVNring }};background:{{ gVNbg }};color:#FBF6E6;border-radius:20px;padding:20px;cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:all .3s ease-out"><span style="font:700 76px/.85 var(--font-display);letter-spacing:-.04em">237</span><span style="font:700 11px/1 var(--font-body);letter-spacing:.2em;color:#EFF4A4">{{ t.vn }}</span></button>
+<button onClick="{{ gUS }}" style="text-align:left;border:1.5px solid {{ gUSring }};background:{{ gUSbg }};color:#FBF6E6;border-radius:20px;padding:20px;cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:all .3s ease-out"><span style="font:700 76px/.85 var(--font-display);letter-spacing:-.04em;color:#FFDFCA">3</span><span style="font:700 11px/1 var(--font-body);letter-spacing:.2em;color:#FFDFCA">{{ t.ca }}</span></button></div>
+<a href="#" style="text-decoration:none;align-self:flex-start;padding:14px 22px;border-radius:999px;background:#FDF8E1;color:#035F1D;font:700 14px/1 var(--font-body)">{{ t.find }}</a></div>
+<div style="position:absolute;right:70px;top:110px;width:680px;height:680px">
+<div style="position:absolute;inset:6%;border-radius:50%;box-shadow:0 0 140px rgba(170,201,57,.28)"></div>
+<canvas data-globe="1" style="position:relative;width:100%;height:100%;display:block;cursor:grab"></canvas></div>
+<span style="position:absolute;right:88px;bottom:60px;font:600 12px/1 var(--font-body);letter-spacing:.14em;color:rgba(251,246,230,.6)">{{ t.drag }}</span>
+</div>
+<footer style="background:#1C4220;color:#FBF6E6;padding:40px clamp(24px,5vw,120px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap"><a href="#home" style="text-decoration:none;display:flex"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:30px;width:auto"></a><div style="display:flex;gap:22px;flex-wrap:wrap"><sc-for list="{{ siteNav }}" as="n" hint-placeholder-count="6"><a href="{{ n.href }}" style="text-decoration:none;font:600 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ n.t }}</a></sc-for></div><div style="display:flex;align-items:center;gap:22px"><a href="#" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;background:#FDF8E1;color:#035F1D;padding:12px 18px;border-radius:999px" style-hover="background:#EFF4A4;color:#035F1D">{{ siteContact }} →</a><span style="font:500 12px/1 var(--font-body);letter-spacing:.08em;opacity:.8">© Phúc Long Heritage</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const SV = [["Chọn lá","Chỉ một tôm hai lá non nhất, được kiểm tra bằng mắt và bằng tay."],["Phân loại","Lá được phân theo kích cỡ và độ non để mỗi mẻ trà ủ đều nhau."],["Sàng sảy","Nia tre đan sàng sạch bụi và cọng, như bao thế hệ vẫn làm."],["Phơi sấy","Hong khô chậm trong khí trời cao nguyên giúp hương trà lắng lại trước khi ép."],["Ủ trà","Kỹ thuật ép trà giúp chiết trọn chiều sâu mà không gắt."],["Trao tay","Bước cuối cùng là của bạn: một ly trà trao nhau bên bàn."]];
+const HV = [["Khởi đầu ở Bảo Lộc","Phúc Long ra đời giữa cao nguyên chè Bảo Lộc, Lâm Đồng, từ một gia đình làm trà."],["Ba cửa hàng đầu tiên","Lê Văn Sỹ, Trần Hưng Đạo và 63 Mạc Thị Bưởi, nơi đầu tiên phục vụ trà pha chế đặc trưng của Phúc Long."],["Đồi chè và nhà máy","Sở hữu đồi chè Thái Nguyên và xây nhà máy chế biến trà, cà phê tại Bình Dương."],["Quán trà hiện đại","Cửa hàng tại Crescent Mall, Quận 7 mở ra mô hình quán trà tự phục vụ của Phúc Long hôm nay."],["Ra phía Bắc","Cửa hàng đầu tiên tại Hà Nội, cùng nhà máy thứ hai tại Bình Dương."],["Vượt đại dương","Cửa hàng đầu tiên ngoài Việt Nam tại Garden Grove, California."],["237 + 3 cửa hàng","237 cửa hàng khắp Việt Nam và 3 cửa hàng tại California, vẫn từ một lá trà Bảo Lộc."]];
+const TT = { en: {"nav1":"Our Story","nav2":"Our Drink","nav3":"Our Products","nav4":"Our Stores","nav5":"Our People","nav6":"Media","heroEb":"OUR ESSENCE IN FOUR WORDS · OUR STORY IN FOUR CHAPTERS","w1":"01 · TO STEEP","w1s":"The craft","w2":"02 · TASTE","w2s":"What we pour","w3":"03 · HEART","w3s":"Sixty years of family","w4":"04 · TO CONNECT","w4s":"Tea houses, two countries","heroP":"Ủ Vị Tâm Giao, pure connections. Since 1968 in Bảo Lộc, these four words have shaped every cup we make.","c1eb":"01 · Ủ · TO STEEP","c1h":"Patience is our first ingredient","c1p":"Six steps, the same since 1968. Our pressed-tea technique draws out depth without bitterness.","next":"NEXT","c2eb":"02 · VỊ · TASTE","c2h":"One leaf, many cups","c2p":"Leaves to brew at home, and drinks we pour fresh every day.","shopTea":"Shop our tea →","seeDrinks":"See the drinks","c3eb":"03 · TÂM · HEART","c3h":"Nearly 60 years, one tea family","c4eb":"04 · GIAO · TO CONNECT","c4h":"Tea is a bridge between people","c4p":"From one hill in Bảo Lộc to tea houses on two sides of the ocean. Spin the globe, or pick a country.","vn":"VIETNAM","ca":"CALIFORNIA","find":"Find a store →","drag":"DRAG TO SPIN","slogan":"Rooted in heritage, brewed for today.","contact":"Contact us","step":"STEP","of":"OF","nextL":"Next:","langA":"EN","langB":"VI"}, vi: {"nav1":"Câu chuyện","nav2":"Đồ uống","nav3":"Sản phẩm","nav4":"Cửa hàng","nav5":"Con người","nav6":"Truyền thông","heroEb":"BỐN CHỮ TINH THẦN · BỐN CHƯƠNG CÂU CHUYỆN","w1":"01 · Ủ TRÀ","w1s":"Nghề trà","w2":"02 · HƯƠNG VỊ","w2s":"Những gì chúng tôi pha","w3":"03 · TẤM LÒNG","w3s":"Sáu mươi năm một gia đình","w4":"04 · KẾT NỐI","w4s":"Quán trà ở hai quốc gia","heroP":"Ủ Vị Tâm Giao, những kết nối thuần khiết. Từ năm 1968 ở Bảo Lộc, bốn chữ này đã định hình mỗi ly trà chúng tôi pha.","c1eb":"01 · Ủ · NGHỀ TRÀ","c1h":"Kiên nhẫn là nguyên liệu đầu tiên","c1p":"Sáu bước, vẫn như từ năm 1968. Kỹ thuật ép trà giúp chiết trọn chiều sâu mà không gắt.","next":"TIẾP","c2eb":"02 · VỊ · HƯƠNG VỊ","c2h":"Một lá trà, muôn ly trà","c2p":"Trà lá để tự pha ở nhà, và thức uống pha mới mỗi ngày tại quán.","shopTea":"Mua trà →","seeDrinks":"Xem đồ uống","c3eb":"03 · TÂM · TẤM LÒNG","c3h":"Gần 60 năm, một gia đình làm trà","c4eb":"04 · GIAO · KẾT NỐI","c4h":"Trà là nhịp cầu nối con người","c4p":"Từ một ngọn đồi ở Bảo Lộc đến những quán trà ở hai bờ đại dương. Xoay địa cầu, hoặc chọn một quốc gia.","vn":"VIỆT NAM","ca":"CALIFORNIA","find":"Tìm cửa hàng →","drag":"KÉO ĐỂ XOAY","slogan":"Gìn giữ di sản, pha cho hôm nay.","contact":"Liên hệ","step":"BƯỚC","of":"/","nextL":"Tiếp theo:","langA":"VI","langB":"EN"} };
+const VN = [[106.70, 10.78], [105.85, 21.03], [108.22, 16.05], [105.78, 10.03], [109.19, 12.24], [106.68, 20.86], [106.65, 11.0], [107.08, 10.35], [108.44, 11.94], [105.69, 18.68]];
+const ORIGIN = [107.80, 11.55], CA = [-117.94, 33.77];
+
+class Component extends DCLogic {
+  componentDidUpdate() { if (window.PL) { const __v = this.state.vi !== undefined ? (this.state.vi ? 'vi' : 'en') : this.state.lang; if ((__v === 'vi' || __v === 'en') && __v !== PL.lang) PL.lang = __v; } }
+  siteChrome(vi, cur) { const h = ['#our-story', '#our-drink', '#tea-leaf', '#our-stores', '#our-people', '#media']; return { siteNav: (vi ? ['Câu chuyện', 'Đồ uống', 'Sản phẩm', 'Cửa hàng', 'Con người', 'Truyền thông'] : ['Our Story', 'Our Drink', 'Our Products', 'Our Stores', 'Our People', 'Media']).map((t, i) => ({ t, href: h[i], ul: i === cur ? '#EFF4A4' : 'transparent' })), siteLangA: vi ? 'VI' : 'EN', siteLangB: vi ? 'EN' : 'VI', siteContact: vi ? 'Liên hệ' : 'Contact us' }; }
+
+  state = { us: 0, gf: 'vn', vi: window.PL ? PL.lang === 'vi' : true };
+  fit = () => { const el = document.getElementById('os-scale'); if (el) el.style.zoom = Math.max(0.3, document.documentElement.clientWidth / 1440); };
+  rot = [-107, -14]; target = [-107, -14];
+  async initGlobe() {
+    try {
+      const [geo, topo] = await Promise.all([import('https://esm.sh/d3-geo@3'), import('https://esm.sh/topojson-client@3')]);
+      const world = await (await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')).json();
+      this._geo = geo; this._land = topo.feature(world, world.objects.countries);
+      this._vn = this._land.features.find(f => f.id === '704');
+      this._us = this._land.features.find(f => f.id === '840');
+      const cv = this._cv;
+      cv.addEventListener('pointerdown', (e) => { this._drag = { x: e.clientX, y: e.clientY, r: this.rot.slice() }; cv.setPointerCapture(e.pointerId); cv.style.cursor = 'grabbing'; });
+      cv.addEventListener('pointermove', (e) => { if (!this._drag) return; const d = this._drag; this.rot = [d.r[0] + (e.clientX - d.x) * 0.35, Math.max(-60, Math.min(60, d.r[1] - (e.clientY - d.y) * 0.35))]; this.target = this.rot.slice(); });
+      const up = () => { this._drag = null; cv.style.cursor = 'grab'; }; cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
+      const loop = (t) => { this.drawGlobe(t); this._raf = requestAnimationFrame(loop); };
+      this._raf = requestAnimationFrame(loop);
+    } catch (e) { console.error('globe failed', e); }
+  }
+  componentWillUnmount() { cancelAnimationFrame(this._raf); window.removeEventListener('resize', this.fit); }
+  drawGlobe(t) {
+    const cv = this._cv, geo = this._geo; if (!cv || !geo) return;
+    const dpr = window.devicePixelRatio || 1, w = cv.clientWidth, h = cv.clientHeight;
+    if (cv.width !== w * dpr) { cv.width = w * dpr; cv.height = h * dpr; }
+    const ctx = cv.getContext('2d'); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+    if (!this._drag) { this.rot[0] += (this.target[0] - this.rot[0]) * 0.06; this.rot[1] += (this.target[1] - this.rot[1]) * 0.06; }
+    const r = Math.min(w, h) / 2 - 8;
+    const proj = geo.geoOrthographic().scale(r).translate([w / 2, h / 2]).rotate([this.rot[0], this.rot[1]]).clipAngle(90);
+    const path = geo.geoPath(proj, ctx);
+    ctx.beginPath(); path({ type: 'Sphere' }); ctx.fillStyle = '#163A1B'; ctx.fill();
+    ctx.beginPath(); path(geo.geoGraticule10()); ctx.strokeStyle = 'rgba(232,233,135,.08)'; ctx.lineWidth = 1; ctx.stroke();
+    ctx.beginPath(); path(this._land); ctx.fillStyle = '#3F6B22'; ctx.fill(); ctx.strokeStyle = 'rgba(28,66,32,.9)'; ctx.lineWidth = .6; ctx.stroke();
+    if (this._vn) { ctx.beginPath(); path(this._vn); ctx.fillStyle = '#E8E987'; ctx.fill(); }
+    if (this._us) { ctx.beginPath(); path(this._us); ctx.fillStyle = '#6E8F2E'; ctx.fill(); }
+    const center = proj.invert([w / 2, h / 2]);
+    const vis = (p) => geo.geoDistance(p, center) < Math.PI / 2 - 0.02;
+    const k = (t % 4000) / 4000;
+    ctx.beginPath(); path({ type: 'LineString', coordinates: [ORIGIN, CA] }); ctx.strokeStyle = 'rgba(255,205,163,.85)'; ctx.lineWidth = 2; ctx.setLineDash([6, 6]); ctx.lineDashOffset = -k * 48; ctx.stroke(); ctx.setLineDash([]);
+    const pin = (p, col, rad, pulse) => { if (!vis(p)) return; const [x, y] = proj(p); if (pulse) { ctx.beginPath(); ctx.arc(x, y, rad + 14 * k, 0, 7); ctx.strokeStyle = col.replace('1)', (1 - k).toFixed(2) + ')'); ctx.lineWidth = 2; ctx.stroke(); } ctx.beginPath(); ctx.arc(x, y, rad, 0, 7); ctx.fillStyle = col; ctx.fill(); ctx.strokeStyle = '#1C4220'; ctx.lineWidth = 1.5; ctx.stroke(); };
+    VN.forEach(p => pin(p, 'rgba(3,95,29,1)', 3.5, false));
+    pin(ORIGIN, 'rgba(232,233,135,1)', 6, true);
+    pin(CA, 'rgba(255,205,163,1)', 6, true);
+    ctx.font = '700 12px Manrope, sans-serif'; ctx.textBaseline = 'middle';
+    const label = (p, txt, col, dx) => { if (!vis(p)) return; const [x, y] = proj(p); ctx.fillStyle = col; ctx.textAlign = dx < 0 ? 'right' : 'left'; ctx.fillText(txt, x + dx, y); };
+    label(ORIGIN, this.state.vi ? 'Bảo Lộc · 1968' : 'Bảo Lộc · 1968', '#FBF6E6', 12);
+    label(CA, this.state.vi ? 'California · 3 cửa hàng' : 'California · 3 stores', '#FFCDA3', 12);
+    ctx.beginPath(); ctx.arc(w / 2, h / 2, r, 0, 7); ctx.strokeStyle = 'rgba(232,233,135,.35)'; ctx.lineWidth = 1.5; ctx.stroke();
+  }
+
+  componentDidMount() { this.fit(); window.addEventListener('resize', this.fit); this._tries = 0; const find = () => { const el = document.querySelector('canvas[data-globe]'); if (el) { this._cv = el; this.initGlobe(); } else if (this._tries++ < 50) setTimeout(find, 200); }; find(); document.querySelectorAll('video[data-v]').forEach(v => { v.muted = true; v.play().catch(() => {}); }); }
+  renderVals() {
+    const P = 'assets/photos/';
+    const H = [
+      ['1968', 'Born in Bảo Lộc', 'A family tea business begins in the highlands of Lâm Đồng.', 'p01-highlands'],
+      ['1980s', 'Our first three stores', 'Lê Văn Sỹ, Trần Hưng Đạo and 63 Mạc Thị Bưởi.', 'p18-steam-pour'],
+      ['2007', 'Our own hills and factory', 'A tea estate in Thái Nguyên and a factory in Bình Dương.', 'p02-bud'],
+      ['2012', 'The modern tea house', 'Crescent Mall, District 7, opens the self-serve tea house.', 'p17-friends'],
+      ['2018', 'Heading north', 'Our first store in Hà Nội and a second factory.', 'p04-shared-table'],
+      ['2021', 'Across the ocean', 'Our first store outside Vietnam, in Garden Grove, California.', 'ls-street'],
+      ['Today', '237 + 3 stores', 'Across Vietnam and California, still rooted in a Bảo Lộc leaf.', 'p17-street-cup']
+    ];
+    const years = H.map(([year, title, body, img], i) => ({ year, title, body, img: P + img + '.jpg', ink: i === 6 ? '#C05131' : '#035F1D', inkDark: i === 6 ? '#FFDFCA' : '#EFF4A4', o1: i % 2 ? 1 : 0, o2: i % 2 ? 0 : 1, al1: i % 2 ? 'left' : 'right', jc2: i % 2 ? 'flex-end' : 'flex-start' }));
+    const SB = ['#F2EBE7', '#EFF4A4', '#DCEAA8', '#AAC939', '#8CAB19', '#035F1D'];
+    const stairs = H.slice(1).map(([year, title, body, img], i) => ({ year, title, body, img: P + img + '.jpg', h: 330 + i * 62, bg: SB[i], ink: i >= 4 ? '#FBF6E6' : '#1C2A1E' }));
+    const steps = [['01', 'Select', 'Only the youngest bud and two leaves, checked by eye and by hand.', 'p19-select'], ['02', 'Sort', 'Graded by size and tenderness so every batch steeps evenly.', 'p20-sort'], ['03', 'Winnow', 'A woven bamboo tray lifts away dust and stems, as it has for generations.', 'p21-winnow'], ['04', 'Dry', 'Slow drying in highland air settles the aroma before pressing.', 'p22-dry'], ['05', 'Steep', 'Our pressed-tea technique draws out depth without bitterness.', 'p23-steep'], ['06', 'Share', 'The last step is yours: a cup passed across the table.', 'p24-share']]
+      .map(([n, t, b, img]) => ({ n, t, b, img: P + img + '.jpg' }));
+    if (this.state.vi) { steps.forEach((x, i) => { x.t = SV[i][0]; x.b = SV[i][1]; }); years.forEach((y, i) => { y.title = HV[i][0]; y.body = HV[i][1]; if (i === 6) y.year = 'Nay'; }); }
+    const ang = [-90, -30, 30, 90, 150, 210];
+    const clock = steps.map((s, i) => ({ ...s, x: Math.round(720 + 320 * Math.cos(ang[i] * Math.PI / 180)), y: Math.round(480 + 320 * Math.sin(ang[i] * Math.PI / 180)) }));
+    const BR = [['#FDF8E1', '#1C2A1E'], ['#F4F6D2', '#1C2A1E'], ['#EFF4A4', '#1C2A1E'], ['#DCEAA8', '#1C2A1E'], ['#8CAB19', '#1C2A1E'], ['#035F1D', '#FBF6E6'], ['#1C4220', '#FBF6E6']];
+    const brew = years.map((y, i) => ({ ...y, bg: BR[i][0], ink: BR[i][1] }));
+    const POS = [[88, 300, -4], [460, 270, 3], [830, 320, -2], [1110, 260, 5], [200, 640, 3], [580, 660, -3], [960, 630, 2]];
+    const cards = years.map((y, i) => ({ ...y, x: POS[i][0], y: POS[i][1], r: POS[i][2] }));
+    const MK = [['HÀ NỘI', 'VN', 760, 120, 170, -8], ['ĐÀ NẴNG', 'VN', 980, 200, 150, 6], ['ĐÀ LẠT', 'VN', 1180, 110, 140, -4], ['BẢO LỘC', '1968', 820, 360, 190, 4], ['NHA TRANG', 'VN', 1080, 420, 150, -10], ['TP. HCM', 'VN', 700, 560, 180, 8], ['CẦN THƠ', 'VN', 920, 600, 140, -6], ['BÌNH DƯƠNG', 'VN', 140, 560, 150, 5], ['GARDEN GROVE', 'CA', 1170, 590, 170, 10]];
+    const marks = MK.map(([city, sub, x, y, s, r]) => ({ city, sub, x, y, s, r, c: sub === 'CA' ? '#C05131' : '#035F1D' }));
+    years.forEach((y, i) => { y.mt = i % 2 ? 40 : 0; });
+    const gfo = (k) => { this.target = k === 'vn' ? [-107, -14] : [158, -28]; this.setState({ gf: k }); }, gon = b => b ? 'rgba(239,244,164,.14)' : 'rgba(251,246,230,.04)', gr = b => b ? '#EFF4A4' : 'rgba(251,246,230,.25)';
+    const us = this.state.us, go = i => this.setState({ us: i });
+    const ustep = steps.map((st, i) => ({ ...st, op: i === us ? 1 : 0, sc: i === us ? 1 : 1.08, d: i === us ? 34 : 20, dot: i <= us ? '#035F1D' : '#FDF8E1', dotInk: i === us ? '#FBF6E6' : (i < us ? '#035F1D' : '#035F1D'), go: () => go(i) }));
+    const cur = steps[us], nxt = steps[(us + 1) % 6];
+    const t = TT[this.state.vi ? 'vi' : 'en'];
+    return { ...this.siteChrome(this.state.vi, 0), toggleSite: () => this.setState(st => ({ vi: !st.vi })),  t, toggleLang: () => this.setState(st => ({ vi: !st.vi })), years, stairs, steps, clock, brew, cards, marks, ustep, cur, nxt, gVN: () => gfo('vn'), gUS: () => gfo('us'), gVNbg: gon(this.state.gf === 'vn'), gUSbg: gon(this.state.gf === 'us'), gVNring: gr(this.state.gf === 'vn'), gUSring: gr(this.state.gf === 'us'), fill: Math.round(us * 85), uNext: () => go((us + 1) % 6) };
+  }
+}
+</script>
+</body>
+</html>

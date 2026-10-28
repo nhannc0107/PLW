@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/colors_and_type.css">
+<script src="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/_ds_bundle.js"></script>
+<style>body{margin:0;background:#FBF6E6;font-family:var(--font-body);color:#1C2A1E}*{box-sizing:border-box}a{color:#035F1D;text-decoration:none}a:hover{color:#658D1B}</style>
+</helmet>
+<div id="op-scale" data-screen-label="Our Products · Tea Leaf" style="width:1440px;margin:0 auto;zoom:1;position:relative;background:#FBF6E6;color:#1C2A1E;overflow:hidden">
+
+<div style="position:relative;height:900px;background:url(assets/photos/tl-hills.jpg) center 60%/cover">
+<div style="position:absolute;inset:0 0 auto 0;height:220px;background:linear-gradient(180deg,rgba(3,60,20,.55),rgba(3,60,20,0))"></div>
+<div style="position:absolute;inset:auto 0 0 0;height:440px;background:linear-gradient(0deg,rgba(2,50,16,.72),rgba(2,50,16,0))"></div>
+<div style="position:absolute;left:88px;right:88px;top:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#FBF6E6;z-index:5"><a href="#home" style="text-decoration:none;display:flex;flex:none"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:36px;width:auto"></a><div style="display:flex;gap:34px;align-items:center;flex-wrap:wrap;justify-content:center"><sc-for list="{{ siteNav }}" as="n" hint-placeholder-count="6"><div data-dd="{{ n.href }}" style="position:relative;display:flex"><a href="{{ n.href }}" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:{{ n.c }};border-bottom:2px solid {{ n.ul }};padding-bottom:4px" style-hover="color:#EFF4A4">{{ n.t }}</a><div data-ddm="1" style="display:none;position:absolute;top:100%;left:-18px;padding-top:14px;z-index:60"><div style="background:#FBF6E6;border:1px solid #E4DACE;border-radius:12px;box-shadow:0 14px 34px rgba(3,40,15,.2);padding:8px;display:flex;flex-direction:column;min-width:190px"><a href="#tea-leaf" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Tea Leaf</a><a href="#coffee" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Coffee</a></div></div></div></sc-for></div><div style="display:flex;gap:18px;align-items:center;font:700 12px/1 var(--font-body);letter-spacing:.12em;color:#FBF6E6;flex:none"><span onClick="{{ toggleSite }}" style="cursor:pointer">{{ siteLangA }} <span style="opacity:.5">/ {{ siteLangB }}</span></span><a href="#shop" style="text-decoration:none;border:1px solid rgba(251,246,230,.7);border-radius:999px;padding:9px 16px;color:#FBF6E6" style-hover="background:#FBF6E6;color:#035F1D">Shop</a></div></div>
+<div style="position:absolute;left:88px;right:88px;bottom:80px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px;color:#FBF6E6">
+<div style="display:flex;flex-direction:column;gap:20px;max-width:860px">
+<span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#EFF4A4">{{ t.heroEb }}</span>
+<h1 style="margin:0;font:700 124px/.9 var(--font-display);letter-spacing:-.04em">{{ t.heroH }}</h1>
+<p style="margin:0;max-width:540px;font:400 19px/1.6 var(--font-body);text-wrap:pretty">{{ t.heroP }}</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;font:700 11px/1 var(--font-body);letter-spacing:.2em">
+<sc-for list="{{ chapters }}" as="c" hint-placeholder-count="5"><span style="display:flex;gap:12px;align-items:center;opacity:{{ c.op }}"><span>{{ c.l }}</span><span style="color:#EFF4A4">{{ c.n }}</span></span></sc-for>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);height:760px">
+<div style="padding:110px 72px 90px 88px;display:flex;flex-direction:column;gap:26px;justify-content:center">
+<span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#658D1B">{{ t.c2eb }}</span>
+<h2 style="margin:0;font:700 76px/.95 var(--font-display);letter-spacing:-.03em;color:#035F1D">{{ t.c2h }}</h2>
+<p style="margin:0;font:400 18px/1.65 var(--font-body);color:#3C463A;text-wrap:pretty">{{ t.c2p }}</p>
+<span style="font:400 italic 22px/1.4 var(--font-display);color:#035F1D;border-top:1px solid #D6CFBE;padding-top:22px">{{ t.c2q }}</span>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)">
+<div style="background:url(assets/photos/tl-hands.jpg) center/cover"></div>
+<div style="background:url(assets/photos/tl-pickers.jpg) 40% center/cover"></div>
+</div>
+</div>
+
+<div style="position:relative;height:680px;background:url(assets/photos/tl-sorting.jpg) center 35%/cover">
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,246,230,.97) 0%,rgba(251,246,230,.92) 34%,rgba(251,246,230,0) 60%)"></div>
+<div style="position:absolute;inset:auto 0 0 0;height:160px;background:linear-gradient(0deg,#FBF6E6,rgba(251,246,230,0))"></div>
+<div style="position:relative;padding:120px 88px;max-width:600px;display:flex;flex-direction:column;gap:24px">
+<span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#658D1B">{{ t.c3eb }}</span>
+<h2 style="margin:0;font:700 76px/.95 var(--font-display);letter-spacing:-.03em;color:#035F1D">{{ t.c3h }}</h2>
+<p style="margin:0;font:400 18px/1.65 var(--font-body);color:#3C463A;text-wrap:pretty">{{ t.c3p }}</p>
+<span style="font:700 13px/1 var(--font-body);letter-spacing:.14em;color:#035F1D">{{ t.c3next }} ↓</span>
+</div>
+</div>
+
+<div style="padding:60px 88px 48px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+<div style="display:flex;flex-direction:column;gap:18px;max-width:780px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#658D1B">{{ t.c4eb }}</span><h2 style="margin:0;font:700 76px/.95 var(--font-display);letter-spacing:-.03em;color:#035F1D">{{ t.c4h }}</h2></div>
+<div style="display:flex;align-items:center;gap:10px;font:700 11px/1 var(--font-body);letter-spacing:.16em;color:#5C5A4E"><span>{{ t.green }}</span><span style="width:220px;height:8px;border-radius:4px;background:linear-gradient(90deg,#C9C46A,#D9A54C,#C8963F,#9A5A22,#7A2A1E)"></span><span>{{ t.black }}</span></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr))">
+<sc-for list="{{ strip }}" as="s" hint-placeholder-count="6">
+<button onClick="{{ s.pick }}" style="cursor:pointer;border:none;background:{{ s.tint }};padding:36px 18px 30px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;box-shadow:{{ s.sel }};transition:background .3s">
+<span style="font:700 11px/1 var(--font-body);letter-spacing:.18em;color:#5C5A4E">{{ s.ox }}</span>
+<img src="{{ s.img }}" alt="{{ s.en }}" style="width:190px;height:190px;object-fit:contain">
+<span style="font:700 22px/1.05 var(--font-display);color:{{ s.ink }}">{{ s.vi }}</span>
+<span style="font:400 13px/1.3 var(--font-body);color:#5C5A4E">{{ s.liquor }}</span>
+</button>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) auto auto;gap:48px;align-items:center;padding:36px 88px;background:#FFFFFF;border-bottom:1px solid #E6DFCF">
+<div style="display:flex;flex-direction:column;gap:8px"><span style="font:700 11px/1 var(--font-body);letter-spacing:.2em;color:#658D1B">{{ sel.family }} · {{ sel.ox }}</span><span style="font:400 italic 22px/1.4 var(--font-display);color:#035F1D">{{ sel.notes }}</span></div>
+<div style="display:flex;flex-direction:column;gap:7px">
+<sc-for list="{{ prof }}" as="r" hint-placeholder-count="5">
+<div style="display:grid;grid-template-columns:96px minmax(0,1fr);gap:10px;align-items:center;font:400 12px/1 var(--font-body);color:#5C5A4E"><span>{{ r.l }}</span><div style="display:flex;gap:3px"><sc-for list="{{ r.segs }}" as="g" hint-placeholder-count="5"><span style="flex:1;height:4px;border-radius:2px;background:{{ g.bg }}"></span></sc-for></div></div>
+</sc-for>
+</div>
+<div style="display:flex;gap:28px;font:400 12px/1.5 var(--font-body);color:#5C5A4E"><span>{{ t.water }}<br><b style="font:700 20px/1.2 var(--font-body);color:#035F1D">{{ sel.temp }}</b></span><span>{{ t.steep }}<br><b style="font:700 20px/1.2 var(--font-body);color:#035F1D">{{ sel.time }}</b></span><span>{{ t.leaf }}<br><b style="font:700 20px/1.2 var(--font-body);color:#035F1D">{{ sel.g }}</b></span></div>
+<a href="#shelf" onClick="{{ findPack }}" style="background:#035F1D;color:#FBF6E6;border-radius:999px;padding:14px 22px;font:700 13px/1 var(--font-body);white-space:nowrap" style-hover="background:#658D1B;color:#FBF6E6">{{ t.findPack }} ↓</a>
+</div>
+
+<div style="margin-top:120px;background:#FBF1C4;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);min-height:860px">
+<div style="padding:120px 72px 100px 88px;display:flex;flex-direction:column;justify-content:space-between;gap:48px">
+<div style="display:flex;flex-direction:column;gap:24px">
+<span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#8A6A12">{{ t.c6eb }}</span>
+<h2 style="margin:0;font:700 112px/.88 var(--font-display);letter-spacing:-.045em;color:#035F1D">{{ t.c6h }}</h2>
+<p style="margin:0;max-width:500px;font:400 19px/1.6 var(--font-body);color:#3C463A;text-wrap:pretty">{{ t.c6p }}</p>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;border-top:1px solid #E2D294;padding-top:26px">
+<sc-for list="{{ brewFacts }}" as="b" hint-placeholder-count="3"><div style="display:flex;flex-direction:column;gap:8px"><span style="font:700 34px/1 var(--font-display);color:#035F1D;letter-spacing:-.02em;white-space:nowrap">{{ b.v }}</span><span style="font:400 14px/1.45 var(--font-body);color:#5C5A4E">{{ b.l }}</span></div></sc-for>
+</div>
+</div>
+<div style="background:url(assets/photos/br-teabag-wide.jpg) center/cover"></div>
+</div>
+<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,1fr);height:640px">
+<sc-for list="{{ macro }}" as="m" hint-placeholder-count="3">
+<div style="position:relative;background:url({{ m.img }}) center/cover">
+<div style="position:absolute;left:28px;bottom:26px;display:flex;flex-direction:column;gap:6px;background:rgba(251,246,230,.92);border-radius:12px;padding:14px 16px"><span style="font:700 11px/1 var(--font-body);letter-spacing:.2em;color:#658D1B">{{ m.k }}</span><span style="font:400 italic 16px/1.3 var(--font-display);color:#035F1D">{{ m.c }}</span></div>
+</div>
+</sc-for>
+</div>
+<div style="position:relative;height:860px;overflow:hidden;background:#1C2A1E url(assets/photos/br-home.jpg) center/cover">
+<video data-brew="1" src="assets/video/tea-time.mp4" poster="assets/photos/br-home.jpg" autoplay="" muted="" loop="" playsinline="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,30,16,.72) 0%,rgba(12,30,16,.35) 40%,rgba(12,30,16,0) 62%)"></div>
+<div style="position:absolute;left:88px;top:120px;max-width:560px;display:flex;flex-direction:column;gap:22px;color:#FBF6E6">
+<span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#EFF4A4">{{ t.c7eb }}</span>
+<h2 style="margin:0;font:700 88px/.9 var(--font-display);letter-spacing:-.04em">{{ t.c7h }}</h2>
+<p style="margin:0;font:400 18px/1.6 var(--font-body);color:#E3EBD4;text-wrap:pretty">{{ t.c7p }}</p>
+</div>
+
+</div>
+
+<div id="shelf" style="padding:120px 88px 56px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:18px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#658D1B">{{ t.c5eb }} · {{ count }} {{ t.products }}</span><h2 style="margin:0;font:700 84px/.92 var(--font-display);letter-spacing:-.035em;color:#035F1D">{{ t.c5h }}</h2></div>
+<div style="display:flex;gap:4px;border:1px solid #D9D1BF;border-radius:999px;padding:5px">
+<sc-for list="{{ tabs }}" as="b" hint-placeholder-count="4"><button onClick="{{ b.pick }}" style="cursor:pointer;border:none;background:{{ b.bg }};color:{{ b.fg }};border-radius:999px;padding:12px 20px;font:700 13px/1 var(--font-body)">{{ b.l }}</button></sc-for>
+</div>
+</div>
+<div style="margin:0 88px;border-top:1px solid #D9D1BF;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))">
+<sc-for list="{{ grid }}" as="p" hint-placeholder-count="8">
+<a href="#shop" style="display:flex;flex-direction:column;gap:16px;padding:36px 28px 40px;border-bottom:1px solid #D9D1BF;border-right:{{ p.br }};background:{{ p.hl }};transition:background .3s;color:#1C2A1E" style-hover="background:#FFFFFF">
+<div style="display:flex;justify-content:space-between;font:700 11px/1 var(--font-body);letter-spacing:.18em;color:#8A8676"><span>{{ p.n }}</span><span style="color:{{ p.tagC }}">{{ p.tag }}</span></div>
+<div style="height:280px;display:flex;align-items:center;justify-content:center"><img src="{{ p.img }}" alt="{{ p.vi }}" style="max-height:100%;max-width:86%;object-fit:contain;filter:drop-shadow(0 20px 22px rgba(60,40,10,.16))"></div>
+<div style="display:flex;flex-direction:column;gap:6px"><span style="font:700 24px/1.05 var(--font-display);color:#035F1D">{{ p.vi }}</span><span style="font:400 14px/1.4 var(--font-body);color:#5C5A4E">{{ p.fmt }}</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #E8E0CE"><span style="font:400 italic 15px/1.3 var(--font-display);color:#3C463A">{{ p.note }}</span><span style="font:700 13px/1 var(--font-body);color:#035F1D">{{ t.view }} →</span></div>
+</a>
+</sc-for>
+</div>
+<div style="padding:40px 88px 72px;display:flex;justify-content:flex-end"><a href="#shop" style="background:#035F1D;color:#FBF6E6;border-radius:999px;padding:15px 26px;font:700 14px/1 var(--font-body)" style-hover="background:#658D1B;color:#FBF6E6">{{ t.shopAll }} →</a></div>
+
+<footer style="background:#1C4220;color:#FBF6E6;padding:40px clamp(24px,5vw,120px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap"><a href="#home" style="text-decoration:none;display:flex"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:30px;width:auto"></a><div style="display:flex;gap:22px;flex-wrap:wrap"><sc-for list="{{ siteNav }}" as="n" hint-placeholder-count="6"><a href="{{ n.href }}" style="text-decoration:none;font:600 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ n.t }}</a></sc-for></div><div style="display:flex;align-items:center;gap:22px"><a href="#" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;background:#FDF8E1;color:#035F1D;padding:12px 18px;border-radius:999px" style-hover="background:#EFF4A4;color:#035F1D">{{ siteContact }} →</a><span style="font:500 12px/1 var(--font-body);letter-spacing:.08em;opacity:.8">© Phúc Long Heritage</span></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const T = [
+  { k: 'green', vi: 'Trà Xanh', en: 'Green Tea', family: 'UNOXIDISED', img: 'assets/tea-types/green-tea.png', icon: 'assets/icons/tea/green-tea.png', ox: '0–5%', origin: 'Bảo Lộc, Lâm Đồng', leaf: 'Bud + two leaves, pan-fired', liquor: 'Pale jade', liq: '#C9C46A', notes: 'Fresh-cut grass, young bud, a clean sweet finish', temp: '80°C', time: '2 min', g: '3 g', pack: 'assets/products/box150-xanh.png', packName: 'Trà Xanh · 150 g', format: 'Loose leaf box', prof: [1, 3, 2, 0, 3], bg: '#EFF4A4', disc: '#AAC939', panel: '#EFF4A4', story: 'Picked at first light and fired within hours, so the leaf keeps its green energy. A daily cup that tastes of the highlands.', tags: ['Morning', 'Light caffeine', 'Iced or hot'] },
+  { k: 'jasmine', vi: 'Trà Lài', en: 'Jasmine Tea', family: 'SCENTED GREEN', img: 'assets/tea-types/jasmine-tea.png', icon: 'assets/icons/tea/jasmine-tea.png', ox: '5–10%', origin: 'Bảo Lộc green tea, Vietnamese jasmine', leaf: 'Green leaf layered with fresh blossom', liquor: 'Light gold', liq: '#D9A54C', notes: 'Night-blooming jasmine, honeyed and long', temp: '85°C', time: '3 min', g: '3 g', pack: 'assets/products/tin-lai.png', packName: 'Trà Lài · 100 g tin', format: 'Premium line tin', prof: [5, 4, 2, 0, 2], bg: '#FDFFA3', disc: '#A1C4D1', panel: '#FDFFA3', story: 'Green leaf rests with fresh jasmine buds overnight, absorbing their scent as they open. Repeated until the leaf holds the flower.', tags: ['Floral', 'Afternoon', 'Our signature'] },
+  { k: 'lotus', vi: 'Trà Sen', en: 'Lotus Tea', family: 'SCENTED GREEN', img: 'assets/tea-types/lotus-tea.png', icon: 'assets/icons/tea/lotus-tea.png', ox: '5–10%', origin: 'Green tea scented with lotus', leaf: 'Green leaf, lotus-stamen scented', liquor: 'Warm amber', liq: '#B9772F', notes: 'Lotus stamen, soft creamy body, quiet finish', temp: '85°C', time: '3 min', g: '3 g', pack: 'assets/products/box150-sen.png', packName: 'Trà Hương Sen · 150 g', format: 'Loose leaf box', prof: [4, 4, 3, 0, 2], bg: '#E9E887', disc: '#D9AFCA', panel: '#F4DCE8', story: 'A Vietnamese ritual of honour. Lotus scent is coaxed into green leaf for a cup served to guests and elders alike.', tags: ['For guests', 'Calm', 'Hot'] },
+  { k: 'oolong', vi: 'Ô Long Hương Hoa', en: 'Floral Oolong', family: 'SEMI-OXIDISED', img: 'assets/tea-types/floral-oolong-tea.png', icon: 'assets/icons/tea/oolong-tea.png', ox: '20–30%', origin: 'Lâm Đồng highlands, 1,000 m', leaf: 'Hand-rolled pearls', liquor: 'Golden honey', liq: '#C8963F', notes: 'Orchid, butter, a sweetness that returns', temp: '90°C', time: '1 min ×3', g: '5 g', pack: 'assets/products/teabag-olong.png', packName: 'Trà Ô Long · 25 bags', format: 'Tea bags 50 g', prof: [4, 4, 3, 1, 1], bg: '#DAE0C1', disc: '#C0AD7C', panel: '#DAE0C1', story: 'Rolled into tight pearls that unfurl over several infusions. Each pour reveals a new layer of orchid and cream.', tags: ['Multi-infusion', 'Gongfu', 'Hot'] },
+  { k: 'roast', vi: 'Ô Long Rang', en: 'Roasted Oolong', family: 'SEMI-OXIDISED, ROASTED', img: 'assets/tea-types/roasted-oolong-tea.png', icon: 'assets/icons/tea/oolong-tea.png', ox: '40–50%', origin: 'Lâm Đồng, charcoal-roasted', leaf: 'Rolled, slow-roasted', liquor: 'Deep amber', liq: '#9A5A22', notes: 'Toasted rice, caramel, dried stone fruit', temp: '95°C', time: '1 min ×3', g: '5 g', pack: 'assets/products/teabag-olong.png', packName: 'Trà Ô Long · 25 bags', format: 'Tea bags 50 g', prof: [2, 3, 4, 4, 2], bg: '#E4DACE', disc: '#C0AD7C', panel: '#E8DFC8', story: 'Slow-roasted over low heat to round the leaf’s edges. Warm, grounding, and best shared after a meal.', tags: ['After meals', 'Warming', 'Hot'] },
+  { k: 'black', vi: 'Hồng Trà', en: 'Black Tea', family: 'FULLY OXIDISED', img: 'assets/tea-types/black-tea.png', icon: 'assets/icons/tea/black-tea.png', ox: '90–100%', origin: 'Bảo Lộc, Lâm Đồng', leaf: 'Fully oxidised, twisted', liquor: 'Ruby red', liq: '#7A2A1E', notes: 'Malt, dried longan, a hint of cocoa', temp: '95°C', time: '4 min', g: '3 g', pack: 'assets/products/teabag-den.png', packName: 'Hồng Trà · 25 bags', format: 'Tea bags 50 g', prof: [1, 3, 5, 2, 3], bg: '#F7BEAA', disc: '#A3504E', panel: '#F7D3C6', story: 'The base of our milk teas. Fully oxidised for a bold, ruby cup that holds its own with milk or alone.', tags: ['With milk', 'Bold', 'Iced or hot'] }
+];
+const ATTR = ['Floral', 'Sweetness', 'Body', 'Roast', 'Astringency'];
+const PK = [
+  { img: 'assets/products/box150-xanh.png', vi: 'Trà Xanh', fmt: 'Loose leaf · 150 g box', g: 'loose', tag: 'LOOSE LEAF', note: 'Fresh, grassy, clean', leaf: 'green-tea.png', tint: '#EEF3DD' },
+  { img: 'assets/products/box150-lai.png', vi: 'Trà Lài', fmt: 'Loose leaf · 150 g box', g: 'loose', tag: 'LOOSE LEAF', note: 'Jasmine, honeyed', leaf: 'jasmine-tea.png', tint: '#FBF7D2' },
+  { img: 'assets/products/box150-sen.png', vi: 'Trà Hương Sen', fmt: 'Loose leaf · 150 g box', g: 'loose', tag: 'LOOSE LEAF', note: 'Lotus, soft, creamy', leaf: 'lotus-tea.png', tint: '#F6E6EE' },
+  { img: 'assets/products/tin-lai.png', vi: 'Trà Lài Premium', fmt: 'Gift tin · 100 g', g: 'tin', tag: 'PREMIUM TIN', note: 'Our signature jasmine', leaf: 'jasmine-tea.png', tint: '#FBF7D2' },
+  { img: 'assets/products/tin-xanh.png', vi: 'Trà Xanh Premium', fmt: 'Gift tin · 100 g', g: 'tin', tag: 'PREMIUM TIN', note: 'First-flush green', leaf: 'green-tea.png', tint: '#EEF3DD' },
+  { img: 'assets/products/teabag-olong.png', vi: 'Trà Ô Long', fmt: '25 bags × 2 g', g: 'bag', tag: 'TEA BAGS', note: 'Orchid and butter', leaf: 'floral-oolong-tea.png', tint: '#EEEBDD' },
+  { img: 'assets/products/teabag-den.png', vi: 'Hồng Trà', fmt: '25 bags × 2 g', g: 'bag', tag: 'TEA BAGS', note: 'Malt and longan', leaf: 'black-tea.png', tint: '#F6E2D9' },
+  { img: 'assets/products/teabag-vai.png', vi: 'Trà Vải', fmt: '25 bags × 2 g', g: 'bag', tag: 'TEA BAGS', note: 'Lychee, bright', leaf: 'black-tea.png', tint: '#F8E3E6' }
+];
+
+const VI = {
+  notes: { green: 'Cỏ non, búp chè, hậu ngọt thanh', jasmine: 'Hoa lài nở đêm, ngọt như mật, lưu hương lâu', lotus: 'Nhuỵ sen, vị êm béo, hậu dịu', oolong: 'Hoa lan, vị bơ, ngọt hồi', roast: 'Gạo rang, caramel, trái cây sấy', black: 'Mạch nha, nhãn sấy, thoảng cacao' },
+  liquor: { green: 'Xanh ngọc nhạt', jasmine: 'Vàng nhạt', lotus: 'Hổ phách ấm', oolong: 'Vàng mật ong', roast: 'Hổ phách đậm', black: 'Đỏ hồng ngọc' },
+  family: { green: 'KHÔNG OXY HOÁ', jasmine: 'TRÀ XANH ƯỚP HƯƠNG', lotus: 'TRÀ XANH ƯỚP HƯƠNG', oolong: 'OXY HOÁ MỘT PHẦN', roast: 'OXY HOÁ MỘT PHẦN, RANG', black: 'OXY HOÁ HOÀN TOÀN' },
+  attr: ['Hương hoa', 'Độ ngọt', 'Độ đậm', 'Độ rang', 'Độ chát'],
+  pk: [['Tươi, thanh, sạch vị', 'Trà lá · hộp 150 g'], ['Hương lài, ngọt mật', 'Trà lá · hộp 150 g'], ['Hương sen, êm, béo', 'Trà lá · hộp 150 g'], ['Lài đặc trưng Phúc Long', 'Hộp thiếc quà tặng · 100 g'], ['Trà xanh vụ đầu', 'Hộp thiếc quà tặng · 100 g'], ['Hoa lan và bơ', '25 túi × 2 g'], ['Mạch nha và nhãn', '25 túi × 2 g'], ['Vải, tươi sáng', '25 túi × 2 g']],
+  tag: { loose: 'TRÀ LÁ', tin: 'HỘP THIẾC', bag: 'TRÀ TÚI LỌC' }
+};
+const TT = {
+  en: { heroEb: 'OUR PRODUCTS · TEA LEAF', heroH: 'It begins on the hill', heroP: 'Bảo Lộc, 1,000 metres up. Cool mornings, red basalt soil, and rows of tea we have tended for more than fifty years.', ch: ['THE HILL', 'THE HANDS', 'THE SELECTION', 'THE COLOUR', 'THE BREW', 'THE SHELF'],
+    c2eb: '02 · THE HANDS', c2h: 'One bud, two leaves. Nothing more.', c2p: 'Our pickers walk the rows before the sun is high, taking only the tender top of each shoot. It is slower than machine cutting. It is also why the cup tastes sweet.', c2q: '“You can feel which leaf is ready. It bends, it doesn’t snap.”',
+    c3eb: '03 · THE SELECTION', c3h: 'Sorted twice, by eye and by hand', c3p: 'Broken, bruised or oversized leaves come out on the bamboo tray. What stays is withered, rolled and fired, and the way it meets the air decides which of six teas it becomes.', c3next: 'SEE THE SIX TEAS',
+    c4eb: '04 · THE COLOUR · 0 → 100% OXIDATION', c4h: 'Six leaves, read by their colour', green: 'GREEN', black: 'BLACK', water: 'WATER', steep: 'STEEP', leaf: 'LEAF', findPack: 'Find this tea',
+    c6eb: '05 · BREWED FOR TODAY', c6h: 'Watch the leaf come back to life', c6p: 'Hot water meets the leaf and it opens again, the same shape it had on the hill. Whole leaves, never dust, so the colour stays clear and the cup stays sweet.', facts: [['Whole', 'leaf in every bag, never dust or fannings'], ['2–4 min', 'from kettle to cup'], ['3×', 'infusions from one pinch of oolong']], macro: [['GREEN · 80°C', 'Shoots sink, then open'], ['JASMINE · 85°C', 'Leaves unfurl on the surface'], ['BLACK · 95°C', 'The liquor turns to amber']], c7eb: '06 · AT HOME IN THE CITY', c7h: 'A three-minute ritual', c7p: 'No ceremony needed. A kettle, a glass and a quiet moment before the city wakes up.', rit: [['01', 'Warm the glass', 'Rinse with hot water so the tea stays at temperature.'], ['02', 'Steep, then wait', 'Watch the leaves open. Lift the bag or pour off at the right time.'], ['03', 'Pour and pause', 'Drink it plain first. Then add ice, milk or a slice of fruit.']],
+    c5eb: '07 · THE SHELF', c5h: 'The garden, sealed for your shelf', products: 'PRODUCTS', tabs: ['All', 'Loose leaf', 'Premium tins', 'Tea bags'], view: 'View', shopAll: 'Shop the tea range' },
+  vi: { heroEb: 'SẢN PHẨM · TRÀ LÁ', heroH: 'Bắt đầu từ đồi chè', heroP: 'Bảo Lộc, độ cao 1.000 mét. Sáng se lạnh, đất đỏ bazan, và những hàng chè chúng tôi chăm sóc hơn năm mươi năm.', ch: ['ĐỒI CHÈ', 'ĐÔI TAY', 'CHỌN LỌC', 'SẮC TRÀ', 'PHA TRÀ', 'KỆ TRÀ'],
+    c2eb: '02 · ĐÔI TAY', c2h: 'Một búp, hai lá. Không hơn.', c2p: 'Người hái chè đi giữa các luống khi nắng còn chưa lên, chỉ ngắt phần ngọn non nhất. Chậm hơn hái máy, nhưng đó là lý do chén trà ngọt hậu.', c2q: '“Chạm vào là biết lá nào đã đến lúc. Lá non thì uốn, không gãy.”',
+    c3eb: '03 · CHỌN LỌC', c3h: 'Lựa hai lần, bằng mắt và bằng tay', c3p: 'Lá dập, gãy hay quá già được nhặt ra trên nong tre. Phần còn lại được héo, vò và sao, và cách lá gặp không khí quyết định nó trở thành loại trà nào trong sáu loại.', c3next: 'XEM SÁU LOẠI TRÀ',
+    c4eb: '04 · SẮC TRÀ · 0 → 100% OXY HOÁ', c4h: 'Sáu loại lá, đọc qua sắc nước', green: 'XANH', black: 'ĐEN', water: 'NƯỚC', steep: 'Ủ', leaf: 'LÁ', findPack: 'Tìm loại trà này',
+    c6eb: '05 · PHA CHO HÔM NAY', c6h: 'Ngắm lá trà sống lại', c6p: 'Nước nóng chạm vào, lá trà mở ra, trở về đúng hình dáng trên đồi chè. Lá nguyên, không vụn, nên sắc nước trong và vị trà ngọt hậu.', facts: [['Lá nguyên', 'trong từng túi lọc, không trà vụn'], ['2–4 phút', 'từ ấm nước đến chén trà'], ['3 lần', 'nước từ một nhúm ô long']], macro: [['TRÀ XANH · 80°C', 'Búp chìm xuống, rồi nở ra'], ['TRÀ LÀI · 85°C', 'Lá xoè trên mặt nước'], ['HỒNG TRÀ · 95°C', 'Nước trà chuyển sắc hổ phách']], c7eb: '06 · TRÀ GIỮA LÒNG PHỐ', c7h: 'Nghi thức ba phút', c7p: 'Không cần cầu kỳ. Một ấm nước, một chiếc ly và chút yên tĩnh trước khi thành phố thức giấc.', rit: [['01', 'Tráng ly', 'Tráng nước nóng để trà giữ nhiệt.'], ['02', 'Ủ và chờ', 'Ngắm lá mở ra. Nhấc túi hoặc chắt nước đúng lúc.'], ['03', 'Rót và dừng lại', 'Uống nguyên vị trước. Rồi thêm đá, sữa hay lát trái cây.']],
+    c5eb: '07 · KỆ TRÀ', c5h: 'Cả khu vườn, gói trọn cho kệ nhà bạn', products: 'SẢN PHẨM', tabs: ['Tất cả', 'Trà lá', 'Hộp thiếc', 'Trà túi lọc'], view: 'Xem', shopAll: 'Mua dòng trà' }
+};
+const TEA2PK = [0, 1, 2, 5, 5, 6];
+class Component extends DCLogic {
+  componentDidUpdate() { if (window.PL) { const __v = this.state.vi !== undefined ? (this.state.vi ? 'vi' : 'en') : this.state.lang; if ((__v === 'vi' || __v === 'en') && __v !== PL.lang) PL.lang = __v; } }
+  state = { vi: window.PL ? PL.lang === 'vi' : true, h: 1, tab: 'all', hl: -1 };
+  siteChrome(vi, cur) { const h = ['#our-story', '#our-drink', '#tea-leaf', '#our-stores', '#our-people', '#media']; return { siteNav: (vi ? ['Câu chuyện', 'Đồ uống', 'Sản phẩm', 'Cửa hàng', 'Con người', 'Truyền thông'] : ['Our Story', 'Our Drink', 'Our Products', 'Our Stores', 'Our People', 'Media']).map((t, i) => ({ t, href: h[i], ul: i === cur ? '#EFF4A4' : 'transparent', c: i === cur ? '#EFF4A4' : '#FBF6E6' })), siteLangA: vi ? 'VI' : 'EN', siteLangB: vi ? 'EN' : 'VI', siteContact: vi ? 'Liên hệ' : 'Contact us' }; }
+  fit = () => { const el = document.getElementById('op-scale'); if (el) el.style.zoom = Math.max(0.3, document.documentElement.clientWidth / 1440); };
+  componentDidMount() { this.fit(); window.addEventListener('resize', this.fit); const go = (n) => { const v = document.querySelector('video[data-brew]'); if (!v) { if (n < 40) setTimeout(() => go(n + 1), 150); return; } v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true; v.setAttribute('muted', ''); const kick = () => { const p = v.play(); if (p && p.catch) p.catch(() => { const r = () => { v.play(); document.removeEventListener('pointerdown', r); }; document.addEventListener('pointerdown', r); }); }; fetch(v.getAttribute('src')).then(r => r.blob()).then(bl => { this._vurl = URL.createObjectURL(bl); v.src = this._vurl; v.load(); kick(); }).catch(kick); return; const p = v.play(); if (p && p.catch) p.catch(() => { const r = () => { v.play(); document.removeEventListener('pointerdown', r); }; document.addEventListener('pointerdown', r); }); }; go(0); }
+  componentWillUnmount() { window.removeEventListener('resize', this.fit); if (this._vurl) URL.revokeObjectURL(this._vurl); }
+  renderVals() {
+    const { vi, h, tab, hl } = this.state, t = TT[vi ? 'vi' : 'en'], pad = i => '0' + (i + 1);
+    const loc = (x) => ({ ...x, notes: vi ? VI.notes[x.k] : x.notes, liquor: vi ? VI.liquor[x.k] : x.liquor, family: vi ? VI.family[x.k] : x.family });
+    const attr = vi ? VI.attr : ATTR;
+    const keys = ['all', 'loose', 'tin', 'bag'];
+    const list = PK.map((p, i) => ({ ...p, i, n: pad(i), note: vi ? VI.pk[i][0] : p.note, fmt: vi ? VI.pk[i][1] : p.fmt, tag: vi ? VI.tag[p.g] : p.tag })).filter(p => tab === 'all' || p.g === tab);
+    return {
+      ...this.siteChrome(vi, 2), toggleSite: () => this.setState(s => ({ vi: !s.vi })), t,
+      chapters: t.ch.map((l, i) => ({ l, n: pad(i), op: i === 0 ? 1 : 0.7 })),
+      strip: T.map((x, i) => ({ ...loc(x), tint: x.liq + (i === h ? '55' : '22'), ink: i > 3 ? '#4A1E12' : '#035F1D', sel: i === h ? 'inset 0 -4px 0 #035F1D' : 'none', pick: () => this.setState({ h: i }) })),
+      sel: loc(T[h]),
+      prof: attr.map((l, i) => ({ l, segs: [0, 1, 2, 3, 4].map(j => ({ bg: j < T[h].prof[i] ? '#035F1D' : '#EDE7DC' })) })),
+      findPack: () => this.setState({ tab: 'all', hl: TEA2PK[h] }),
+      brewFacts: t.facts.map(([v, l]) => ({ v, l })),
+      macro: t.macro.map(([k, c], i) => ({ k, c, img: ['assets/photos/br-float.jpg', 'assets/photos/br-jasmine.jpg', 'assets/photos/br-amber-wide.jpg'][i] })),
+      ritual: t.rit.map(([n, h, p]) => ({ n, h, p })),
+      count: list.length,
+      tabs: t.tabs.map((l, i) => ({ l, bg: tab === keys[i] ? '#035F1D' : 'transparent', fg: tab === keys[i] ? '#FBF6E6' : '#035F1D', pick: () => this.setState({ tab: keys[i], hl: -1 }) })),
+      grid: list.map((p, j) => ({ ...p, br: j % 4 === 3 ? 'none' : '1px solid #D9D1BF', hl: p.i === hl ? '#EFF4A4' : 'transparent', tagC: p.i === hl ? '#035F1D' : '#8A8676' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

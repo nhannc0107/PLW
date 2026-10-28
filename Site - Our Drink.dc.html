@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/colors_and_type.css">
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/phuc-long-design/colors_and_type.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Mrs+Saint+Delafield&amp;display=swap">
+<script src="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>body{margin:0;background:#E9E2D6;font-family:var(--font-body);color:#1C2A1E}*{box-sizing:border-box}a{color:#035F1D}a:hover{color:#658D1B}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.6)}.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}.dv-opt:target .dv-oid{background:#035F1D;color:#fff}.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.55)}</style>
+</helmet>
+<section id="our-drink" style="padding:0;background:#FDF8E1;overflow:hidden">
+<div id="od-scale" style="width:1280px;margin:0 auto;zoom:1">
+<div class="dv-opt" id="2a"><div class="dv-card" style="width:1280px;background:#FDF8E1;position:relative;overflow:visible">
+
+<div style="position:relative;height:900px;overflow:hidden">
+<video ref="{{ heroVideo }}" src="assets/video/highland-to-sip.mp4" poster="assets/photos/p01-highlands.jpg" preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(253,248,225,0) 0%,rgba(253,248,225,0) 45%,rgba(253,248,225,.6) 72%,#FDF8E1 100%);pointer-events:none"></div>
+<div style="position:absolute;left:0;right:0;top:0;height:170px;background:linear-gradient(180deg,rgba(3,50,15,.55),rgba(3,50,15,0));z-index:1;pointer-events:none"></div><div style="position:absolute;left:88px;right:88px;top:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;z-index:3"><a href="#home" style="text-decoration:none;display:flex;flex:none"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:36px;width:auto"></a><div style="display:flex;gap:34px;align-items:center;flex-wrap:wrap;justify-content:center"><sc-for list="{{ siteNav }}" as="n" hint-placeholder-count="6"><div data-dd="{{ n.href }}" style="position:relative;display:flex"><a href="{{ n.href }}" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ n.t }}</a><div data-ddm="1" style="display:none;position:absolute;top:100%;left:-18px;padding-top:14px;z-index:60"><div style="background:#FBF6E6;border:1px solid #E4DACE;border-radius:12px;box-shadow:0 14px 34px rgba(3,40,15,.2);padding:8px;display:flex;flex-direction:column;min-width:190px"><a href="#tea-leaf" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Tea Leaf</a><a href="#coffee" style="padding:13px 14px;border-radius:8px;font:700 13px/1 var(--font-body);letter-spacing:.06em;color:#035F1D;text-decoration:none;text-transform:none" style-hover="background:#EFF4A4;color:#035F1D">Coffee</a></div></div></div></sc-for></div><div style="display:flex;gap:18px;align-items:center;font:700 12px/1 var(--font-body);letter-spacing:.12em;color:#FBF6E6;flex:none"><span onClick="{{ toggleSite }}" style="cursor:pointer">{{ siteLangA }} <span style="opacity:.5">/ {{ siteLangB }}</span></span><a href="#shop" style="text-decoration:none;border:1px solid rgba(251,246,230,.7);border-radius:999px;padding:9px 16px;color:#FBF6E6" style-hover="background:#FBF6E6;color:#035F1D">Shop</a></div></div>
+<div style="position:absolute;left:56px;right:56px;bottom:64px;z-index:1;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:end">
+<div style="display:flex;flex-direction:column;gap:22px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:#035F1D">{{ t.eyebrow }}</span><h1 style="margin:0;font:700 112px/0.96 var(--font-display);letter-spacing:-.02em;color:#035F1D;text-wrap:balance">{{ t.hero }}</h1></div>
+<div style="display:flex;flex-direction:column;gap:22px;padding-bottom:10px"><p style="margin:0;font:700 18px/1.6 var(--font-body);color:#1C2A1E">{{ t.lede }}</p><div style="display:flex;gap:12px"><button onClick="{{ addToCart }}" style="border:0;background:#035F1D;color:#FBF6E6;padding:16px 28px;border-radius:999px;font:700 15px/1 var(--font-body);cursor:pointer" style-hover="background:#658D1B">{{ t.ctaOrder }}</button><button style="border:1px solid #035F1D;background:rgba(253,248,225,.6);color:#035F1D;padding:16px 26px;border-radius:999px;font:700 15px/1 var(--font-body);cursor:pointer">{{ t.ctaStory }}</button></div></div>
+</div>
+</div>
+
+<div style="padding:72px 56px 0;display:flex;justify-content:space-between;align-items:end;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:{{ scriptFamily }};font-style:{{ scriptStyle }};font-size:46px;line-height:1;color:#658D1B">{{ x.archScript }}</span><h2 style="margin:0;font:700 72px/0.98 var(--font-display);letter-spacing:-.02em;max-width:680px;text-wrap:balance">{{ x.archTitle }}</h2></div>
+<div style="display:flex;border:1px solid #E4DACE;border-radius:999px;padding:4px;background:#fff;box-shadow:0 8px 24px rgba(28,66,32,.08)"><sc-for list="{{ modes }}" as="m" hint-placeholder-count="2"></sc-for></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;padding:44px 56px 0">
+<sc-for list="{{ arches }}" as="a" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:18px;align-items:center">
+<div style="position:relative;width:100%;height:500px;border-radius:999px 999px 32px 32px;background:{{ a.tint }};display:flex;align-items:flex-end;justify-content:center;overflow:visible" style-hover="transform:translateY(-6px)">
+<div style="position:absolute;inset:0;border-radius:999px 999px 32px 32px;background:url(assets/pattern-primary-green.png) center/220px;opacity:.08;pointer-events:none"></div>
+<img src="{{ a.img }}" alt="{{ a.name }}" style="height:430px;width:auto;margin-bottom:28px;position:relative;filter:drop-shadow(0 26px 30px rgba(28,42,30,.25))">
+
+<span style="position:absolute;top:36px;left:36px;padding:7px 12px;border-radius:999px;background:#FDF8E1;color:#035F1D;font:700 11px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase">{{ a.tag }}</span>
+</div>
+<h3 style="margin:0;font:700 34px/1.1 var(--font-display);text-align:center">{{ a.name }}</h3>
+<p style="margin:0;font:400 15px/1.55 var(--font-body);color:#4F2C1D;text-align:center;max-width:300px">{{ a.note }}</p>
+
+</div>
+</sc-for>
+</div>
+
+
+<div style="margin-top:110px;position:relative;height:760px;overflow:hidden">
+<div style="position:absolute;left:0;right:0;top:0;text-align:center;display:flex;flex-direction:column;gap:14px;align-items:center;padding:0 56px;z-index:2"><h2 style="margin:0;font:700 68px/1 var(--font-display);letter-spacing:-.02em;text-wrap:balance;max-width:900px">{{ x.ribbonTitle }}</h2><p style="margin:0;font:400 17px/1.6 var(--font-body);color:#4F2C1D;max-width:620px">{{ x.ribbonBody }}</p></div>
+<svg viewBox="0 0 1280 760" style="position:absolute;inset:0;width:100%;height:100%">
+<defs><pattern id="weave2a" patternUnits="userSpaceOnUse" width="120" height="120"><image href="assets/pattern-primary-green.png" x="0" y="0" width="120" height="120" preserveAspectRatio="xMidYMid slice"></image></pattern>
+<path id="ribbon2a" d="M -60 640 C 120 420, 260 300, 420 380 S 640 560, 820 420 S 1040 200, 1340 330"></path></defs>
+<use href="#ribbon2a" fill="none" stroke="#035F1D" strokeWidth="76" strokeLinecap="round"></use>
+<use href="#ribbon2a" fill="none" stroke="url(#weave2a)" strokeWidth="76" strokeLinecap="round" opacity=".55"></use>
+<text style="font:700 22px var(--font-body);letter-spacing:.06em" fill="#FDF8E1" dy="8"><textPath ref="{{ ribbonRef }}" href="#ribbon2a" startOffset="2%"></textPath></text>
+</svg>
+<img src="assets/products/cup-oolong.png" alt="" style="position:absolute;left:120px;top:300px;height:420px;width:auto;transform:rotate(-14deg);filter:drop-shadow(0 30px 30px rgba(28,42,30,.25))">
+<img src="assets/products/cup-peach.png" alt="" style="position:absolute;right:110px;top:250px;height:430px;width:auto;transform:rotate(12deg);filter:drop-shadow(0 30px 30px rgba(28,42,30,.25))">
+<div style="position:absolute;left:470px;top:430px;width:340px;background:#EFF4A4;border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:10px;box-shadow:0 16px 36px rgba(28,66,32,.12)"><span style="font:700 22px/1.2 var(--font-display);color:#035F1D">{{ x.claim1 }}</span><p style="margin:0;font:400 14px/1.55 var(--font-body);color:#1C4220">{{ x.claim1b }}</p></div>
+<div style="position:absolute;left:640px;top:610px;width:320px;background:#F2EBE7;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px;box-shadow:0 16px 36px rgba(28,66,32,.12)"><span style="font:700 22px/1.2 var(--font-display);color:#4F2C1D">{{ x.claim2 }}</span><p style="margin:0;font:400 14px/1.55 var(--font-body);color:#4F2C1D">{{ x.claim2b }}</p></div>
+</div>
+
+<div style="padding:110px 56px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:340px 340px;gap:20px">
+<div style="grid-column:span 2;background:#EFF4A4;border-radius:28px;padding:44px;display:flex;flex-direction:column;justify-content:space-between"><h3 style="margin:0;font:700 64px/0.98 var(--font-display);color:#035F1D;letter-spacing:-.02em">{{ x.bento1 }}</h3><p style="margin:0;font:400 17px/1.6 var(--font-body);color:#1C4220;max-width:440px">{{ x.bento1b }}</p></div>
+<div style="border-radius:28px;overflow:hidden"><image-slot id="2a-ls-street" src="assets/photos/ls-street.jpg" shape="rect" placeholder="Street-style portrait with woven cup"></image-slot></div>
+<div style="grid-row:span 2;border-radius:28px;overflow:hidden"><image-slot id="2a-ls-friends" src="assets/photos/ls-friends.jpg" shape="rect" placeholder="Gen Z friends cheers"></image-slot></div>
+<div style="border-radius:28px;overflow:hidden"><image-slot id="2a-ls-office" src="assets/photos/ls-office.jpg" shape="rect" placeholder="Office desk break"></image-slot></div>
+<div style="background:#035F1D;border-radius:28px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;color:#FBF6E6;position:relative;overflow:hidden"><div style="position:absolute;inset:0;background:url(assets/pattern-primary-green.png) center/200px;opacity:.18"></div><h3 style="margin:0;font:700 40px/1.02 var(--font-display);position:relative">{{ x.bento2 }}</h3><p style="margin:0;font:400 15px/1.55 var(--font-body);position:relative">{{ x.bento2b }}</p></div>
+<div style="border-radius:28px;overflow:hidden"><image-slot id="2a-ls-campus" src="assets/photos/ls-campus.jpg" shape="rect" placeholder="Campus study moment"></image-slot></div>
+</div>
+<div style="padding:20px 56px 0"></div>
+
+<div style="margin-top:110px;padding:90px 0 96px;background:#1C4220;color:#FBF6E6">
+<div style="padding:0 56px;display:flex;justify-content:space-between;align-items:end;gap:40px"><div style="display:flex;flex-direction:column;gap:12px"><span style="font:700 12px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:#8CAB19">{{ handle }}</span><h2 style="margin:0;font:700 64px/1 var(--font-display);letter-spacing:-.02em;max-width:700px">{{ x.ugcTitle }}</h2></div><p style="margin:0;font:400 16px/1.6 var(--font-body);max-width:360px">{{ x.ugcBody }}</p></div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;padding:44px 56px 0">
+<sc-for list="{{ ugc }}" as="u" hint-placeholder-count="4">
+<div onMouseEnter="{{ ugcEnter }}" onMouseLeave="{{ ugcLeave }}" style="position:relative;aspect-ratio:9/16;border-radius:24px;overflow:hidden;background:{{ u.bg }};cursor:pointer" style-hover="transform:translateY(-6px)">
+<sc-if value="{{ u.isVideo }}" hint-placeholder-val="{{ true }}"><video ref="{{ ugcVid }}" src="{{ u.src }}" poster="{{ u.poster }}" preload="none" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video><div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 65%,rgba(0,0,0,.55) 100%);pointer-events:none"></div></sc-if>
+<sc-if value="{{ u.isQuote }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;background:url(assets/pattern-primary-green.png) center/200px;opacity:.2"></div><p style="position:absolute;left:24px;right:24px;top:50%;transform:translateY(-50%);margin:0;font:700 26px/1.25 var(--font-display);color:#035F1D;text-align:center">{{ u.quote }}</p></sc-if>
+<div style="position:absolute;top:14px;left:14px;right:14px;display:flex;gap:4px"><span style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.9)"></span><span style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.4)"></span><span style="flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.4)"></span></div>
+<div style="position:absolute;top:28px;left:14px;display:flex;align-items:center;gap:8px"><span style="width:30px;height:30px;border-radius:50%;background:#FDF8E1 url(assets/logo-stamp-green.png) center/88% no-repeat"></span><span style="font:700 13px/1 var(--font-body);color:{{ u.ink }}">{{ u.user }}</span></div>
+<div style="position:absolute;left:16px;right:16px;bottom:16px;display:flex;justify-content:space-between;align-items:end;gap:8px"><span style="font:600 14px/1.35 var(--font-body);color:{{ u.ink }}">{{ u.caption }}</span><span style="font:700 12px/1 var(--font-body);color:{{ u.ink }};flex:none">♥ {{ u.likes }}</span></div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="position:relative;height:860px;overflow:hidden;background:radial-gradient(120% 90% at 78% 40%,#F4F6C4 0%,#FBF8E4 45%,#FDF8E1 75%);color:#1C2A1E">
+<svg viewBox="0 0 1280 860" style="position:absolute;inset:0;width:100%;height:100%">
+<defs><pattern id="weave2b" patternUnits="userSpaceOnUse" width="110" height="110"><image href="assets/pattern-jasmine-yellow.png" x="0" y="0" width="110" height="110" preserveAspectRatio="xMidYMid slice"></image></pattern>
+<path id="ribbon2b" d="M -80 760 C 160 800, 400 720, 560 620 S 820 330, 980 380 S 1160 660, 1360 560"></path></defs>
+<use href="#ribbon2b" fill="none" stroke="#8CAB19" strokeWidth="70" strokeLinecap="round" opacity=".9"></use>
+<use href="#ribbon2b" fill="none" stroke="url(#weave2b)" strokeWidth="70" strokeLinecap="round" opacity=".7"></use>
+<text style="font:700 20px var(--font-body);letter-spacing:.06em" fill="#035F1D" dy="7"><textPath ref="{{ ribbonRef2 }}" href="#ribbon2b" startOffset="1%"></textPath></text>
+<div style="position: absolute; left: 829px; top: 497px; width: 150px; background: #fff; border: 1px solid #E4DACE; border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 12px 26px rgba(28,66,32,.10); z-index: 3"><span style="font:700 26px/1 var(--font-display);color:#035F1D">320ml</span><span style="font:600 12px/1.35 var(--font-body);color:#4F2C1D">{{ x.cpgFact }}</span></div></svg>
+<div style="position:absolute;left:56px;top:96px;width:520px;display:flex;flex-direction:column;gap:22px;z-index:2">
+<span style="align-self:flex-start;padding:9px 16px;border-radius:999px;background:#035F1D;color:#FBF6E6;font:700 12px/1 var(--font-body);letter-spacing:.16em;text-transform:uppercase">{{ x.cpgEyebrow }}</span>
+<h2 style="margin:0;font:700 96px/0.92 var(--font-display);letter-spacing:-.03em;color:#035F1D;text-wrap:balance">{{ x.cpgTitle }}</h2>
+<span style="font-family:{{ scriptFamily }};font-style:{{ scriptStyle }};font-size:46px;line-height:1;color:#658D1B">{{ x.cpgScript }}</span>
+<p style="margin:0;font:400 17px/1.6 var(--font-body);color:#4F2C1D;max-width:470px">{{ x.cpgBody }}</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><button style="border:0;background:#035F1D;color:#FBF6E6;padding:17px 28px;border-radius:999px;font:700 15px/1 var(--font-body);cursor:pointer" style-hover="background:#658D1B">{{ x.cpgCta1 }} →</button><button style="border:1px solid #035F1D;background:rgba(255,255,255,.5);color:#035F1D;padding:17px 26px;border-radius:999px;font:700 15px/1 var(--font-body);cursor:pointer">{{ x.cpgCta2 }}</button></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ cpgChannels }}" as="ch" hint-placeholder-count="4"><span style="padding:8px 14px;border-radius:999px;background:#fff;border:1px solid #E4DACE;font:600 13px/1 var(--font-body);color:#1C4220">{{ ch }}</span></sc-for></div>
+</div>
+<div style="position:absolute;left:640px;top:170px;width:200px;height:430px;border-radius:30px;overflow:hidden;background:#81be57;transform:rotate(-10deg);box-shadow:0 34px 50px rgba(28,66,32,.22);z-index:1"><img src="assets/products/can-dao-oi.jpg" alt="Trà Đào – Ổi" style="width: 100%; height: 100%; object-fit: cover; position: static"></div>
+<div style="position:absolute;left:900px;top:90px;width:200px;height:430px;border-radius:30px;overflow:hidden;background:#cc6f34;transform:rotate(9deg);box-shadow:0 34px 50px rgba(28,66,32,.22);z-index:1"><img src="assets/products/can-olong-lan.jpg" alt="TS Ô Long – Phong Lan" style="width:100%;height:100%;object-fit:cover"></div>
+
+
+<span style="position:absolute;left:1120px;top:60px;width:118px;height:118px;border-radius:50%;background:#C05131;color:#FBF6E6;display:flex;align-items:center;justify-content:center;text-align:center;font:800 17px/1.05 var(--font-display);transform:rotate(12deg);box-shadow:0 14px 28px rgba(28,42,30,.2);z-index:3">{{ x.cpgSticker }}</span>
+
+</div>
+
+
+<footer style="margin-top:110px;background:#1C4220;color:#FBF6E6;padding:40px clamp(24px,5vw,120px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap"><a href="#home" style="text-decoration:none;display:flex"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:30px;width:auto"></a><div style="display:flex;gap:22px;flex-wrap:wrap"><sc-for list="{{ siteNav }}" as="n" hint-placeholder-count="6"><a href="{{ n.href }}" style="text-decoration:none;font:600 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#FBF6E6" style-hover="color:#EFF4A4">{{ n.t }}</a></sc-for></div><div style="display:flex;align-items:center;gap:22px"><a href="#" style="text-decoration:none;font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;background:#FDF8E1;color:#035F1D;padding:12px 18px;border-radius:999px" style-hover="background:#EFF4A4;color:#035F1D">{{ siteContact }} →</a><span style="font:500 12px/1 var(--font-body);letter-spacing:.08em;opacity:.8">© Phúc Long Heritage</span></div></footer>
+
+<div ref="{{ recoWrap }}" style="position:absolute;top:0;right:0;z-index:5;display:flex;align-items:center;gap:14px;transition:transform .7s cubic-bezier(.2,.7,.2,1),opacity .35s ease-out" style-hover="opacity:1 !important">
+<sc-if value="{{ recoOpen }}" hint-placeholder-val="{{ true }}">
+<div style="position:relative;width:236px;display:flex;flex-direction:column;align-items:center;gap:10px">
+<div style="position:relative;width:236px;height:236px">
+<div style="position:absolute;left:43px;top:43px;width:150px;height:150px;border-radius:50%;background:{{ reco.tint }};box-shadow:0 18px 40px rgba(28,42,30,.22);border:3px solid #FDF8E1;transition:background .4s ease-out"></div>
+<div style="position:absolute;left:117px;top:117px;width:2px;height:96px;margin-left:-1px;background:linear-gradient(180deg,rgba(3,95,29,0),rgba(3,95,29,.55));transform-origin:50% 0;transform:rotate({{ handDeg }}deg);transition:transform .6s cubic-bezier(.2,.7,.2,1);pointer-events:none"></div>
+<img src="{{ reco.img }}" alt="{{ reco.name }}" style="position:absolute;left:50%;top:6px;height:200px;width:auto;transform:translateX(-50%) rotate(-6deg);filter:drop-shadow(0 14px 14px rgba(28,42,30,.25));pointer-events:none">
+<sc-for list="{{ slots }}" as="s" hint-placeholder-count="5">
+<button onClick="{{ s.pick }}" style="position:absolute;left:{{ s.x }}px;top:{{ s.y }}px;transform:translate(-50%,-50%);border:0;border-radius:999px;padding:6px 9px;font:700 10px/1 var(--font-body);letter-spacing:.04em;cursor:pointer;background:{{ s.bg }};color:{{ s.fg }};box-shadow:0 4px 12px rgba(28,42,30,.15);white-space:nowrap" style-hover="background:#8CAB19;color:#1C2A1E">{{ s.label }}</button>
+</sc-for>
+</div>
+<div style="display:flex;align-items:center;gap:10px;background:rgba(253,248,225,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #E4DACE;border-radius:999px;padding:6px 6px 6px 16px;box-shadow:0 10px 24px rgba(28,42,30,.12)">
+<div style="display:flex;flex-direction:column;gap:3px"><span style="font:700 10px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:#658D1B">{{ reco.slot }}</span><span style="font:700 16px/1.1 var(--font-display);color:#1C2A1E">{{ reco.name }}</span></div>
+<button onClick="{{ addToCart }}" style="width:38px;height:38px;flex:none;border-radius:50%;border:0;background:#035F1D;color:#FBF6E6;font:700 20px/1 var(--font-body);cursor:pointer" style-hover="background:#658D1B">+</button>
+</div>
+</div>
+</sc-if>
+<button onClick="{{ toggleReco }}" style="border:0;cursor:pointer;background:#035F1D;color:#FBF6E6;border-radius:18px 0 0 18px;padding:16px 10px;display:flex;flex-direction:column;align-items:center;gap:10px;box-shadow:-8px 12px 30px rgba(28,42,30,.25)" style-hover="background:#658D1B"><img src="{{ reco.img }}" alt="" style="height:52px;width:auto"><span style="writing-mode:vertical-rl;transform:rotate(180deg);font:700 12px/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase">{{ recoToggleLabel }}</span><span style="font:700 14px/1 var(--font-body)">{{ recoArrow }}</span></button>
+</div>
+
+</div></div>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;vi&quot;],&quot;default&quot;:&quot;en&quot;,&quot;tsType&quot;:&quot;'en'|'vi'&quot;}}">
+const COPY = {
+  en: {
+    cart: 'Cart', eyebrow: 'Since 1968 · Bảo Lộc, Lâm Đồng',
+    hero: 'Rooted in heritage, brewed for today.',
+    lede: 'For nearly 60 years we have pressed, steeped and shared Vietnamese tea. Every cup is a bridge, back to the highlands and towards the people you share it with.',
+    ctaStory: 'Read our story', ctaOrder: 'Order now', readMore: 'Read the chapter',
+    chaptersTitle: 'A story in three chapters', script: 'Pure connections',
+    quote: '“Tea is not only a drink. It is how we slow down and find our way back to each other.”',
+    quoteSub: 'Our essence is pure connection: with yourself, with your roots and with the people around the table.',
+    signatureTitle: 'Signature cups', fullMenu: 'See the full menu',
+    shopEyebrow: 'Shop tea', shopTitle: 'Bring the leaf home', shopBody: 'Loose leaf, tea bags and whole-bean coffee, packed the way we brew them in store.', shopCta: 'Shop the range',
+    giftEyebrow: 'Gifting', giftTitle: 'A gift that steeps slowly', giftBody: 'Curated tea boxes for Tết, thank-yous and every quiet moment worth marking.', giftCta: 'Explore gift boxes',
+    addCart: 'Add to cart', brewGuide: 'How to brew', lines: 'Tea lines',
+    orderLive: 'Delivering now', perk1: 'Ready in 15 min', perk2: 'Free delivery over 150.000đ', perk3: 'Earn points on every cup', menuBandTitle: 'Thirsty right now?', menuBandBody: 'Order your favourite cup for pick-up or delivery from a store near you.', findStore: 'Find a store',
+    menuWord: 'Menu', scroll: 'Scroll to steep',
+    journeyTitle: 'From highland to cup', journeyBody: 'Six steps, unhurried. The way we have made tea since the first leaf was picked in Bảo Lộc.',
+    essenceEyebrow: 'Our essence', moodPick: 'Try this', moodScript: 'May we recommend', moodTitle: 'A cup for every mood'
+  },
+  vi: {
+    cart: 'Giỏ hàng', eyebrow: 'Từ 1968 · Bảo Lộc, Lâm Đồng',
+    hero: 'Ủ vị tâm giao.',
+    lede: 'Gần 60 năm, chúng tôi ép, ủ và sẻ chia trà Việt. Mỗi ly trà là một nhịp cầu, đưa bạn về cao nguyên và đến gần hơn với những người cùng thưởng trà.',
+    ctaStory: 'Đọc câu chuyện', ctaOrder: 'Đặt món', readMore: 'Đọc tiếp',
+    chaptersTitle: 'Câu chuyện trong ba chương', script: 'Ủ vị tâm giao',
+    quote: '“Trà không chỉ là thức uống. Trà là cách ta chậm lại và tìm về với nhau.”',
+    quoteSub: 'Cốt lõi của chúng tôi là kết nối thuần khiết: với chính mình, với cội nguồn và với những người cùng ngồi bên bàn trà.',
+    signatureTitle: 'Ly trà đặc trưng', fullMenu: 'Xem toàn bộ thực đơn',
+    shopEyebrow: 'Mua trà', shopTitle: 'Mang lá trà về nhà', shopBody: 'Trà lá, trà túi lọc và cà phê hạt, đóng gói theo đúng cách chúng tôi pha tại cửa hàng.', shopCta: 'Xem sản phẩm',
+    giftEyebrow: 'Quà tặng', giftTitle: 'Món quà ủ vị', giftBody: 'Hộp quà trà tuyển chọn cho Tết, lời cảm ơn và những khoảnh khắc đáng nhớ.', giftCta: 'Khám phá hộp quà',
+    addCart: 'Thêm vào giỏ', brewGuide: 'Cách pha', lines: 'Dòng trà',
+    orderLive: 'Đang giao hàng', perk1: 'Sẵn sàng trong 15 phút', perk2: 'Miễn phí giao từ 150.000đ', perk3: 'Tích điểm mỗi ly', menuBandTitle: 'Thèm một ly ngay bây giờ?', menuBandBody: 'Đặt ly yêu thích để tự đến lấy hoặc giao tận nơi từ cửa hàng gần bạn.', findStore: 'Tìm cửa hàng',
+    menuWord: 'Menu', scroll: 'Cuộn xuống',
+    journeyTitle: 'Từ cao nguyên đến ly trà', journeyBody: 'Sáu bước, không vội vàng. Như cách chúng tôi làm trà từ búp trà đầu tiên hái ở Bảo Lộc.',
+    essenceEyebrow: 'Tinh thần cốt lõi', moodPick: 'Thử ngay', moodScript: 'Gợi ý cho bạn', moodTitle: 'Mỗi tâm trạng, một ly trà'
+  }
+};
+const LINES = [
+  { key: 'jas', en: ['Jasmine', 'Light · floral · calming', 'Young green tea scented with fresh jasmine blossoms. Delicate, clean and quietly uplifting.'], vi: ['Trà Lài', 'Nhẹ · thơm hoa · thư thái', 'Trà xanh non ướp hoa lài tươi. Thanh, dịu và nhẹ nhàng sảng khoái.'], bg: '#EFF4A4', ink: '#035F1D', dot: '#EFF4A4', pattern: 'assets/pattern-jasmine-yellow.png', logo: 'assets/logo-horizontal-green.png', price: '95.000đ' },
+  { key: 'oolong', en: ['Oolong', 'Roasted · smooth · rich', 'Semi-oxidised leaves rolled by hand, with a warm roasted body and a long honeyed finish.'], vi: ['Trà Ô Long', 'Rang · êm · đậm', 'Lá trà bán oxy hoá vo tay, thân trà ấm vị rang và hậu ngọt kéo dài.'], bg: '#C05131', ink: '#FBF6E6', dot: '#C05131', pattern: 'assets/pattern-peach-orange.png', logo: 'assets/logo-horizontal-white.png', price: '145.000đ' },
+  { key: 'lotus', en: ['Lotus', 'Fragrant · gentle · rare', 'Green tea rested in lotus blossoms, a Vietnamese ritual of patience and scent.'], vi: ['Trà Sen', 'Thơm · dịu · quý', 'Trà xanh ướp trong hoa sen, một nghi thức Việt của sự kiên nhẫn và hương thơm.'], bg: '#D987C4', ink: '#1C2A1E', dot: '#D987C4', pattern: 'assets/pattern-sky-green.png', logo: 'assets/logo-horizontal-green.png', price: '165.000đ' },
+  { key: 'heritage', en: ['Black Tea', 'Bold · malty · classic', 'The leaf behind our milk teas: full-bodied black tea from the Lâm Đồng highlands.'], vi: ['Hồng Trà', 'Đậm · thơm mạch nha · cổ điển', 'Lá trà làm nên trà sữa của chúng tôi: hồng trà đậm vị từ cao nguyên Lâm Đồng.'], bg: '#035F1D', ink: '#FBF6E6', dot: '#035F1D', pattern: 'assets/pattern-primary-green.png', logo: 'assets/logo-horizontal-white.png', price: '85.000đ' }
+];
+const STEPS = [
+  { img: 'inspect-leaves', bg: '#EFF4A4', en: ['Select', 'Only the youngest bud and two leaves. Each one is checked by eye and by hand.'], vi: ['Chọn lá', 'Chỉ một tôm hai lá non nhất, được kiểm tra bằng mắt và bằng tay.'] },
+  { img: 'sort-leaves', bg: '#F2EBE7', en: ['Sort', 'Leaves are graded by size and tenderness so every batch steeps evenly.'], vi: ['Phân loại', 'Lá được phân theo kích cỡ và độ non để mỗi mẻ trà ủ đều nhau.'] },
+  { img: 'winnow', bg: '#FFCDA3', en: ['Winnow', 'A woven bamboo tray lifts away dust and stems, as it has for generations.'], vi: ['Sàng sảy', 'Nia tre đan sàng sạch bụi và cọng, như bao thế hệ vẫn làm.'] },
+  { img: 'drying-rack', bg: '#E8E987', en: ['Dry', 'Slow drying in highland air settles the aroma before pressing.'], vi: ['Phơi sấy', 'Hong khô chậm trong khí trời cao nguyên giúp hương trà lắng lại trước khi ép.'] },
+  { img: 'brew-table', bg: '#C6DAE7', en: ['Steep', 'Our pressed-tea technique draws out depth without bitterness.'], vi: ['Ủ trà', 'Kỹ thuật ép trà giúp chiết trọn chiều sâu mà không gắt.'] },
+  { img: 'serve-customer', bg: '#FFC0C8', en: ['Share', 'The last step is yours: a cup passed across the table.'], vi: ['Trao tay', 'Bước cuối cùng là của bạn: một ly trà trao nhau bên bàn.'] }
+];
+const P2 = 'assets/products/';
+const SLOTS = [
+  { from: 6, to: 11, en: 'Morning', vi: 'Sáng', img: 'cup-lai', tint: '#EFF4A4', price: '55.000đ', name: ['Jasmine Tea', 'Trà Lài Đậm Thơm'], why: ['Light, floral and clean. A gentle start to the day.', 'Thanh, thơm hoa lài. Khởi đầu ngày mới nhẹ nhàng.'] },
+  { from: 11, to: 15, en: 'Noon', vi: 'Trưa', img: 'cup-peach', tint: '#FFCDA3', price: '55.000đ', name: ['Peach Tea', 'Trà Đào'], why: ['Bright and cooling for the midday heat.', 'Mát lạnh, tươi tắn giữa trưa nắng.'] },
+  { from: 15, to: 19, en: 'Afternoon', vi: 'Chiều', img: 'cup-oolong', tint: '#F2EBE7', price: '59.000đ', name: ['Oolong Milk Tea', 'Trà Sữa Ô Long'], why: ['Roasted, creamy and steady. Made for the 3pm slump.', 'Đậm vị rang, béo nhẹ. Tỉnh táo cho buổi chiều.'] },
+  { from: 19, to: 23, en: 'Evening', vi: 'Tối', img: 'cup-vai', tint: '#FFC0C8', price: '55.000đ', name: ['Lychee Jasmine Tea', 'Trà Vải Lài'], why: ['Sweet lychee and jasmine to share with friends tonight.', 'Vải ngọt, lài thơm. Cùng bạn bè cho buổi tối.'] },
+  { from: 23, to: 30, en: 'Late', vi: 'Khuya', img: 'cup-hongtra', tint: '#E4DACE', price: '55.000đ', name: ['Black Milk Tea', 'Hồng Trà Sữa'], why: ['The comforting classic, any hour.', 'Vị quen thuộc, ấm áp mọi lúc.'] }
+];
+class Component extends DCLogic {
+  __fit = () => { const el = document.getElementById('od-scale'); if (el) el.style.zoom = Math.max(0.3, document.documentElement.clientWidth / 1280); };
+  siteChrome(vi, cur) { const h = ['#our-story', '#our-drink', '#tea-leaf', '#our-stores', '#our-people', '#media']; return { siteNav: (vi ? ['Câu chuyện', 'Đồ uống', 'Sản phẩm', 'Cửa hàng', 'Con người', 'Truyền thông'] : ['Our Story', 'Our Drink', 'Our Products', 'Our Stores', 'Our People', 'Media']).map((t, i) => ({ t, href: h[i], ul: i === cur ? '#EFF4A4' : 'transparent' })), siteLangA: vi ? 'VI' : 'EN', siteLangB: vi ? 'EN' : 'VI', siteContact: vi ? 'Liên hệ' : 'Contact us' }; }
+
+  ribbonRef2 = (el) => { this._ribbonEl2 = el; if (el && this._ribbonText2) el.textContent = this._ribbonText2; };
+  ribbonRef = (el) => { this._ribbonEl = el; if (el && this._ribbonText) el.textContent = this._ribbonText; };
+  componentDidUpdate() { if (window.PL) { const __v = this.state.vi !== undefined ? (this.state.vi ? 'vi' : 'en') : this.state.lang; if ((__v === 'vi' || __v === 'en') && __v !== PL.lang) PL.lang = __v; } if (this._ribbonEl2 && this._ribbonEl2.textContent !== this._ribbonText2) this._ribbonEl2.textContent = this._ribbonText2; if (this._ribbonEl && this._ribbonEl.textContent !== this._ribbonText) this._ribbonEl.textContent = this._ribbonText; }
+  recoWrap = (el) => {
+    if (!el || el === this._recoEl) return; this._recoEl = el;
+    const tick = () => {
+      if (!el.isConnected) return;
+      const card = el.parentElement, r = card.getBoundingClientRect(), sc = r.height / (card.offsetHeight || 1);
+      const wh = el.offsetHeight, vh = window.innerHeight;
+      let top = (vh * 0.42 - wh / 2 - r.top) / sc;
+      top = Math.max(140, Math.min(card.offsetHeight - wh - 140, top));
+      if (Math.abs(top - (this._recoTop || 0)) > 1) { this._recoTop = top; el.style.transform = 'translateY(' + top + 'px)'; }
+      const w = el.getBoundingClientRect(); let hit = false;
+      if (!el.matches(':hover')) for (const t of card.querySelectorAll('h1,h2,h3,p')) { if (el.contains(t)) continue; const b = t.getBoundingClientRect(); if (b.width && b.right > w.left + 10 && b.left < w.right - 10 && b.bottom > w.top + 10 && b.top < w.bottom - 10) { hit = true; break; } }
+      const op = hit ? '0.18' : '1'; if (el.style.opacity !== op) el.style.opacity = op;
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  ugcVid = (v) => { if (!v || v._init) return; v._init = true; v.muted = true; v.loop = true; v.playsInline = true; v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); };
+  heroVideo = (v) => { if (!v || v._init) return; v._init = true; v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true; v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('loop', ''); const p = () => v.play().catch(() => {}); v.readyState >= 2 ? p() : v.addEventListener('canplay', p, { once: true }); p(); this._vid = v; };
+  componentDidMount() { this.__fit(); window.addEventListener('resize', this.__fit); this.tickYear(); }
+  yearRef = (el) => { this._year = el; };
+  moodVals(vi) {
+    const raw = [
+        { bg: '#EFF4A4', title: vi ? 'Nhẹ nhàng, sảng khoái' : 'Light & uplifting', body: vi ? 'Khi bạn cần một chút tươi mới giữa ngày.' : 'For when the afternoon needs a little lift.', drink: vi ? 'Trà Lài Sữa' : 'Jasmine Milk Tea', ph: 'P-25 · Mood: light', src: 'assets/photos/p25-mood-light.jpg' },
+        { bg: '#F2EBE7', title: vi ? 'Đậm đà, êm dịu' : 'Rich & comforting', body: vi ? 'Một ly ấm áp cho những cuộc trò chuyện dài.' : 'A warm, rounded cup for long conversations.', drink: vi ? 'Trà Sữa Phúc Long' : 'Phúc Long Milk Tea', ph: 'P-26 · Mood: rich', src: 'assets/photos/p26-mood-rich.jpg' },
+        { bg: '#FFCDA3', title: vi ? 'Tươi tắn, rạng rỡ' : 'Bright & fruity', body: vi ? 'Vị trái cây mát lành cho ngày nắng.' : 'Cool, fruit-led and made for sunny days.', drink: vi ? 'Trà Đào' : 'Peach Tea', ph: 'P-27 · Mood: bright', src: 'assets/photos/p27-mood-bright.jpg' }
+      ];
+    const m = this.state.mood;
+    return {
+      mood: raw[m],
+      moods: raw.map((x, i) => ({ ...x, n: i + 1, op: i === m ? 1 : 0.4, arrowX: i === m ? '0px' : '-12px', imgOp: i === m ? 1 : 0, imgScale: i === m ? 1 : 1.06, pick: () => this.setState({ mood: i }) }))
+    };
+  }
+  heroVideoA = (v) => { if (!v || v._init) return; v._init = true; v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true; v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); const p = () => v.play().catch(() => {}); v.readyState >= 2 ? p() : v.addEventListener('canplay', p, { once: true }); p(); this._vidA = v; };
+  leafPathRef = (el) => { this._lp = el; this._len = 0; };
+  leafRef = (el) => { this._lg = el; };
+  updateLeaf() {
+    const v = this._vidA, path = this._lp, g = this._lg; if (!path || !g) return;
+    const live = v && v.duration && v.readyState >= 2 && !v.paused;
+    const dur = live ? v.duration : 10;
+    const t = live ? v.currentTime : ((performance.now() - this._t0) / 1000) % dur;
+    if (!this._len) { this._len = path.getTotalLength(); path.style.strokeDasharray = this._len; }
+    const L = this._len, p = Math.min(1, t / (dur * 0.92));
+    const e = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+    const s = L * (0.35 * p + 0.65 * e);
+    path.style.strokeDashoffset = L - s;
+    const a = path.getPointAtLength(s), b = path.getPointAtLength(Math.min(L, s + 3));
+    const ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI + Math.sin(t * 5) * 22;
+    const fade = t > dur * 0.92 ? Math.max(0, 1 - (t - dur * 0.92) / (dur * 0.08)) : Math.min(1, t / 0.4);
+    path.style.opacity = 0.9 * fade; g.style.opacity = fade;
+    g.setAttribute('transform', `translate(${a.x} ${a.y}) rotate(${ang}) scale(${1.5 + Math.sin(t * 3) * 0.15})`);
+  }
+  shelfRef = (el) => { this._shelf = el; };
+  shelfBy = (d) => { const s = this._shelf; if (s) s.scrollBy({ left: d * 320, behavior: 'smooth' }); };
+  tickYear = () => {
+    cancelAnimationFrame(this._raf);
+    const loop = () => {
+      const v = this._vid, el = this._year;
+      if (!this._t0) this._t0 = performance.now();
+      if (el) {
+        const live = v && v.duration && v.readyState >= 2 && !v.paused;
+        const dur = live ? v.duration : 10;
+        const t = live ? v.currentTime : ((performance.now() - this._t0) / 1000) % dur;
+        const p = Math.min(1, t / (dur * 0.9));
+        const e = 1 - Math.pow(1 - p, 2);
+        const y = String(1968 + Math.round(58 * e));
+        if (el.textContent !== y) el.textContent = y;
+      }
+      this.updateLeaf();
+      this._raf = requestAnimationFrame(loop);
+    };
+    this._raf = requestAnimationFrame(loop);
+  };
+  componentWillUnmount() { window.removeEventListener('resize', this.__fit); cancelAnimationFrame(this._raf); }
+  state = { mode: 0, slot: null, recoOpen: true, mood: 0, lang: window.PL ? PL.lang : (this.props.lang ?? 'en'), line: 0, step: 0, cart: 0 };
+  renderVals() {
+    const L = this.state.lang, t = COPY[L], vi = L === 'vi';
+    const on = ['#035F1D', '#FBF6E6'], off = ['transparent', '#035F1D'];
+    const onD = ['#FBF6E6', '#1C4220'], offD = ['transparent', '#FBF6E6'];
+    const ln = LINES[this.state.line], lt = ln[L];
+    const st = STEPS[this.state.step], stt = st[L];
+    const add = (e) => { this.setState(s => ({ cart: s.cart + 1 })); if (window.PL) { let el = e && e.currentTarget, txt = ''; for (let i = 0; el && i < 7; i++, el = el.parentElement) { txt = el.textContent || ''; if (PL.find(txt)) break; } PL.add(txt); } };
+    const hr = new Date().getHours(), hh = hr < 6 ? hr + 24 : hr;
+    const si = this.state.slot ?? Math.max(0, SLOTS.findIndex(s => hh >= s.from && hh < s.to));
+    const sl = SLOTS[si], li = vi ? 1 : 0, sub = this.state.mode === 1;
+    const pr = (n) => (sub ? Math.round(n * 0.85 / 1000) * 1000 : n).toLocaleString('vi-VN') + 'đ';
+    const minisList = [['cup-lai','Trà Lài Đậm Thơm','Jasmine Tea'],['cup-hongtra','Hồng Trà Sữa','Black Milk Tea'],['cup-nhansen','TS Nhãn Sen','Longan Lotus Milk Tea'],['cup-thachdau','Ô Long Thạch Dâu','Oolong Strawberry Jelly'],['cup-matcha','Oatcha Matcha Latte','Oatcha Matcha Latte'],['cup-cappu','Cappuccino Đá Xay','Cappuccino Frappé'],['cup-lucky','Lucky Tea','Lucky Tea'],['cup-suachua','Sữa Chua Đặc Thơm','Fragrant Yoghurt'],['cup-phucbontu','Sữa Chua Phúc Bồn Tử','Raspberry Yoghurt']];
+    const ribbonText = vi ? 'Lá trà Bảo Lộc  ·  Ủ trọn vị  ·  Từ 1968  ·  Pha tươi mỗi ly  ·  Ủ Vị Tâm Giao  ·  Lá trà Bảo Lộc  ·  Ủ trọn vị' : 'Bảo Lộc leaves  ·  Fully steeped  ·  Since 1968  ·  Brewed fresh, every cup  ·  Ủ Vị Tâm Giao  ·  Bảo Lộc leaves  ·  Fully steeped';
+    const rt2 = vi ? 'Trà lon ít đường  ·  Trà túi lọc  ·  Lá trà Bảo Lộc  ·  Tiện mang theo  ·  Ủ Vị Tâm Giao  ·  Trà lon ít đường  ·  Trà túi lọc' : 'Low-sugar canned tea  ·  Tea bags  ·  Bảo Lộc leaves  ·  Ready to go  ·  Ủ Vị Tâm Giao  ·  Low-sugar canned tea  ·  Tea bags';
+    this._ribbonText2 = rt2; if (this._ribbonEl2 && this._ribbonEl2.textContent !== rt2) this._ribbonEl2.textContent = rt2;
+    this._ribbonText = ribbonText; if (this._ribbonEl && this._ribbonEl.textContent !== ribbonText) this._ribbonEl.textContent = ribbonText;
+    return { ...this.siteChrome(this.state.lang === 'vi', 1), toggleSite: () => this.setState(st => ({ lang: st.lang === 'vi' ? 'en' : 'vi' })), 
+      x: vi ? {
+        cpgEyebrow: 'Phúc Long tại nhà', cpgTitle: 'Mang vị Phúc Long về nhà', cpgScript: 'mọi lúc, mọi nơi', cpgBody: 'Trà túi lọc ủ từ lá trà Bảo Lộc và trà lon ít đường mới. Cùng một tay nghề trà, giờ nằm gọn trong tủ bếp, balo hay tủ lạnh văn phòng.', cpgCta1: 'Mua online', cpgCta2: 'Tìm điểm bán', cpgSticker: 'Mới · ít đường', cpgFact: 'Trà lon tiện lợi, ướp lạnh là ngon',
+        archScript: 'Ly đặc trưng', archTitle: 'Ba ly làm nên Phúc Long', moreTitle: 'Còn nhiều vị nữa',
+        ribbonTitle: 'Ủ từ lá trà, pha cho hôm nay', ribbonBody: 'Từ búp trà Bảo Lộc đến ly trà trên tay bạn, mỗi bước đều được làm chậm rãi và tỉ mỉ.',
+        ribbonText: 'Lá trà Bảo Lộc  ·  Ủ trọn vị  ·  Từ 1968  ·  Pha tươi mỗi ly  ·  Ủ Vị Tâm Giao  ·  Lá trà Bảo Lộc  ·  Ủ trọn vị',
+        claim1: 'Lá trà tuyển chọn', claim1b: 'Một tôm hai lá non, hái tay trên cao nguyên Lâm Đồng.', claim2: 'Pha tươi từng ly', claim2b: 'Kỹ thuật ép trà giữ trọn hương, không gắt.',
+        bento1: 'Trà ngon, chuyện vui', bento1b: 'Ly trà xanh hoạ tiết đan tre đi cùng bạn: đến trường, lên văn phòng, lên sân thượng.', bento2: 'Mỗi ngày một nhịp trà', bento2b: 'Sáng tỉnh táo, chiều thư thả, tối cùng bạn bè.',
+        rooftopScript: 'tối nay', rooftop: 'Gặp nhau trên sân thượng', ugcTitle: 'Khoảnh khắc thật, ly trà thật', ugcBody: 'Những khoảnh khắc khách hàng chia sẻ cùng Phúc Long. Gắn thẻ để xuất hiện tại đây.', recoTab: 'Gợi ý lúc này'
+      } : {
+        cpgEyebrow: 'Phúc Long at home', cpgTitle: 'Take Phúc Long home', cpgScript: 'anytime, anywhere', cpgBody: 'Tea bags steeped from Bảo Lộc leaves and our new low-sugar canned teas. The same tea craft, now in your kitchen, your bag or the office fridge.', cpgCta1: 'Shop online', cpgCta2: 'Find a stockist', cpgSticker: 'New · low sugar', cpgFact: 'Ready-to-drink, best served chilled',
+        archScript: 'Signature cups', archTitle: 'Three cups that made Phúc Long', moreTitle: 'More to sip',
+        ribbonTitle: 'Steeped from the leaf, brewed for today', ribbonBody: 'From Bảo Lộc buds to the cup in your hand, every step is slow and deliberate.',
+        ribbonText: 'Bảo Lộc leaves  ·  Fully steeped  ·  Since 1968  ·  Brewed fresh, every cup  ·  Ủ Vị Tâm Giao  ·  Bảo Lộc leaves  ·  Fully steeped',
+        claim1: 'Hand-selected leaves', claim1b: 'A bud and two young leaves, picked by hand in the Lâm Đồng highlands.', claim2: 'Brewed fresh, every cup', claim2b: 'Our pressed-tea technique keeps the aroma, never the bitterness.',
+        bento1: 'Good tea, good company', bento1b: 'The woven green cup goes where you go: to class, to the office, up to the rooftop.', bento2: 'A tea for every hour', bento2b: 'Bright mornings, slow afternoons, evenings with friends.',
+        rooftopScript: 'tonight', rooftop: 'See you on the rooftop', ugcTitle: 'Real moments, real cups', ugcBody: 'Moments our community shares with Phúc Long. Tag us to be featured here.', recoTab: 'Right now'
+      },
+      ribbonRef: this.ribbonRef, ribbonRef2: this.ribbonRef2,
+      cpgChannels: vi ? ['Siêu thị', 'Cửa hàng tiện lợi', 'Sàn TMĐT', 'Cửa hàng Phúc Long'] : ['Supermarkets', 'Convenience stores', 'Marketplaces', 'Phúc Long stores'],
+      modes: (vi ? ['Mua một lần', 'Gói tháng · tiết kiệm 15%'] : ['One-time', 'Monthly pass · save 15%']).map((label, i) => ({ label, bg: this.state.mode === i ? '#035F1D' : 'transparent', fg: this.state.mode === i ? '#FBF6E6' : '#035F1D', pick: () => this.setState({ mode: i }) })),
+      arches: [
+        { img: 'assets/products/cup-peach.png', name: vi ? 'Trà Đào' : 'Peach Tea', note: vi ? 'Trà đen ủ lạnh, đào ngâm giòn ngọt.' : 'Cold-steeped black tea with sweet, crisp peach.', tint: '#FFCDA3', sticker: '#EFF4A4', stickerInk: '#035F1D', price: pr(55000), tag: vi ? 'Bán chạy' : 'Best seller' },
+        { img: 'assets/products/cup-vai.png', name: vi ? 'Trà Vải Lài' : 'Lychee Jasmine', note: vi ? 'Trà lài thơm hoa, vải mọng, chút chanh.' : 'Floral jasmine tea, plump lychee and a squeeze of lime.', tint: '#FFC0C8', sticker: '#035F1D', stickerInk: '#FBF6E6', price: pr(55000), tag: vi ? 'Yêu thích' : 'Fan fave' },
+        { img: 'assets/products/cup-oolong.png', name: vi ? 'Trà Sữa Ô Long' : 'Oolong Milk Tea', note: vi ? 'Ô long rang đậm, sữa béo dịu.' : 'Deep roasted oolong with soft, creamy milk.', tint: '#E8E987', sticker: '#C05131', stickerInk: '#FBF6E6', price: pr(59000), tag: vi ? 'Đặc trưng' : 'Signature' }
+      ],
+      minis: minisList.map(m => ({ img: P2 + m[0] + '.png', name: vi ? m[1] : m[2] })),
+      handle: '@phuclongcoffeeandtea',
+      ugc: [
+        { isVideo: true, isQuote: false, src: 'assets/video/ugc-first-sip.mp4', poster: 'assets/photos/ls-street.jpg', bg: '#1C2A1E', ink: '#FFFFFF', user: '@minhanh.sips', caption: vi ? 'Ngụm đầu tiên luôn là ngon nhất' : 'The first sip always hits different', likes: '12,4k' },
+        { isVideo: true, isQuote: false, src: 'assets/video/ugc-rooftop.mp4', poster: 'assets/photos/ls-rooftop.jpg', bg: '#1C2A1E', ink: '#FFFFFF', user: '@saigon.squad', caption: vi ? 'Cụng ly trên sân thượng' : 'Rooftop cheers, Saigon sunset', likes: '28,1k' },
+        { isVideo: false, isQuote: true, bg: '#EFF4A4', ink: '#035F1D', quote: vi ? '“Trà Vải Lài là chân ái. Thơm lài mà không ngọt gắt.”' : '“Lychee Jasmine is the one. Floral, never too sweet.”', user: '@thuha.daily', caption: vi ? 'Đánh giá 5 sao' : '5-star review', likes: '3,2k' },
+        { isVideo: true, isQuote: false, src: 'assets/video/ugc-desk.mp4', poster: 'assets/photos/ls-office.jpg', bg: '#1C2A1E', ink: '#FFFFFF', user: '@studywithlinh', caption: vi ? 'Nghi thức bàn học mỗi chiều' : 'My 3pm desk ritual', likes: '9,8k' }
+      ],
+      ugcEnter: (e) => { const v = e.currentTarget.querySelector('video'); if (v) { v.muted = true; v.play().catch(() => {}); } },
+      ugcLeave: (e) => { const v = e.currentTarget.querySelector('video'); if (v) v.pause(); },
+      ugcVid: this.ugcVid,
+      cpg: [
+        { img: 'assets/products/can-dao-oi.jpg', bg: '#81be57', h: '220px', name: vi ? 'Trà Đào – Ổi · lon' : 'Peach – Guava · can', price: '18.000đ', tag: vi ? 'Mới · ít đường' : 'New · low sugar' },
+        { img: 'assets/products/can-olong-lan.jpg', bg: '#cc6f34', h: '220px', name: vi ? 'TS Ô Long – Phong Lan · lon' : 'Oolong Orchid Milk Tea · can', price: '20.000đ', tag: vi ? 'Mới · ít đường' : 'New · low sugar' },
+        { img: 'assets/products/tin-xanh.png', bg: '#EFF4A4', h: '180px', name: vi ? 'Trà Xanh · lon giấy 100g' : 'Green Tea · 100g tin', price: '180.000đ', tag: vi ? 'Cao cấp' : 'Premium' },
+        { img: 'assets/products/tin-lai.png', bg: '#F2EBE7', h: '180px', name: vi ? 'Trà Lài · lon giấy 100g' : 'Jasmine Tea · 100g tin', price: '180.000đ', tag: vi ? 'Cao cấp' : 'Premium' },
+        { img: 'assets/products/box150-sen.png', bg: '#FFC0C8', h: '180px', name: vi ? 'Trà Hương Sen · hộp 150g' : 'Lotus Tea · 150g box', price: '130.000đ', tag: vi ? 'Lá rời' : 'Loose leaf' },
+        { img: 'assets/products/box150-xanh.png', bg: '#EFF4A4', h: '180px', name: vi ? 'Trà Xanh · hộp 150g' : 'Green Tea · 150g box', price: '120.000đ', tag: vi ? 'Lá rời' : 'Loose leaf' },
+        { img: 'assets/products/box150-lai.png', bg: '#F2EBE7', h: '180px', name: vi ? 'Trà Lài · hộp 150g' : 'Jasmine Tea · 150g box', price: '120.000đ', tag: vi ? 'Lá rời' : 'Loose leaf' },
+        { img: 'assets/products/teabag-vai.png', bg: '#FFC0C8', h: '160px', name: vi ? 'Trà Hương Vải · 25 túi lọc' : 'Lychee Tea · 25 bags', price: '65.000đ', tag: vi ? 'Túi lọc' : 'Tea bags' },
+        { img: 'assets/products/teabag-den.png', bg: '#F2EBE7', h: '160px', name: vi ? 'Hồng Trà · 25 túi lọc' : 'Black Tea · 25 bags', price: '65.000đ', tag: vi ? 'Túi lọc' : 'Tea bags' },
+        { img: 'assets/products/teabag-olong.png', bg: '#EFF4A4', h: '160px', name: vi ? 'Trà Ô Long · 25 túi lọc' : 'Oolong Tea · 25 bags', price: '65.000đ', tag: vi ? 'Túi lọc' : 'Tea bags' },
+        { img: 'assets/products/coffee-king.png', bg: '#E4DACE', h: '180px', name: vi ? 'Cà Phê King · 250g' : 'King Coffee Beans · 250g', price: '150.000đ', tag: vi ? 'Rang mộc' : 'Pure roast' },
+        { img: 'assets/products/coffee-moka.png', bg: '#FFE3B8', h: '180px', name: vi ? 'Cà Phê Moka · 250g' : 'Moka Coffee Beans · 250g', price: '160.000đ', tag: vi ? 'Rang mộc' : 'Pure roast' },
+        { img: 'assets/products/coffee-robusta.png', bg: '#FFCDA3', h: '180px', name: vi ? 'Cà Phê Robusta · 250g' : 'Robusta Coffee Beans · 250g', price: '130.000đ', tag: vi ? 'Rang mộc' : 'Pure roast' }
+      ],
+      recoOpen: !!this.state.recoOpen, recoWrap: this.recoWrap, handDeg: [300, 0, 60, 120, 240][si] + 180,
+      recoToggleLabel: vi ? 'Gợi ý lúc này' : 'Right now', recoArrow: this.state.recoOpen ? '›' : '‹',
+      toggleReco: () => this.setState(s => ({ recoOpen: !s.recoOpen })),
+      reco: { img: P2 + sl.img + '.png', tint: sl.tint, price: sl.price, name: sl.name[li], why: sl.why[li], slot: (vi ? sl.vi : sl.en) + (this.state.slot == null ? (vi ? ' · bây giờ' : ' · now') : '') },
+      slots: SLOTS.map((s, i) => { const a = [300, 0, 60, 120, 240][i] * Math.PI / 180; return {  x: Math.round(118 + 112 * Math.sin(a)), y: Math.round(118 - 112 * Math.cos(a)), label: vi ? s.vi : s.en, bg: i === si ? '#035F1D' : '#F2EBE7', fg: i === si ? '#FBF6E6' : '#035F1D', pick: () => this.setState({ slot: i }) }; }),
+      heroVideo: this.heroVideo, heroVideoA: this.heroVideoA, leafPathRef: this.leafPathRef, leafRef: this.leafRef, yearRef: this.yearRef, shelfRef: this.shelfRef, shelfPrev: () => this.shelfBy(-1), shelfNext: () => this.shelfBy(1),
+      shelf: [
+        { src: 'assets/photos/p12a-jasmine.jpg', tint: '#EFF4A4', type: vi ? 'Trà lá' : 'Loose leaf', name: vi ? 'Trà Lài 100g' : 'Jasmine Tea 100g', note: vi ? 'Thơm hoa, thanh nhẹ' : 'Floral, light, calming', price: '95.000đ' },
+        { src: 'assets/photos/p12b-oolong.jpg', tint: '#FFCDA3', type: vi ? 'Trà lá' : 'Loose leaf', name: vi ? 'Trà Ô Long 150g' : 'Oolong Tea 150g', note: vi ? 'Vị rang, hậu ngọt' : 'Roasted, honeyed finish', price: '145.000đ' },
+        { src: 'assets/photos/p12c-lotus.jpg', tint: '#FFC0C8', type: vi ? 'Trà lá' : 'Loose leaf', name: vi ? 'Trà Sen 100g' : 'Lotus Tea 100g', note: vi ? 'Ướp sen, dịu và quý' : 'Lotus-scented, rare', price: '165.000đ' },
+        { src: 'assets/photos/p12d-black.jpg', tint: '#E4DACE', type: vi ? 'Trà lá' : 'Loose leaf', name: vi ? 'Hồng Trà 200g' : 'Black Tea 200g', note: vi ? 'Đậm, thơm mạch nha' : 'Bold, malty, classic', price: '85.000đ' },
+        { src: 'assets/photos/p15-teabags.jpg', tint: '#F2EBE7', type: vi ? 'Túi lọc' : 'Tea bags', name: vi ? 'Hồng Trà · 25 gói' : 'Black Tea · 25 bags', note: vi ? 'Tiện lợi mỗi ngày' : 'Everyday convenience', price: '65.000đ' },
+        { src: 'assets/photos/p15b-coffee.jpg', tint: '#C1A075', type: vi ? 'Cà phê' : 'Coffee', name: vi ? 'Cà phê hạt 250g' : 'Coffee Beans 250g', note: vi ? 'Rang mộc, đậm đà' : 'Medium roast, rich', price: '120.000đ' },
+        { src: 'assets/photos/p09-tet-gift.jpg', tint: '#EFF4A4', type: vi ? 'Quà tặng' : 'Gift box', name: vi ? 'Hộp quà Tết' : 'Tết Gift Box', note: vi ? 'Bốn dòng trà tuyển chọn' : 'Four signature teas', price: '450.000đ' }
+      ], t, cart: window.PL ? PL.count() : this.state.cart, addToCart: add,
+      scriptFamily: vi ? "'Phuc Long Heritage', Georgia, serif" : "'Mrs Saint Delafield', cursive", scriptStyle: vi ? 'italic' : 'normal',
+      setEN: () => this.setState({ lang: 'en' }), setVI: () => this.setState({ lang: 'vi' }),
+      enBg: vi ? off[0] : on[0], enFg: vi ? off[1] : on[1], viBg: vi ? on[0] : off[0], viFg: vi ? on[1] : off[1],
+      enBgD: vi ? offD[0] : onD[0], enFgD: vi ? offD[1] : onD[1], viBgD: vi ? onD[0] : offD[0], viFgD: vi ? onD[1] : offD[1],
+      nav: vi ? ['Câu chuyện', 'Nghề trà', 'Thực đơn', 'Mua trà', 'Quà tặng', 'Cửa hàng'] : ['Our Story', 'Tea Craft', 'Menu', 'Shop Tea', 'Gifting', 'Stores'],
+      chapters: [
+        { num: 'I', src: 'assets/photos/p02-bud.jpg', ph: 'P-02 · The Leaf: bud macro', title: vi ? 'Chiếc lá' : 'The Leaf', body: vi ? 'Hái tay trên sườn đồi Lâm Đồng, nơi sương mát và đất đỏ bazan nuôi nên búp trà dịu thơm.' : 'Hand-picked on the slopes of Lâm Đồng, where cool mist and red basalt soil shape a gentle, floral leaf.' },
+        { num: 'II', src: 'assets/photos/p03-winnow-hands.jpg', ph: 'P-03 · The Craft: hands winnowing', title: vi ? 'Nghề ép trà' : 'The Craft', body: vi ? 'Kỹ thuật ép trà giữ trọn hương thơm, một tay nghề được gìn giữ và hoàn thiện qua nhiều thập kỷ.' : 'Our pressed-tea technique locks in aroma, a craft we have kept and refined over decades.' },
+        { num: 'III', src: 'assets/photos/p04-shared-table.jpg', ph: 'P-04 · The Connection: shared table', title: vi ? 'Tâm giao' : 'The Connection', body: vi ? 'Trà là nơi ta gặp nhau. Pha cho hôm nay, sẻ chia như thuở nào.' : 'Tea is where we meet. Brewed for today, shared the way it always has been.' }
+      ],
+      drinks: [
+        { name: vi ? 'Trà Sữa Phúc Long' : 'Phúc Long Milk Tea', tag: vi ? 'Đặc trưng' : 'Signature', note: vi ? 'Hồng trà đậm, sữa béo, hậu vị rang.' : 'Bold black tea, creamy milk, a roasted finish.', tint: '#F2EBE7', ph: 'P-05 · Phúc Long Milk Tea', src: 'assets/photos/p05-milk-tea.jpg' },
+        { name: vi ? 'Trà Đào' : 'Peach Tea', tag: vi ? 'Trái cây' : 'Fruity', note: vi ? 'Trà đen ủ lạnh với đào ngâm.' : 'Cold-steeped black tea with poached peach.', tint: '#FFCDA3', ph: 'P-06 · Peach Tea', src: 'assets/photos/p06-peach-tea.jpg' },
+        { name: vi ? 'Trà Lài Sữa' : 'Jasmine Milk Tea', tag: vi ? 'Thanh nhẹ' : 'Light', note: vi ? 'Trà lài thơm hoa, sữa dịu nhẹ.' : 'Floral jasmine, softened with milk.', tint: '#EFF4A4', ph: 'P-07 · Jasmine Milk Tea', src: 'assets/photos/p07-jasmine-milk-tea.jpg' },
+        { name: vi ? 'Trà Ô Long Sen' : 'Lotus Oolong', tag: vi ? 'Theo mùa' : 'Seasonal', note: vi ? 'Ô long rang, hương sen thoảng.' : 'Roasted oolong with a breath of lotus.', tint: '#FFC0C8', ph: 'P-07b · Lotus Oolong', src: 'assets/photos/p07b-lotus-oolong.jpg' }
+      ],
+      footCols: [
+        { h: vi ? 'Khám phá' : 'Explore', items: vi ? ['Câu chuyện', 'Nghề trà', 'Tạp chí'] : ['Our Story', 'Tea Craft', 'Journal'] },
+        { h: vi ? 'Mua sắm' : 'Shop', items: vi ? ['Trà lá', 'Túi lọc', 'Quà tặng'] : ['Loose leaf', 'Tea bags', 'Gifting'] },
+        { h: vi ? 'Ghé thăm' : 'Visit', items: vi ? ['Tìm cửa hàng', 'Đặt món', 'Tuyển dụng'] : ['Find a store', 'Order', 'Careers'] }
+      ],
+      line: { wash: `linear-gradient(90deg, ${ln.bg}f2 0%, ${ln.bg}cc 38%, ${ln.bg}66 68%, ${ln.bg}99 100%)`, bg: ln.bg, ink: ln.ink, pattern: ln.pattern, logo: ln.logo, price: ln.price, name: lt[0], kicker: lt[1], desc: lt[2] },
+      lines: LINES.map((l, i) => ({ scene: ['assets/photos/bg-jasmine.jpg', 'assets/photos/bg-oolong.jpg', 'assets/photos/bg-lotus.jpg', 'assets/photos/bg-black.jpg'][i], sceneOp: i === this.state.line ? 1 : 0, sceneScale: i === this.state.line ? 1 : 1.08, name: l[L][0], pack: ['assets/photos/p12a-jasmine.jpg', 'assets/photos/p12b-oolong.jpg', 'assets/photos/p12c-lotus.jpg', 'assets/photos/p12d-black.jpg'][i], disp: i === this.state.line ? 'block' : 'none', dot: l.dot, rowBg: i === this.state.line ? 'rgba(255,255,255,.35)' : 'transparent', pick: () => this.setState({ line: i }) })),
+      bestsellers: [
+        { name: vi ? 'Trà Sữa Phúc Long' : 'Phúc Long Milk Tea', price: '55.000đ', tag: vi ? 'Bán chạy' : 'Best seller', src: 'assets/photos/p05-milk-tea.jpg' },
+        { name: vi ? 'Trà Đào' : 'Peach Tea', price: '55.000đ', tag: vi ? 'Yêu thích' : 'Fan fave', src: 'assets/photos/p06-peach-tea.jpg' },
+        { name: vi ? 'Ô Long Sen' : 'Lotus Oolong', price: '60.000đ', tag: vi ? 'Mới' : 'New', src: 'assets/photos/p07b-lotus-oolong.jpg' }
+      ],
+      filters: (vi ? ['Tất cả', 'Trà lá', 'Túi lọc', 'Cà phê'] : ['All', 'Loose leaf', 'Tea bags', 'Coffee']).map((label, i) => ({ label, bg: i === 0 ? '#1C2A1E' : '#fff', fg: i === 0 ? '#FBF6E6' : '#1C2A1E' })),
+      products: [
+        { name: vi ? 'Trà Lài 100g' : 'Jasmine Tea 100g', type: vi ? 'Trà lá' : 'Loose leaf', price: '95.000đ', tint: '#EFF4A4', ph: 'P-13 · Jasmine tin', src: 'assets/photos/p12a-jasmine.jpg' },
+        { name: vi ? 'Trà Ô Long 150g' : 'Oolong Tea 150g', type: vi ? 'Trà lá' : 'Loose leaf', price: '145.000đ', tint: '#FFCDA3', ph: 'P-14 · Oolong pouch', src: 'assets/photos/p12b-oolong.jpg' },
+        { name: vi ? 'Hồng Trà túi lọc · 25 gói' : 'Black Tea · 25 bags', type: vi ? 'Túi lọc' : 'Tea bags', price: '65.000đ', tint: '#F2EBE7', ph: 'P-15 · Tea bag box', src: 'assets/photos/p15-teabags.jpg' },
+        { name: vi ? 'Cà phê hạt rang 250g' : 'Roasted Coffee Beans 250g', type: vi ? 'Cà phê' : 'Coffee', price: '120.000đ', tint: '#E4DACE', ph: 'P-15b · Coffee bean bag', src: 'assets/photos/p15b-coffee.jpg' }
+      ],
+      step: { n: this.state.step + 1, title: stt[0], body: stt[1], img: `assets/illustrations/${st.img}.png`, bg: st.bg },
+      steps: STEPS.map((s, i) => ({ n: i + 1, ph: 'P-' + (19 + i) + ' · ' + s.en[0], disp: i === this.state.step ? 'block' : 'none', src: ['assets/photos/p19-select.jpg', 'assets/photos/p20-sort.jpg', 'assets/photos/p21-winnow.jpg', 'assets/photos/p22-dry.jpg', 'assets/photos/p23-steep.jpg', 'assets/photos/p24-share.jpg'][i], title: s[L][0], bar: i === this.state.step ? '#8CAB19' : 'rgba(251,246,230,.25)', op: i === this.state.step ? 1 : 0.55, pick: () => this.setState({ step: i }) })),
+      nextStep: () => this.setState(s => ({ step: (s.step + 1) % STEPS.length })),
+      prevStep: () => this.setState(s => ({ step: (s.step + STEPS.length - 1) % STEPS.length })),
+      ...this.moodVals(vi),    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<meta name="ext-resource-dependency" content="assets/web/icons__solid__location.webp" data-resource-id="r0" />
+<meta name="ext-resource-dependency" content="assets/web/icons__solid__shopping-cart.webp" data-resource-id="r1" />
+<meta name="ext-resource-dependency" content="assets/web/icons__solid__tea-hill.webp" data-resource-id="r2" />
+<meta name="ext-resource-dependency" content="assets/web/icons__solid__tea-leaf.webp" data-resource-id="r3" />
+<meta name="ext-resource-dependency" content="assets/web/icons__solid__tea-table.webp" data-resource-id="r4" />
+<meta name="ext-resource-dependency" content="assets/web/icons__tea__black-tea.webp" data-resource-id="r5" />
+<meta name="ext-resource-dependency" content="assets/web/icons__tea__green-tea.webp" data-resource-id="r6" />
+<meta name="ext-resource-dependency" content="assets/web/icons__tea__jasmine-tea.webp" data-resource-id="r7" />
+<meta name="ext-resource-dependency" content="assets/web/icons__tea__lotus-tea.webp" data-resource-id="r8" />
+<meta name="ext-resource-dependency" content="assets/web/icons__tea__oolong-tea.webp" data-resource-id="r9" />
+<meta name="ext-resource-dependency" content="assets/web/logo-horizontal-green.webp" data-resource-id="r10" />
+<meta name="ext-resource-dependency" content="assets/web/logo-horizontal-white.webp" data-resource-id="r11" />
+<meta name="ext-resource-dependency" content="assets/web/logo-stamp-green.webp" data-resource-id="r12" />
+<meta name="ext-resource-dependency" content="assets/map/vn-map.json" data-resource-id="r13" />
+<meta name="ext-resource-dependency" content="assets/web/pattern-jasmine-yellow.webp" data-resource-id="r14" />
+<meta name="ext-resource-dependency" content="assets/web/pattern-peach-orange.webp" data-resource-id="r15" />
+<meta name="ext-resource-dependency" content="assets/web/pattern-primary-green.webp" data-resource-id="r16" />
+<meta name="ext-resource-dependency" content="assets/web/pattern-primary-weave.webp" data-resource-id="r17" />
+<meta name="ext-resource-dependency" content="assets/web/pattern-sky-green.webp" data-resource-id="r18" />
+<meta name="ext-resource-dependency" content="assets/web/photos__bg-black.webp" data-resource-id="r19" />
+<meta name="ext-resource-dependency" content="assets/web/photos__bg-jasmine.webp" data-resource-id="r20" />
+<meta name="ext-resource-dependency" content="assets/web/photos__bg-lotus.webp" data-resource-id="r21" />
+<meta name="ext-resource-dependency" content="assets/web/photos__bg-oolong.webp" data-resource-id="r22" />
+<meta name="ext-resource-dependency" content="assets/web/photos__br-amber-wide.webp" data-resource-id="r23" />
+<meta name="ext-resource-dependency" content="assets/web/photos__br-float.webp" data-resource-id="r24" />
+<meta name="ext-resource-dependency" content="assets/web/photos__br-home.webp" data-resource-id="r25" />
+<meta name="ext-resource-dependency" content="assets/web/photos__br-jasmine.webp" data-resource-id="r26" />
+<meta name="ext-resource-dependency" content="assets/web/photos__br-teabag-wide.webp" data-resource-id="r27" />
+<meta name="ext-resource-dependency" content="assets/web/photos__cf-bags-ed.webp" data-resource-id="r28" />
+<meta name="ext-resource-dependency" content="assets/web/photos__cf-cherries.webp" data-resource-id="r29" />
+<meta name="ext-resource-dependency" content="assets/web/photos__cf-iced-ed.webp" data-resource-id="r30" />
+<meta name="ext-resource-dependency" content="assets/web/photos__cf-pull-macro.webp" data-resource-id="r31" />
+<meta name="ext-resource-dependency" content="assets/web/photos__cf-roaster.webp" data-resource-id="r32" />
+<meta name="ext-resource-dependency" content="assets/web/photos__cf-split.webp" data-resource-id="r33" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-bake-choc.webp" data-resource-id="r34" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-bake-matcha.webp" data-resource-id="r35" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-bake-tiramisu.webp" data-resource-id="r36" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-berry.webp" data-resource-id="r37" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-coffee-bmt.webp" data-resource-id="r38" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-coffee-hue.webp" data-resource-id="r39" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-coffee-saigon.webp" data-resource-id="r40" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-home-go.webp" data-resource-id="r41" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-home-tea.webp" data-resource-id="r42" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-lotus.webp" data-resource-id="r43" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-lychee.webp" data-resource-id="r44" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-matcha.webp" data-resource-id="r45" />
+<meta name="ext-resource-dependency" content="assets/web/photos__hero-bg-peach.webp" data-resource-id="r46" />
+<meta name="ext-resource-dependency" content="assets/web/photos__ls-campus.webp" data-resource-id="r47" />
+<meta name="ext-resource-dependency" content="assets/web/photos__ls-friends.webp" data-resource-id="r48" />
+<meta name="ext-resource-dependency" content="assets/web/photos__ls-office.webp" data-resource-id="r49" />
+<meta name="ext-resource-dependency" content="assets/web/photos__ls-rooftop.webp" data-resource-id="r50" />
+<meta name="ext-resource-dependency" content="assets/web/photos__ls-street.webp" data-resource-id="r51" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p01-highlands.webp" data-resource-id="r52" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p02-bud.webp" data-resource-id="r53" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p03-winnow-hands.webp" data-resource-id="r54" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p04-shared-table.webp" data-resource-id="r55" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p05-milk-tea.webp" data-resource-id="r56" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p06-peach-tea.webp" data-resource-id="r57" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p07-jasmine-milk-tea.webp" data-resource-id="r58" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p07b-lotus-oolong.webp" data-resource-id="r59" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p09-tet-gift.webp" data-resource-id="r60" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p12a-jasmine.webp" data-resource-id="r61" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p12b-oolong.webp" data-resource-id="r62" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p12c-lotus.webp" data-resource-id="r63" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p12d-black.webp" data-resource-id="r64" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p15-teabags.webp" data-resource-id="r65" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p15b-coffee.webp" data-resource-id="r66" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p16-gift-hero.webp" data-resource-id="r67" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p19-select.webp" data-resource-id="r68" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p20-sort.webp" data-resource-id="r69" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p21-winnow.webp" data-resource-id="r70" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p22-dry.webp" data-resource-id="r71" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p23-steep.webp" data-resource-id="r72" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p24-share.webp" data-resource-id="r73" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p25-mood-light.webp" data-resource-id="r74" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p26-mood-rich.webp" data-resource-id="r75" />
+<meta name="ext-resource-dependency" content="assets/web/photos__p27-mood-bright.webp" data-resource-id="r76" />
+<meta name="ext-resource-dependency" content="assets/web/photos__ppl-factory.webp" data-resource-id="r77" />
+<meta name="ext-resource-dependency" content="assets/web/photos__ppl-manager-v2.webp" data-resource-id="r78" />
+<meta name="ext-resource-dependency" content="assets/web/photos__ppl-office-v2.webp" data-resource-id="r79" />
+<meta name="ext-resource-dependency" content="assets/web/photos__ppl-team-v2.webp" data-resource-id="r80" />
+<meta name="ext-resource-dependency" content="assets/web/photos__store-cantho.webp" data-resource-id="r81" />
+<meta name="ext-resource-dependency" content="assets/web/photos__store-flagship-hanoi-night.webp" data-resource-id="r82" />
+<meta name="ext-resource-dependency" content="assets/web/photos__store-flagship-int.webp" data-resource-id="r83" />
+<meta name="ext-resource-dependency" content="assets/web/photos__store-hoian.webp" data-resource-id="r84" />
+<meta name="ext-resource-dependency" content="assets/web/photos__store-interior-buudien.webp" data-resource-id="r85" />
+<meta name="ext-resource-dependency" content="assets/web/photos__store-kiosk.webp" data-resource-id="r86" />
+<meta name="ext-resource-dependency" content="assets/web/photos__store-opening-hcm.webp" data-resource-id="r87" />
+<meta name="ext-resource-dependency" content="assets/web/photos__tl-hands.webp" data-resource-id="r88" />
+<meta name="ext-resource-dependency" content="assets/web/photos__tl-hills.webp" data-resource-id="r89" />
+<meta name="ext-resource-dependency" content="assets/web/photos__tl-pickers.webp" data-resource-id="r90" />
+<meta name="ext-resource-dependency" content="assets/web/photos__tl-sorting.webp" data-resource-id="r91" />
+<meta name="ext-resource-dependency" content="assets/web/products__box150-lai.webp" data-resource-id="r92" />
+<meta name="ext-resource-dependency" content="assets/web/products__box150-sen.webp" data-resource-id="r93" />
+<meta name="ext-resource-dependency" content="assets/web/products__box150-xanh.webp" data-resource-id="r94" />
+<meta name="ext-resource-dependency" content="assets/web/products__can-dao-oi.webp" data-resource-id="r95" />
+<meta name="ext-resource-dependency" content="assets/web/products__can-olong-lan.webp" data-resource-id="r96" />
+<meta name="ext-resource-dependency" content="assets/web/products__coffee-king.webp" data-resource-id="r97" />
+<meta name="ext-resource-dependency" content="assets/web/products__coffee-moka.webp" data-resource-id="r98" />
+<meta name="ext-resource-dependency" content="assets/web/products__coffee-robusta.webp" data-resource-id="r99" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-americano.webp" data-resource-id="r100" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-bacxiu.webp" data-resource-id="r101" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-cappu.webp" data-resource-id="r102" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-cf-den.webp" data-resource-id="r103" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-cf-muoi.webp" data-resource-id="r104" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-cf-suada.webp" data-resource-id="r105" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-hongtra.webp" data-resource-id="r106" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-lai.webp" data-resource-id="r107" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-lucky.webp" data-resource-id="r108" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-matcha.webp" data-resource-id="r109" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-nhansen.webp" data-resource-id="r110" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-oolong.webp" data-resource-id="r111" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-peach.webp" data-resource-id="r112" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-thachdau.webp" data-resource-id="r113" />
+<meta name="ext-resource-dependency" content="assets/web/products__cup-vai.webp" data-resource-id="r114" />
+<meta name="ext-resource-dependency" content="assets/web/products__food-banhmi.webp" data-resource-id="r115" />
+<meta name="ext-resource-dependency" content="assets/web/products__food-banhmique.webp" data-resource-id="r116" />
+<meta name="ext-resource-dependency" content="assets/web/products__food-choc-croissant.webp" data-resource-id="r117" />
+<meta name="ext-resource-dependency" content="assets/web/products__food-croissant.webp" data-resource-id="r118" />
+<meta name="ext-resource-dependency" content="assets/web/products__food-matcha-cake.webp" data-resource-id="r119" />
+<meta name="ext-resource-dependency" content="assets/web/products__food-tiramisu.webp" data-resource-id="r120" />
+<meta name="ext-resource-dependency" content="assets/web/products__teabag-den.webp" data-resource-id="r121" />
+<meta name="ext-resource-dependency" content="assets/web/products__teabag-olong.webp" data-resource-id="r122" />
+<meta name="ext-resource-dependency" content="assets/web/products__teabag-vai.webp" data-resource-id="r123" />
+<meta name="ext-resource-dependency" content="assets/web/products__tin-lai.webp" data-resource-id="r124" />
+<meta name="ext-resource-dependency" content="assets/web/products__tin-xanh.webp" data-resource-id="r125" />
+<meta name="ext-resource-dependency" content="assets/web/tea-types__black-tea.webp" data-resource-id="r126" />
+<meta name="ext-resource-dependency" content="assets/web/tea-types__floral-oolong-tea.webp" data-resource-id="r127" />
+<meta name="ext-resource-dependency" content="assets/web/tea-types__green-tea.webp" data-resource-id="r128" />
+<meta name="ext-resource-dependency" content="assets/web/tea-types__jasmine-tea.webp" data-resource-id="r129" />
+<meta name="ext-resource-dependency" content="assets/web/tea-types__lotus-tea.webp" data-resource-id="r130" />
+<meta name="ext-resource-dependency" content="assets/web/tea-types__roasted-oolong-tea.webp" data-resource-id="r131" />
+<meta name="ext-resource-dependency" content="assets/video/ugc-desk.mp4" data-resource-id="r136" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Mrs+Saint+Delafield&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Mrs+Saint+Delafield&amp;display=swap">
+</head>
+<body>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" data-bg-color="#035F1D"><rect width="100" height="100" fill="#035F1D"/><circle cx="50" cy="44" r="16" fill="#FBF6E6"/><path d="M34 40 Q50 22 66 40" stroke="#E9E887" stroke-width="4" fill="none"/><rect x="26" y="64" width="48" height="8" rx="2" fill="#E9E887"/></svg></template>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/colors_and_type.css">
+<script src="_ds/phuc-long-heritage-design-system-59af1a55-5d00-4413-897a-21e16fb4f511/_ds_bundle.js"></script>
+<style>body{margin:0;background:#FBF6E6;font-family:var(--font-body)}*{box-sizing:border-box}a{color:#035F1D;text-decoration:none}a:hover{color:#658D1B}[data-dd="#tea-leaf"]:hover > [data-ddm]{display:block !important}@keyframes plToast{0%{opacity:0;transform:translateY(12px)}12%{opacity:1;transform:none}85%{opacity:1}100%{opacity:0}}</style>
+</helmet>
+<div style="position:relative;min-height:100vh">
+<sc-if value="{{ r.home }}" hint-placeholder-val="{{ true }}"><dc-import name="Site - Homepage" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{ r.our_story }}" hint-placeholder-val="{{ false }}"><dc-import name="Site - Our Story" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{ r.our_drink }}" hint-placeholder-val="{{ false }}"><dc-import name="Site - Our Drink" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{ r.tea_leaf }}" hint-placeholder-val="{{ false }}"><dc-import name="Site - Tea Leaf" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{ r.coffee }}" hint-placeholder-val="{{ false }}"><dc-import name="Site - Coffee" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{ r.our_stores }}" hint-placeholder-val="{{ false }}"><dc-import name="Site - Our Stores" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{ r.our_people }}" hint-placeholder-val="{{ false }}"><dc-import name="Site - Our People" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{ r.shop }}" hint-placeholder-val="{{ false }}"><dc-import name="Site - Shop" hint-size="100%,100vh"></dc-import></sc-if>
+<sc-if value="{{ r.media }}" hint-placeholder-val="{{ false }}"><div style="min-height:100vh;background:#035F1D;color:#FBF6E6;display:flex;flex-direction:column;padding:28px clamp(24px,6vw,88px) 56px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap"><a href="#home" style="display:flex"><img src="assets/logo-horizontal-white.png" alt="Phúc Long" style="height:36px;width:auto"></a><div style="display:flex;gap:28px;flex-wrap:wrap"><sc-for list="{{ nav }}" as="n" hint-placeholder-count="6"><a href="{{ n.href }}" style="font:700 12px/1 var(--font-body);letter-spacing:.12em;text-transform:uppercase;color:{{ n.c }}">{{ n.t }}</a></sc-for></div></div>
+<div style="margin:auto 0;display:flex;flex-direction:column;gap:22px;padding:80px 0"><span style="font:700 12px/1 var(--font-body);letter-spacing:.24em;color:#E9E887">MEDIA · TRUYỀN THÔNG</span><h1 style="margin:0;font:700 clamp(64px,9vw,140px)/.88 var(--font-display);letter-spacing:-.045em">Coming soon</h1><p style="margin:0;max-width:520px;font:400 18px/1.6 var(--font-body);color:#DAE0C1">News, press releases and brand stories will live here.</p><a href="#home" style="align-self:flex-start;background:#E9E887;color:#035F1D;border-radius:999px;padding:16px 26px;font:700 14px/1 var(--font-body)">Back to homepage →</a></div>
+</div></sc-if>
+<sc-if value="{{ showBasket }}" hint-placeholder-val="{{ false }}"><button onClick="{{ openBasket }}" style="position:fixed;right:28px;bottom:28px;z-index:80;cursor:pointer;border:none;background:#035F1D;color:#FBF6E6;border-radius:999px;padding:14px 18px 14px 20px;display:flex;align-items:center;gap:10px;box-shadow:0 10px 28px rgba(3,40,15,.3);font:700 14px/1 var(--font-body)" style-hover="background:#1C4220"><img src="assets/icons/solid/shopping-cart.png" alt="" style="width:22px;height:22px;filter:brightness(0) invert(1)">{{ basketLabel }}<span style="min-width:26px;height:26px;border-radius:999px;background:#E9E887;color:#035F1D;display:flex;align-items:center;justify-content:center;font:800 12px/1 var(--font-body);padding:0 7px">{{ count }}</span></button></sc-if>
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><div style="position:fixed;right:28px;bottom:96px;z-index:81;background:#FBF6E6;color:#1C2A1E;border:1px solid #E4DACE;border-radius:14px;padding:14px 18px;box-shadow:0 10px 28px rgba(3,40,15,.2);font:600 14px/1.4 var(--font-body);animation:plToast 2.4s ease-out forwards">{{ toastText }}</div></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const RES = {"assets/icons/solid/location.png":"r0","assets/icons/solid/shopping-cart.png":"r1","assets/icons/solid/tea-hill.png":"r2","assets/icons/solid/tea-leaf.png":"r3","assets/icons/solid/tea-table.png":"r4","assets/icons/tea/black-tea.png":"r5","assets/icons/tea/green-tea.png":"r6","assets/icons/tea/jasmine-tea.png":"r7","assets/icons/tea/lotus-tea.png":"r8","assets/icons/tea/oolong-tea.png":"r9","assets/logo-horizontal-green.png":"r10","assets/logo-horizontal-white.png":"r11","assets/logo-stamp-green.png":"r12","assets/map/vn-map.json":"r13","assets/pattern-jasmine-yellow.png":"r14","assets/pattern-peach-orange.png":"r15","assets/pattern-primary-green.png":"r16","assets/pattern-primary-weave.png":"r17","assets/pattern-sky-green.png":"r18","assets/photos/bg-black.jpg":"r19","assets/photos/bg-jasmine.jpg":"r20","assets/photos/bg-lotus.jpg":"r21","assets/photos/bg-oolong.jpg":"r22","assets/photos/br-amber-wide.jpg":"r23","assets/photos/br-float.jpg":"r24","assets/photos/br-home.jpg":"r25","assets/photos/br-jasmine.jpg":"r26","assets/photos/br-teabag-wide.jpg":"r27","assets/photos/cf-bags-ed.jpg":"r28","assets/photos/cf-cherries.jpg":"r29","assets/photos/cf-iced-ed.jpg":"r30","assets/photos/cf-pull-macro.jpg":"r31","assets/photos/cf-roaster.jpg":"r32","assets/photos/cf-split.jpg":"r33","assets/photos/hero-bg-bake-choc.jpg":"r34","assets/photos/hero-bg-bake-matcha.jpg":"r35","assets/photos/hero-bg-bake-tiramisu.jpg":"r36","assets/photos/hero-bg-berry.jpg":"r37","assets/photos/hero-bg-coffee-bmt.jpg":"r38","assets/photos/hero-bg-coffee-hue.jpg":"r39","assets/photos/hero-bg-coffee-saigon.jpg":"r40","assets/photos/hero-bg-home-go.jpg":"r41","assets/photos/hero-bg-home-tea.jpg":"r42","assets/photos/hero-bg-lotus.jpg":"r43","assets/photos/hero-bg-lychee.jpg":"r44","assets/photos/hero-bg-matcha.jpg":"r45","assets/photos/hero-bg-peach.jpg":"r46","assets/photos/ls-campus.jpg":"r47","assets/photos/ls-friends.jpg":"r48","assets/photos/ls-office.jpg":"r49","assets/photos/ls-rooftop.jpg":"r50","assets/photos/ls-street.jpg":"r51","assets/photos/p01-highlands.jpg":"r52","assets/photos/p02-bud.jpg":"r53","assets/photos/p03-winnow-hands.jpg":"r54","assets/photos/p04-shared-table.jpg":"r55","assets/photos/p05-milk-tea.jpg":"r56","assets/photos/p06-peach-tea.jpg":"r57","assets/photos/p07-jasmine-milk-tea.jpg":"r58","assets/photos/p07b-lotus-oolong.jpg":"r59","assets/photos/p09-tet-gift.jpg":"r60","assets/photos/p12a-jasmine.jpg":"r61","assets/photos/p12b-oolong.jpg":"r62","assets/photos/p12c-lotus.jpg":"r63","assets/photos/p12d-black.jpg":"r64","assets/photos/p15-teabags.jpg":"r65","assets/photos/p15b-coffee.jpg":"r66","assets/photos/p16-gift-hero.jpg":"r67","assets/photos/p19-select.jpg":"r68","assets/photos/p20-sort.jpg":"r69","assets/photos/p21-winnow.jpg":"r70","assets/photos/p22-dry.jpg":"r71","assets/photos/p23-steep.jpg":"r72","assets/photos/p24-share.jpg":"r73","assets/photos/p25-mood-light.jpg":"r74","assets/photos/p26-mood-rich.jpg":"r75","assets/photos/p27-mood-bright.jpg":"r76","assets/photos/ppl-factory.jpg":"r77","assets/photos/ppl-manager-v2.jpg":"r78","assets/photos/ppl-office-v2.jpg":"r79","assets/photos/ppl-team-v2.jpg":"r80","assets/photos/store-cantho.jpg":"r81","assets/photos/store-flagship-hanoi-night.png":"r82","assets/photos/store-flagship-int.jpg":"r83","assets/photos/store-hoian.jpg":"r84","assets/photos/store-interior-buudien.png":"r85","assets/photos/store-kiosk.jpg":"r86","assets/photos/store-opening-hcm.png":"r87","assets/photos/tl-hands.jpg":"r88","assets/photos/tl-hills.jpg":"r89","assets/photos/tl-pickers.jpg":"r90","assets/photos/tl-sorting.jpg":"r91","assets/products/box150-lai.png":"r92","assets/products/box150-sen.png":"r93","assets/products/box150-xanh.png":"r94","assets/products/can-dao-oi.jpg":"r95","assets/products/can-olong-lan.jpg":"r96","assets/products/coffee-king.png":"r97","assets/products/coffee-moka.png":"r98","assets/products/coffee-robusta.png":"r99","assets/products/cup-americano.png":"r100","assets/products/cup-bacxiu.png":"r101","assets/products/cup-cappu.png":"r102","assets/products/cup-cf-den.png":"r103","assets/products/cup-cf-muoi.png":"r104","assets/products/cup-cf-suada.png":"r105","assets/products/cup-hongtra.png":"r106","assets/products/cup-lai.png":"r107","assets/products/cup-lucky.png":"r108","assets/products/cup-matcha.png":"r109","assets/products/cup-nhansen.png":"r110","assets/products/cup-oolong.png":"r111","assets/products/cup-peach.png":"r112","assets/products/cup-thachdau.png":"r113","assets/products/cup-vai.png":"r114","assets/products/food-banhmi.png":"r115","assets/products/food-banhmique.png":"r116","assets/products/food-choc-croissant.png":"r117","assets/products/food-croissant.png":"r118","assets/products/food-matcha-cake.png":"r119","assets/products/food-tiramisu.png":"r120","assets/products/teabag-den.png":"r121","assets/products/teabag-olong.png":"r122","assets/products/teabag-vai.png":"r123","assets/products/tin-lai.png":"r124","assets/products/tin-xanh.png":"r125","assets/tea-types/black-tea.png":"r126","assets/tea-types/floral-oolong-tea.png":"r127","assets/tea-types/green-tea.png":"r128","assets/tea-types/jasmine-tea.png":"r129","assets/tea-types/lotus-tea.png":"r130","assets/tea-types/roasted-oolong-tea.png":"r131","assets/video/croissant-v2.mp4":"r132","assets/video/farm-to-table.mp4":"r133","assets/video/highland-to-sip.mp4":"r134","assets/video/tea-time.mp4":"r135","assets/video/ugc-desk.mp4":"r136","assets/video/ugc-first-sip.mp4":"r137","assets/video/ugc-rooftop.mp4":"r138"};
+(function () { if (window.__plResFix) return; window.__plResFix = true;
+  const get = p => { const r = window.__resources; const id = RES[p]; return r && id && r[id] ? r[id] : null; };
+  window.PLres = p => get(p) || p;
+  const fixEl = el => { if (!el || el.nodeType !== 1) return;
+    if (el.tagName === 'VIDEO') { const vs = el.getAttribute('src'); if (vs && vs.startsWith('assets/') && !get(vs)) { el.removeAttribute('src'); try { el.load(); } catch (e) {} } const ps = el.getAttribute('poster'); if (!ps) { const d = get('assets/photos/p01-highlands.jpg'); if (d) el.setAttribute('poster', d); } }
+    ['src', 'poster', 'href'].forEach(a => { const v = el.getAttribute && el.getAttribute(a); if (v && v.startsWith('assets/')) { const b = get(v); if (b) el.setAttribute(a, b); } });
+    const st = el.getAttribute && el.getAttribute('style'); if (st && st.indexOf('assets/') >= 0) { const ns = st.replace(/url\(\s*(["']?)(assets\/[^"')]+)\1\s*\)/g, (m, q, p) => { const b = get(p); return b ? 'url("' + b + '")' : m; }); if (ns !== st) el.setAttribute('style', ns); }
+  };
+  const scan = root => { fixEl(root); if (root.querySelectorAll) root.querySelectorAll('[src^="assets/"],[poster^="assets/"],[style*="assets/"]').forEach(fixEl); };
+  const start = () => { if (!window.__resources) return; scan(document.body); new MutationObserver(ms => ms.forEach(m => { if (m.type === 'attributes') fixEl(m.target); else m.addedNodes.forEach(scan); })).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ['src', 'poster', 'style'] }); };
+  if (document.body) start(); else document.addEventListener('DOMContentLoaded', start);
+})();
+const CAT = [{"id":"d1","name":"Trà Đào","nameEn":"Peach Tea"},{"id":"d2","name":"Trà Vải Lài","nameEn":"Lychee Jasmine"},{"id":"d3","name":"Trà Sữa Ô Long","nameEn":"Oolong Milk Tea"},{"id":"d4","name":"Trà Lài Đậm Thơm","nameEn":"Jasmine Tea"},{"id":"d5","name":"Hồng Trà Sữa","nameEn":"Black Milk Tea"},{"id":"d6","name":"TS Nhãn Sen","nameEn":"Longan Lotus Milk Tea"},{"id":"d7","name":"Ô Long Thạch Dâu","nameEn":"Oolong Strawberry Jelly"},{"id":"d8","name":"Oatcha Matcha Latte","nameEn":"Oatcha Matcha Latte"},{"id":"d9","name":"Cappuccino Đá Xay","nameEn":"Cappuccino Frappé"},{"id":"d10","name":"Lucky Tea","nameEn":"Lucky Tea"},{"id":"k4","name":"Cà Phê Đen Đá","nameEn":"Iced Black Coffee"},{"id":"k5","name":"Americano Đá","nameEn":"Iced Americano"},{"id":"k3","name":"Cà Phê Muối","nameEn":"Salted Cream Coffee"},{"id":"k2","name":"Cà Phê Sữa Đá","nameEn":"Iced Milk Coffee"},{"id":"k1","name":"Bạc Xỉu","nameEn":"Saigon White Coffee"},{"id":"f1","name":"Croissant Bơ","nameEn":"Butter Croissant"},{"id":"f2","name":"Croissant Sô-cô-la","nameEn":"Chocolate Croissant"},{"id":"f3","name":"Tiramisu Mini","nameEn":"Mini Tiramisu"},{"id":"f4","name":"Bánh Mì Thịt Nướng","nameEn":"Grilled Pork Bánh Mì"},{"id":"f5","name":"Mousse Trà Xanh","nameEn":"Green Tea Mousse"},{"id":"f6","name":"Bánh Mì Que","nameEn":"Pâté Stick Bread"},{"id":"c1","name":"Trà Xanh · Lon giấy 100g","nameEn":"Green Tea · 100g tin"},{"id":"c2","name":"Trà Lài · Lon giấy 100g","nameEn":"Jasmine Tea · 100g tin"},{"id":"c3","name":"Trà Xanh · Hộp 150g","nameEn":"Green Tea · 150g box"},{"id":"c4","name":"Trà Lài · Hộp 150g","nameEn":"Jasmine Tea · 150g box"},{"id":"c5","name":"Trà Hương Sen · Hộp 150g","nameEn":"Lotus Tea · 150g box"},{"id":"c6","name":"Hồng Trà · 25 túi lọc","nameEn":"Black Tea · 25 bags"},{"id":"c7","name":"Trà Ô Long · 25 túi lọc","nameEn":"Oolong Tea · 25 bags"},{"id":"c8","name":"Trà Hương Vải · 25 túi lọc","nameEn":"Lychee Tea · 25 bags"},{"id":"c9","name":"Cà Phê King · 250g","nameEn":"King Coffee Beans · 250g"},{"id":"c10","name":"Cà Phê Moka · 250g","nameEn":"Moka Coffee Beans · 250g"},{"id":"c12","name":"Trà Đào – Ổi · lon","nameEn":"Peach – Guava · can"},{"id":"c13","name":"TS Ô Long – Phong Lan · lon","nameEn":"Oolong Orchid Milk Tea · can"},{"id":"c11","name":"Cà Phê Robusta · 250g","nameEn":"Robusta Coffee Beans · 250g"}];
+if (!window.PL) {
+  window.PL = { lang: 'en', shopCart: [], pending: [], openCart: false, toast: null, subs: new Set(),
+    emit() { this.subs.forEach(f => f()); },
+    find(txt) { if (!txt) return null; const t = txt.toLowerCase(); let best = null; CAT.forEach(p => [p.name, p.nameEn].forEach(n => { if (n && t.includes(n.toLowerCase()) && (!best || n.length > best.len)) best = { id: p.id, len: n.length, name: p.name, nameEn: p.nameEn }; })); return best; },
+    add(txt) { const b = this.find(txt) || { id: 'd1', name: 'Trà Đào', nameEn: 'Peach Tea' }; this.pending.push(b.id); this.toast = { ...b, at: Date.now() }; this.emit(); },
+    setShopCart(c) { if (c !== this.shopCart) { this.shopCart = c; this.emit(); } },
+    count() { return this.shopCart.reduce((a, l) => a + l.qty, 0) + this.pending.length; }
+  };
+}
+const ROUTES = ["home","our-story","our-drink","tea-leaf","coffee","our-stores","our-people","shop","media"];
+class Component extends DCLogic {
+  state = { route: 'home', tick: 0 };
+  read = () => { const h = (location.hash || '').replace('#', ''); if (!h) return this.go('home'); if (ROUTES.includes(h)) this.go(h); };
+  go(r) { if (r !== this.state.route) { this.setState({ route: r }); window.scrollTo(0, 0); } }
+  componentDidMount() { window.addEventListener('hashchange', this.read); this.read(); this._sub = () => { this.setState(s => ({ tick: s.tick + 1 })); if (PL.toast) { clearTimeout(this._t); this._t = setTimeout(() => { PL.toast = null; this.forceUpdate(); }, 2400); } }; PL.subs.add(this._sub); }
+  componentWillUnmount() { window.removeEventListener('hashchange', this.read); PL.subs.delete(this._sub); clearTimeout(this._t); }
+  renderVals() {
+    const route = this.state.route, vi = PL.lang === 'vi', r = {};
+    ROUTES.forEach(k => r[k.replace('-', '_')] = route === k);
+    const T = vi ? ['Câu chuyện', 'Đồ uống', 'Sản phẩm', 'Cửa hàng', 'Con người', 'Truyền thông'] : ['Our Story', 'Our Drink', 'Our Products', 'Our Stores', 'Our People', 'Media'];
+    const H = ['#our-story', '#our-drink', '#tea-leaf', '#our-stores', '#our-people', '#media'];
+    const tt = PL.toast;
+    return { r, nav: T.map((t, i) => ({ t, href: H[i], c: i === 5 ? '#EFF4A4' : '#FBF6E6' })),
+      showBasket: route !== 'shop' && route !== 'media', count: PL.count(), basketLabel: vi ? 'Giỏ hàng' : 'Basket',
+      openBasket: () => { PL.openCart = true; location.hash = '#shop'; },
+      toast: !!tt && route !== 'shop', toastText: tt ? (vi ? 'Đã thêm ' + tt.name + ' (size M) vào giỏ' : 'Added ' + tt.nameEn + ' (size M) to your basket') : '' };
+  }
+}
+</script>
+</body>
+</html>
